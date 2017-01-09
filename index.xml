@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flobot Documentation</title>
+    <link>http://localhost:1313/index.xml</link>
+    <description>Recent content on Flobot Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MIT</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 20:10:46 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>License</title>
+      <link>http://localhost:1313/license/</link>
+      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      
+      <guid>http://localhost:1313/license/</guid>
+      <description>&lt;p&gt;The MIT License (MIT)&lt;/p&gt;
+
+&lt;p&gt;Copyright &amp;copy; 2017 West Midlands Fire Service&lt;/p&gt;
+
+&lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:&lt;/p&gt;
+
+&lt;p&gt;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&lt;/p&gt;
+
+&lt;p&gt;THE SOFTWARE IS PROVIDED &amp;ldquo;AS IS&amp;rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Flobot Overview</title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
+      
+      <guid>http://localhost:1313/</guid>
+      <description>
+
+&lt;h2 id=&#34;what&#34;&gt;What?&lt;/h2&gt;
+
+&lt;p&gt;Flobot is a &lt;a href=&#34;http://www.mrc-productivity.com/blog/2016/08/5-huge-benefits-of-low-code-development/&#34;&gt;low-code development&lt;/a&gt; framework for &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;why&#34;&gt;Why?&lt;/h2&gt;
+
+&lt;p&gt;Flobot has been developed to offer an alternative for organizations (especially non-profits and Government departments) who need modern and continually-evolving back-office software - but can do without all the complexity, vendor lock-in and expense that traditionally comes with it.&lt;/p&gt;
+
+&lt;p&gt;By placing an emphasis on openness, collaboration and self-sufficiency, Flobot offers a service that has been specifically engineered to meet the challenges facing today&amp;rsquo;s Public Sector.&lt;/p&gt;
+
+&lt;p&gt;Built with &lt;i class=&#34;icon icon-heart&#34;&gt;&lt;/i&gt; at &lt;a href=&#34;https://www.wmfs.net/&#34;&gt;West Midlands Fire Service&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve installed &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; (at least v6.9 LTS), then Flobot can be downloaded via &lt;code&gt;npm&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;npm install flobot --save
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Encapsulate business functions in low-code &amp;ldquo;Blueprints&amp;rdquo; - great for interoperability and developing shared services.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deploy blueprints to the cloud for a mobile-empowered workforce&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Securely expose back-office workflows over REST with granular permissions&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Out-the-box support &lt;a href=&#34;https://auth0.com/&#34;&gt;Auth0&lt;/a&gt;, &lt;a href=&#34;https://www.mongodb.com/&#34;&gt;MongoDB&lt;/a&gt; and &lt;a href=&#34;https://www.elastic.co/products/elasticsearch&#34;&gt;Elasticsearch&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Easily extend out-the-box functionality with plug-ins&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
