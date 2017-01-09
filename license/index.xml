@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Licenses on Flobot Documentation</title>
-    <link>http://localhost:1313/license/index.xml</link>
+    <link>https://wmfs.github.io/license/index.xml</link>
     <description>Recent content in Licenses on Flobot Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
     <lastBuildDate>Wed, 09 Mar 2016 20:10:46 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/license/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wmfs.github.io/license/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>License</title>
-      <link>http://localhost:1313/license/</link>
+      <link>https://wmfs.github.io/license/</link>
       <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
       
-      <guid>http://localhost:1313/license/</guid>
+      <guid>https://wmfs.github.io/license/</guid>
       <description>&lt;p&gt;The MIT License (MIT)&lt;/p&gt;
 
 &lt;p&gt;Copyright &amp;copy; 2017 West Midlands Fire Service&lt;/p&gt;
