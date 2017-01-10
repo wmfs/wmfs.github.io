@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Key Concepts - Flobot Documentation</title>
+    <meta name="generator" content="Hugo 0.18.1" />
+
+    
+    <meta name="description" content="A low-code development framework for Node.js">
+    
+    <link rel="canonical" href="https://wmfs.github.io/key-concepts/">
+    
+    <meta name="author" content="Tim Needham">
+    
+
+    <meta property="og:url" content="https://wmfs.github.io/key-concepts/">
+    <meta property="og:title" content="Flobot Documentation">
+    <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://wmfs.github.io/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://wmfs.github.io/images/favicon.ico">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://wmfs.github.io/fonts/icon.eot');
+        src: url('https://wmfs.github.io/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://wmfs.github.io/fonts/icon.woff')
+               format('woff'),
+             url('https://wmfs.github.io/fonts/icon.ttf')
+               format('truetype'),
+             url('https://wmfs.github.io/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://wmfs.github.io/stylesheets/application.css">
+    <link rel="stylesheet" href="https://wmfs.github.io/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://wmfs.github.io/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://wmfs.github.io/stylesheets/highlight/highlight.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://wmfs.github.io/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-red palette-accent-teal">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Key Concepts
+      </div>
+    </div>
+
+    
+    <div class="button button-twitter" role="button" aria-label="Twitter">
+       <a href="https://twitter.com/flobotJS" title="@flobotJS on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+    </div>
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/wmfs/flobot" title="@wmfs/flobot on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+    
+        
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="https://github.com/wmfs/flobot" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://wmfs.github.io/images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>Flobot Documentation <span class="version">0.0.2</span></strong>
+        
+          <br>
+          wmfs/flobot
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/wmfs/flobot/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/wmfs/flobot/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Welcome!" href="https://wmfs.github.io/">
+	
+	Welcome!
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Key Concepts" href="https://wmfs.github.io/key-concepts/">
+	
+	Key Concepts
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Getting started" href="https://wmfs.github.io/getting-started/">
+	
+	Getting started
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="License" href="https://wmfs.github.io/license/">
+	
+	License
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">The author</span>
+        
+        <ul>
+          
+          <li>
+            <a href="https://twitter.com/flobotJS" target="_blank" title="@flobotJS on Twitter">
+              @flobotJS on Twitter
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/wmfs/flobot" target="_blank" title="@wmfs/flobot on GitHub">
+              @wmfs/flobot on GitHub
+            </a>
+          </li>
+          
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Key Concepts </h1>
+
+			
+
+<h2 id="flows">Flows</h2>
+
+<p><strong>Everything in Flobot is built around a flow - a definition of a real-world business process.</strong></p>
+
+<ul>
+<li><p>An organization is likely to contain hundreds of business processes, of all shapes-and-sizes. Flows can underpin something as simple as searching for a document through to complex business-to-business workflows.</p></li>
+
+<li><p>Flows may involve people from multiple teams or require no human input at all. It&rsquo;s likely an employee&rsquo;s role will require interaction with several flows - but probably not all of them.</p></li>
+
+<li><p>Flows play nicely with industry representations such as <a href="https://en.wikipedia.org/wiki/State_diagram">State Diagrams</a>, <a href="https://en.wikipedia.org/wiki/Activity_diagram">Activity Diagrams</a> and <a href="http://www.bpmn.org/">Business Process Diagrams</a>.</p></li>
+</ul>
+
+<h3 id="the-booking-someone-sick-flow">The booking-someone-sick flow</h3>
+
+<p><img src="https://wmfs.github.io/images/simple-flow.png" alt="Simple state diagram for booking-someone-sick" /></p>
+
+<ul>
+<li><p>In the diagram above, the operator has been granted access to this particular flow and can <em>instigate</em> it</p></li>
+
+<li><p>The <em>initial</em> step is for the operator to complete a form containing all the details of the sickness.</p></li>
+
+<li><p>Once the form has been completed, an email is sent to the employee&rsquo;s manager containing a summary about the absence.</p></li>
+
+<li><p>What happens next is dependent on whether the absence will reduce staffing below some critical level. Either things are fine and the flow can move to the final step or the Operations Room will be alerted to the staffing shortfall.</p></li>
+
+<li><p>And to finish, the employee will have a new entry added to their sickness record.</p></li>
+</ul>
+
+<h2 id="states">States</h2>
+
+<p>Each of the circles in the previous diagram are known as <strong>States</strong>.  More accurately, a Flobot flow contains all the necessary information to assemble a <a href="https://en.wikipedia.org/wiki/State_diagram">Finite State Machine</a> (<strong>FSM</strong>), that being:</p>
+
+<ul>
+<li><p>A list of possible states (exactly one of a finite number of states at any given time)</p></li>
+
+<li><p>How states are connected together (along with any conditions that are required)</p></li>
+
+<li><p>Which is the <em>initial</em> state (i.e. the state that is active when things first start)</p></li>
+</ul>
+
+<p>Flobot offers a pool of different <strong>State Classes</strong> from which flows can be constructed. It&rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few state classes.</p>
+
+<p>For example, the state classes below should be enough to model large chunks of mundane organizational data collection:</p>
+
+<table>
+<thead>
+<tr>
+<th>State class</th>
+<th>What does the state do?</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>formFilling</code></td>
+<td>Provides the details of a form for a human to complete. Things will wait in this state until some data is submitted</td>
+</tr>
+
+<tr>
+<td><code>saving-doc</code></td>
+<td>Saves a document to a database (e.g. the data collected via a <code>formFilling</code> state)</td>
+</tr>
+
+<tr>
+<td><code>settingSearchIndex</code></td>
+<td>Adds some details to a search index so that people can search and find it again later</td>
+</tr>
+
+<tr>
+<td><code>finding-one</code></td>
+<td>Fetches a single document from a database</td>
+</tr>
+
+<tr>
+<td><code>deleting-one</code></td>
+<td>Deletes a document from a database</td>
+</tr>
+
+<tr>
+<td><code>deletingFromSearchIndex</code></td>
+<td>Removes details from a search index - so that it won&rsquo;t show-up in searches anymore</td>
+</tr>
+
+<tr>
+<td><code>sendingEmail</code></td>
+<td>Generates and sends an email</td>
+</tr>
+
+<tr>
+<td><code>importing</code></td>
+<td>Imports some data from CSV files or similar</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="flobots">Flobots</h2>
+
+<p>At this point it <em>might</em>  be useful to think of things in terms of a railway network&hellip;</p>
+
+<div class="admonition note">
+<p class="admonition-title">Analogy alert!</p>
+<p><ul>
+<li><p><strong>Flows</strong> can be seen as the railway track - connecting states together in a very controlled way</p></li>
+
+<li><p><strong>States</strong> can be seen as the railway stations - they&rsquo;re reached by navigating flows. Journeys start at the <em>initial</em> state.</p></li>
+
+<li><p><strong>Flobots</strong> therefore can be seen as individual trains as they transition from state-to-state. A single flow can have any number of Flobots making their way around it.</p></li>
+</ul>
+</p>
+</div>
+
+<p>Flobots are always persisted as a simple document so that survive server restarts.
+This is the sort of thing that might be persisted for a Flobot travelling around that <strong>booking-someone-sick</strong> flow from earlier:</p>
+
+<pre><code class="language-JSON">{ 
+    &quot;_id&quot; : &quot;586e42ade923c119c4a4a85b&quot;, 
+    &quot;createdAt&quot; : &quot;2017-01-05T12:57:17.701+0000&quot;,
+    &quot;userId&quot; : &quot;john.doe@flobotjs.io&quot;, 
+    &quot;status&quot; : &quot;running&quot;, 
+    &quot;flowId&quot; : &quot;booking-someone-sick&quot;, 
+    &quot;stateId&quot; : &quot;notifyingOperationsRoom&quot;, 
+    &quot;stateEnterTime&quot; : &quot;2017-01-05T12:57:17.686+0000&quot;, 
+    &quot;ctx&quot; : {
+        &quot;formData&quot; : {
+            &quot;employeeNumber&quot;: 372711,
+            &quot;likelyReturnDate&quot;: &quot;2017-01-07T09:00:00.000+0000&quot;,
+            &quot;sicknessCode&quot;: &quot;hangover&quot;
+        }
+    }
+}
+</code></pre>
+
+<p>The various properties in this example document are described in the table below:</p>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>_id</code></td>
+<td>Uniquely identifies a Flobot</td>
+</tr>
+
+<tr>
+<td><code>createdAt</code></td>
+<td>When the Flobot was first instigated</td>
+</tr>
+
+<tr>
+<td><code>userId</code></td>
+<td>If the Flobot was instigated by a human, then this is the userId of that person</td>
+</tr>
+
+<tr>
+<td><code>status</code></td>
+<td>Always one of <code>starting</code>, <code>running</code>, <code>waitingForHumanInput</code> or <code>finished</code></td>
+</tr>
+
+<tr>
+<td><code>flowId</code></td>
+<td>Identifies which flow this Flobot is travelling around</td>
+</tr>
+
+<tr>
+<td><code>stateId</code></td>
+<td>Indicates the state that this Flobot is currently in</td>
+</tr>
+
+<tr>
+<td><code>stateEnterTime</code></td>
+<td>The timestamp of when the Flobot entered its current state</td>
+</tr>
+
+<tr>
+<td><code>ctx</code></td>
+<td>This is a simple key/value store that&rsquo;s unique to each Flobot. In analogy terms, a good place to store the number of passengers on this particular train. This <strong>context</strong> is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each <del>train</del> Flobot.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="blueprints">Blueprints</h2>
+
+<p>On their own, flow definitions aren&rsquo;t enough&hellip; for everything to spark, states need to be fed things like data models, form layouts, images, custom logic, templates etc.
+This is where Flobot <strong>Blueprints</strong> come in. The actual content of a Blueprint is beyond the scope of this article, but just to say Blueprints themselves are nothing special, just a simple folder structure:</p>
+
+<p><img src="https://wmfs.github.io/images/blueprint-dir.png" alt="Simple blueprint structure showing a root directory and folders such as 'flows', 'forms' and 'models'" /></p>
+
+<p>Given an organization could potentially attract hundreds of flows, blueprints can logically group together related flows (perhaps into teams or functional areas) to help make things more manageable.
+Blueprints also help with versioning, collaboration (on Github or similar) and interoperability.</p>
+
+<p>The Flobot framework can load any number of blueprints at startup, potentially serving all back-office functionality from a single server.</p>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>Flobot takes a batteries-included approach and hopefully ships with enough <a href="#states">State Classes</a> to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employees a <strong>plugin</strong> architecture.
+A Flobot plugin extends the core framework with related State Classes (along with other internal components required to run them).</p>
+
+<p><strong>Some example of some official Flobot plugins:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Module description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="https://github.com/wmfs/flobot-express-plugin">Express</a></td>
+<td>Makes Flobot accessible via the web. Provides a secure REST API for controlling Flobots and a static server for serving blueprint assets</td>
+</tr>
+
+<tr>
+<td><a href="https://github.com/wmfs/flobot-mongodb-plugin">MongoDB</a></td>
+<td>Replaces the default in-memory storage service with a MongoDB backed alternative</td>
+</tr>
+
+<tr>
+<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin">Elasticsearch</a></td>
+<td>Adds Elasticsearch search-index integration</td>
+</tr>
+
+<tr>
+<td><a href="https://github.com/wmfs/flobot-forms-plugin">Forms</a></td>
+<td>For collecting data from humans</td>
+</tr>
+
+<tr>
+<td><a href="https://github.com/wmfs/flobot-import-plugin">Import</a></td>
+<td>Stream data from .CSV files into Flobot storage</td>
+</tr>
+
+<tr>
+<td><a href="https://github.com/wmfs/flobot-alerts-plugin">Alerts</a></td>
+<td>Provides states to send emails and similar</td>
+</tr>
+</tbody>
+</table>
+
+<p>Flobot&rsquo;s current library of state classes is certainly far from exhaustive and organizations will undoubtedly have specialist requirements of their own.
+Thankfully it&rsquo;s really straightforward to write new plugins for Flobot to add missing capabilities.</p>
+
+
+			<aside class="copyright" role="note">
+				
+				&copy; 2017 MIT &ndash;
+				
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://wmfs.github.io/getting-started/" title="Getting started">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Getting started
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/wmfs.github.io\/';
+      var repo_id  = 'wmfs\/flobot';
+    
+    </script>
+
+    <script src="https://wmfs.github.io/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

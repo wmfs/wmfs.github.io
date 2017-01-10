@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Flobot Documentation</title>
-    <link>https://wmfs.github.io/index.xml</link>
-    <description>Recent content on Flobot Documentation</description>
+    <title>Key-concepts on Flobot Documentation</title>
+    <link>https://wmfs.github.io/key-concepts/index.xml</link>
+    <description>Recent content in Key-concepts on Flobot Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
     <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
-    <atom:link href="https://wmfs.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wmfs.github.io/key-concepts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Key Concepts</title>
@@ -265,61 +265,6 @@ A Flobot plugin extends the core framework with related State Classes (along wit
 
 &lt;p&gt;Flobot&amp;rsquo;s current library of state classes is certainly far from exhaustive and organizations will undoubtedly have specialist requirements of their own.
 Thankfully it&amp;rsquo;s really straightforward to write new plugins for Flobot to add missing capabilities.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting started</title>
-      <link>https://wmfs.github.io/getting-started/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/getting-started/</guid>
-      <description>
-
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; Flobot requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Flobot itself can then be downloaded via &lt;code&gt;npm&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;npm install flobot --save
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>License</title>
-      <link>https://wmfs.github.io/license/</link>
-      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/license/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;The MIT License (MIT)&lt;/p&gt;
-
-&lt;p&gt;Copyright &amp;copy; 2017 West Midlands Fire Service&lt;/p&gt;
-
-&lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:&lt;/p&gt;
-
-&lt;p&gt;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&lt;/p&gt;
-
-&lt;p&gt;THE SOFTWARE IS PROVIDED &amp;ldquo;AS IS&amp;rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome to Flobot!</title>
-      <link>https://wmfs.github.io/</link>
-      <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/</guid>
-      <description>&lt;p&gt;Flobot has been developed as an alternative for organizations (especially non-profits and Government departments) who need modern and continually-evolving back-office software - but can do without the complexity, expense and vendor lock-in that usually comes with it.&lt;/p&gt;
-
-&lt;p&gt;By placing an emphasis on openness, collaboration and self-sufficiency, Flobot has been specifically engineered to deliver a service that can meet the challenges facing today&amp;rsquo;s Public Sector.&lt;/p&gt;
-
-&lt;p&gt;Flobot is a &lt;a href=&#34;http://www.mrc-productivity.com/blog/2016/08/5-huge-benefits-of-low-code-development/&#34;&gt;low-code development&lt;/a&gt; framework for &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Built with &lt;i class=&#34;icon icon-heart&#34;&gt;&lt;/i&gt; at &lt;a href=&#34;https://www.wmfs.net/&#34;&gt;West Midlands Fire Service&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
