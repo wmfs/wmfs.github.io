@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>State-classes on Flobot Documentation</title>
+    <link>https://wmfs.github.io/state-classes/index.xml</link>
+    <description>Recent content in State-classes on Flobot Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MIT</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 20:10:46 +0100</lastBuildDate>
+    <atom:link href="https://wmfs.github.io/state-classes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>State Classes</title>
+      <link>https://wmfs.github.io/state-classes/</link>
+      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      
+      <guid>https://wmfs.github.io/state-classes/</guid>
+      <description>&lt;p&gt;This is a list of all &lt;a href=&#34;http://localhost:1313/key-concepts/#states&#34;&gt;State Classes&lt;/a&gt; that are currently available via the core Flobot plugins.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>persisting</title>
+      <link>https://wmfs.github.io/state-classes/persisting/</link>
+      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      
+      <guid>https://wmfs.github.io/state-classes/persisting/</guid>
+      <description>&lt;p&gt;Blah!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>sendingEmail</title>
+      <link>https://wmfs.github.io/state-classes/sending-email/</link>
+      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      
+      <guid>https://wmfs.github.io/state-classes/sending-email/</guid>
+      <description>&lt;p&gt;Blah!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

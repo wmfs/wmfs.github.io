@@ -60,7 +60,7 @@
 
 &lt;p&gt;Flobot offers a pool of different &lt;strong&gt;State Classes&lt;/strong&gt; from which flows can be constructed. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few state classes.&lt;/p&gt;
 
-&lt;p&gt;For example, the state classes below should be enough to model large chunks of mundane organizational data collection:&lt;/p&gt;
+&lt;p&gt;For example, the state classes below should be enough to model large swathes of organizational data collection:&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -113,6 +113,10 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;ul&gt;
+&lt;li&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;http://localhost:1313/state-classes/&#34;&gt;State Classes&lt;/a&gt; section.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;flobots&#34;&gt;Flobots&lt;/h2&gt;
 
 &lt;p&gt;At this point it &lt;em&gt;might&lt;/em&gt;  be useful to think of things in terms of a railway network&amp;hellip;&lt;/p&gt;
@@ -122,7 +126,7 @@
 &lt;p&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Flows&lt;/strong&gt; can be seen as the railway track - connecting states together in a very controlled way&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;States&lt;/strong&gt; can be seen as the railway stations - they&amp;rsquo;re reached by navigating flows. Journeys start at the &lt;em&gt;initial&lt;/em&gt; state.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;States&lt;/strong&gt; can be seen as the railway stations - they&amp;rsquo;re reached by travelling around flows. Journeys start at the &lt;em&gt;initial&lt;/em&gt; state.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Flobots&lt;/strong&gt; therefore can be seen as individual trains as they transition from state-to-state. A single flow can have any number of Flobots making their way around it.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -217,7 +221,7 @@ Blueprints also help with versioning, collaboration (on Github or similar) and i
 
 &lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
 
-&lt;p&gt;Flobot takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;#states&#34;&gt;State Classes&lt;/a&gt; to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employees a &lt;strong&gt;plugin&lt;/strong&gt; architecture.
+&lt;p&gt;Flobot takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;#states&#34;&gt;State Classes&lt;/a&gt; to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a &lt;strong&gt;plugin&lt;/strong&gt; architecture.
 A Flobot plugin extends the core framework with related State Classes (along with other internal components required to run them).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some example of some official Flobot plugins:&lt;/strong&gt;&lt;/p&gt;
