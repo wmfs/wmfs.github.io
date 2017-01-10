@@ -129,8 +129,8 @@
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Flobots are always persisted as a simple document so that survive server restarts.
-This is the sort of thing that might be persisted for a Flobot travelling around that &lt;strong&gt;booking-someone-sick&lt;/strong&gt; flow from earlier:&lt;/p&gt;
+&lt;p&gt;Flobots are always persisted as a simple document so that they can survive server restarts.
+This is an example of what might be persisted for a Flobot travelling around the &lt;strong&gt;booking-someone-sick&lt;/strong&gt; flow from earlier:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-JSON&#34;&gt;{ 
     &amp;quot;_id&amp;quot; : &amp;quot;586e42ade923c119c4a4a85b&amp;quot;, 
