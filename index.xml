@@ -323,20 +323,20 @@ Thankfully it&amp;rsquo;s really straightforward to write new plugins for Flobot
     
     <item>
       <title>persisting</title>
-      <link>https://wmfs.github.io/state-classes/persisting/</link>
+      <link>https://wmfs.github.io/state-classes/list/persisting/</link>
       <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
       
-      <guid>https://wmfs.github.io/state-classes/persisting/</guid>
+      <guid>https://wmfs.github.io/state-classes/list/persisting/</guid>
       <description>&lt;p&gt;Blah!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>sendingEmail</title>
-      <link>https://wmfs.github.io/state-classes/sending-email/</link>
+      <link>https://wmfs.github.io/state-classes/list/sending-email/</link>
       <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
       
-      <guid>https://wmfs.github.io/state-classes/sending-email/</guid>
+      <guid>https://wmfs.github.io/state-classes/list/sending-email/</guid>
       <description>&lt;p&gt;Blah!&lt;/p&gt;
 </description>
     </item>
