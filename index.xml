@@ -51,7 +51,7 @@
 &lt;p&gt;Each of the circles in the previous diagram are known as &lt;strong&gt;States&lt;/strong&gt;.  More accurately, a Flobot flow contains all the necessary information to assemble a &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;Finite State Machine&lt;/a&gt; (&lt;strong&gt;FSM&lt;/strong&gt;), that being:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;A list of possible states (exactly one of a finite number of states at any given time)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A list of possible states (an FSM can be in exactly one of a finite number of states at any given time)&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;How states are connected together (along with any conditions that are required)&lt;/p&gt;&lt;/li&gt;
 
