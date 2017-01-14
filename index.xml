@@ -292,12 +292,324 @@ Thankfully it&amp;rsquo;s really straightforward to write new plugins for Flobot
     </item>
     
     <item>
-      <title>State Classes</title>
-      <link>https://wmfs.github.io/state-classes/</link>
-      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      <title>Core Components</title>
+      <link>https://wmfs.github.io/core-components/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/state-classes/</guid>
-      <description>&lt;p&gt;This is a list of all &lt;a href=&#34;http://localhost:1313/key-concepts/#states&#34;&gt;State Classes&lt;/a&gt; that are currently available via the core Flobot plugins.&lt;/p&gt;
+      <guid>https://wmfs.github.io/core-components/</guid>
+      <description>
+
+&lt;p&gt;This page contains an inventory of all the main types of component supplied via the Flobot module and core plugins:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/components.png&#34; alt=&#34;Diagram showing how plugins/blueprints/config/services relate to each other&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#list-of-plugins&#34;&gt;List of plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#list-of-state-classes&#34;&gt;List of States Classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#list-of-commands&#34;&gt;List of commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#list-of-services&#34;&gt;List of services&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;list-of-plugins&#34;&gt;List of plugins&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Plugin&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;a href=&#34;https://github.com/wmfs/flobot&#34;&gt;flobot&lt;/a&gt; module has a &lt;a href=&#34;https://github.com/wmfs/flobot/lib/plugin&#34;&gt;built-in plugin&lt;/a&gt; which provides low-level components to help get things started.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt;alerts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds some alerting options to the Flobot framework&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds an Elasticsearch-based search service to the Flobot framework&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt;express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Exposes the Flobot framework via an Express.js web app.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds some form capabilities to Flobot&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt;import&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;For extracting data from files and loading into Flobot storage&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-mongodb-plugin#readme&#34;&gt;mongodb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Replace Flobot&amp;#39;s out-the-box memory storage with MongoDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;list-of-state-classes&#34;&gt;List of State Classes&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;State Class&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Plugin&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/elasticsearch-deleting-from-search-index&#34;&gt;deletingFromSearchIndex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Removes a document from an Elasticsearch index&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/flobot-finding-one&#34;&gt;findingOne&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Fetches a single document from storage and adds to a Flobot&amp;#39;s context&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/forms-form-filling&#34;&gt;formFilling&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Indicates which form a human needs to complete - and waits until data is submitted&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/import-importing&#34;&gt;importing&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Streams data from a pre-prepared directory and into storage&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt; import&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/flobot-persisting&#34;&gt;persisting&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Saves a document to storage&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/import-producing-import-files&#34;&gt;producingImportFiles&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent &lt;strong&gt;importing&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt; import&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/elasticsearch-searching&#34;&gt;searching&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Runs a query on an Elasticsearch index&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/alerts-sending-email&#34;&gt;sendingEmail&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;For sending an email!&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/elasticsearch-setting-search-index&#34;&gt;settingSearchIndex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Indexes an Elasticsearch document&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/flobot-starting&#34;&gt;starting&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;An internal (automatically added) state that performs some Flobot-startup tasks&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;list-of-commands&#34;&gt;List of commands&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Plugin&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;commands/flobot-env&#34;&gt;env&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Configure states by referring to environment variables&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;commands/flobot-sprintf&#34;&gt;sprintf&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Derive options via a sprintf string template&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;commands/flobot-value&#34;&gt;value&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Get a value from the Flobot&amp;#39;s context&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;list-of-services&#34;&gt;List of services&lt;/h2&gt;
+
+&lt;div class=&#34;admonition warning&#34;&gt;
+&lt;p class=&#34;admonition-title&#34;&gt;Advanced&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re not going to be writing your own Flobot plugins, you can probably give this section a miss for &lt;now&gt;&lt;/now&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Service&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Plugin&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/express-auth&#34;&gt;auth&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-blueprint-docs&#34;&gt;blueprintDocs&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Allows tracking of documents created via blueprints, so they don&amp;#39;t get reverted when Flobot restarts&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-caches&#34;&gt;caches&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds &lt;a href=&#34;https://www.npmjs.com/package/lru-cache&#34;&gt;lru-cache&lt;/a&gt;-based caching to Flobot&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-commands&#34;&gt;commands&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Service to support blueprint commands&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/alerts-email&#34;&gt;email&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Integrates Flobot with &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt; to offer email-sending capabilities&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-expression&#34;&gt;expression&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Provides safe, &lt;a href=&#34;https://www.npmjs.com/package/esprima&#34;&gt;Esprima&lt;/a&gt;-based expression evaluation&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/express-flobot-rest&#34;&gt;flobotRest&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Exposes the core Flobot abilities (start, get, update and cancel) over a JWT-secured REST API&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-flobots&#34;&gt;flobots&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Creates Finite State Machines based on flow definitions and an API to interact with Flobots&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/forms-forms&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Exposes UI configuration (as supplied via blueprints in &lt;a href=&#34;http://schemaform.io/&#34;&gt;Schema Form&lt;/a&gt; format)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-functions&#34;&gt;functions&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds ability to run custom logic as defined in a blueprint&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-inventory&#34;&gt;inventory&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/express-rbac&#34;&gt;rbac&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;RBAC (Role Based Access Control) solution for Flobot. Uses the &lt;code&gt;storage&lt;/code&gt; service for persistence and supports role inheritance,&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-registry&#34;&gt;registry&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Provides a mechanism for states to refer to site-specific values&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/elasticsearch-search&#34;&gt;search&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;For integrating Flobot with an Elasticsearch server&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/express-server&#34;&gt;server&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-states&#34;&gt;states&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Stores and prepares State Classes, ahead of generating flows&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;This is the default in-memory storage service that ships with Flobot. Useful for testing and not much else. See other &lt;code&gt;storage&lt;/code&gt; services from other plugins.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/mongodb-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Replaces the default in-memory storage solution with a MongoDB-backed alternative&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-mongodb-plugin#readme&#34;&gt; mongodb&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-tags&#34;&gt;tags&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Provides a generic mechanism to help tag/classify search results, tasks, forms etc.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-temp&#34;&gt;temp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Helps configure and manage a temporary folder for Flobot to use&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/express-users&#34;&gt;users&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds user-management capabilities to Flobot (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
@@ -322,38 +634,178 @@ Thankfully it&amp;rsquo;s really straightforward to write new plugins for Flobot
     </item>
     
     <item>
-      <title>persisting</title>
-      <link>https://wmfs.github.io/state-classes/list/persisting/</link>
-      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      <title>deletingFromSearchIndex state</title>
+      <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/state-classes/list/persisting/</guid>
-      <description>&lt;p&gt;Blah!&lt;/p&gt;
+      <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</guid>
+      <description>
+
+&lt;p&gt;Removes a document from an Elasticsearch index&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>sendingEmail</title>
-      <link>https://wmfs.github.io/state-classes/list/sending-email/</link>
-      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      <title>findingOne state</title>
+      <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/state-classes/list/sending-email/</guid>
-      <description>&lt;p&gt;Blah!&lt;/p&gt;
+      <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
+      <description>
+
+&lt;p&gt;Fetches a single document from storage and adds to a Flobot&amp;#39;s context&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Welcome to Flobot!</title>
-      <link>https://wmfs.github.io/</link>
-      <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
+      <title>formFilling state</title>
+      <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/</guid>
-      <description>&lt;p&gt;Flobot has been developed as an alternative for organizations (especially non-profits and Government departments) who need modern and continually-evolving business software - but can do without the complexity, expense and vendor lock-in that usually accompanies it.&lt;/p&gt;
+      <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
+      <description>
 
-&lt;p&gt;By placing an emphasis on openness, collaboration and self-sufficiency, Flobot has been specifically engineered to deliver a service that can meet the challenges facing today&amp;rsquo;s Public Sector.&lt;/p&gt;
+&lt;p&gt;Indicates which form a human needs to complete - and waits until data is submitted&lt;hr&gt;&lt;/p&gt;
 
-&lt;p&gt;Flobot is a &lt;a href=&#34;http://www.mrc-productivity.com/blog/2016/08/5-huge-benefits-of-low-code-development/&#34;&gt;low-code development&lt;/a&gt; framework for &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
 
-&lt;p&gt;Built with &lt;i class=&#34;icon icon-heart&#34;&gt;&lt;/i&gt; at &lt;a href=&#34;https://www.wmfs.net/&#34;&gt;West Midlands Fire Service&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt;forms&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>importing state</title>
+      <link>https://wmfs.github.io/core-components/states/import-importing/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/import-importing/</guid>
+      <description>
+
+&lt;p&gt;Streams data from a pre-prepared directory and into storage&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt;import&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>persisting state</title>
+      <link>https://wmfs.github.io/core-components/states/flobot-persisting/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/flobot-persisting/</guid>
+      <description>
+
+&lt;p&gt;Saves a document to storage&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>producingImportFiles state</title>
+      <link>https://wmfs.github.io/core-components/states/import-producing-import-files/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/import-producing-import-files/</guid>
+      <description>
+
+&lt;p&gt;Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent &lt;strong&gt;importing&lt;/strong&gt;.&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt;import&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>searching state</title>
+      <link>https://wmfs.github.io/core-components/states/elasticsearch-searching/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/elasticsearch-searching/</guid>
+      <description>
+
+&lt;p&gt;Runs a query on an Elasticsearch index&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>sendingEmail state</title>
+      <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
+      <description>
+
+&lt;p&gt;For sending an email!&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt;alerts&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>settingSearchIndex state</title>
+      <link>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</guid>
+      <description>
+
+&lt;p&gt;Indexes an Elasticsearch document&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>starting state</title>
+      <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
+      <description>
+
+&lt;p&gt;An internal (automatically added) state that performs some Flobot-startup tasks&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This state is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>env command</title>
+      <link>https://wmfs.github.io/core-components/commands/flobot-env/</link>
+      <pubDate>Sat, 14 Jan 2017 23:09:07 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/commands/flobot-env/</guid>
+      <description>
+
+&lt;p&gt;Configure states by referring to environment variables&lt;hr&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;related&#34;&gt;Related&lt;/h3&gt;
+
+&lt;p&gt;This command is provided via the &lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin&lt;/p&gt;
 </description>
     </item>
     

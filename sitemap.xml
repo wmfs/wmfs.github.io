@@ -12,8 +12,8 @@
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/state-classes/</loc>
-    <lastmod>2016-03-09T20:10:46+01:00</lastmod>
+    <loc>https://wmfs.github.io/core-components/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
   </url>
   
   <url>
@@ -22,18 +22,184 @@
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/state-classes/list/persisting/</loc>
-    <lastmod>2016-03-09T20:10:46+01:00</lastmod>
+    <loc>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/state-classes/list/sending-email/</loc>
-    <lastmod>2016-03-09T20:10:46+01:00</lastmod>
+    <loc>https://wmfs.github.io/core-components/states/flobot-finding-one/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/forms-form-filling/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/import-importing/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/flobot-persisting/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/import-producing-import-files/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/elasticsearch-searching/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/alerts-sending-email/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/states/flobot-starting/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/commands/flobot-env/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/commands/flobot-sprintf/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/commands/flobot-value/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/express-auth/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-blueprint-docs/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-caches/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-commands/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/alerts-email/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-expression/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/express-flobot-rest/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-flobots/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/forms-forms/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-functions/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-inventory/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/express-rbac/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-registry/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/elasticsearch-search/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/express-server/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-states/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-storage/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/mongodb-storage/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-tags/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/flobot-temp/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/services/express-users/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/</loc>
     <lastmod>2016-03-08T21:07:13+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/core-components/</loc>
+    <lastmod>2017-01-14T23:09:07+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -56,12 +222,6 @@
   
   <url>
     <loc>https://wmfs.github.io/license/</loc>
-    <lastmod>2016-03-09T20:10:46+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/state-classes/</loc>
     <lastmod>2016-03-09T20:10:46+01:00</lastmod>
     <priority>0</priority>
   </url>
