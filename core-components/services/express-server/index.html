@@ -307,11 +307,65 @@
 
 			
 
-<p>Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints<hr></p>
+<p>Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints. This service is provided via the
+<a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;staticRootDir&quot;: &quot;/some/dir/somewhere&quot;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>staticRootDir</em></td>
+<td><code>string</code></td>
+<td>A path pointing to a directory where static blueprint assets will be copied and served</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="blueprint-dirs">Blueprint dirs</h2>
+
+<blockquote>
+<p>This service can load resources defined in the following Blueprint directories:</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Content</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>/images</code></td>
+<td>A place to put images that can be served-up in Forms and similar</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="boots-after">Boots after</h3>
+
+<p><code>temp</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

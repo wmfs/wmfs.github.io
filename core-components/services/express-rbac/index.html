@@ -307,11 +307,24 @@
 
 			
 
-<p>RBAC (Role Based Access Control) solution for Flobot. Uses the <code>storage</code> service for persistence and supports role inheritance,<hr></p>
+<p>Provides JWT-based authentication capabilities. This service is provided via the
+<a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin</p>
+<ul>
+<li>This service doesn&rsquo;t require any configuration to boot.</li>
+</ul>
+
+<h3 id="boots-after">Boots after</h3>
+
+<p><code>flobots</code>
+ <code>forms</code>
+ <code>storage</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

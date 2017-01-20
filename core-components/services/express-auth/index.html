@@ -307,11 +307,53 @@
 
 			
 
-<p>Provides JWT-based authentication capabilities<hr></p>
+<p>Provides JWT-based authentication capabilities. This service is provided via the
+<a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;auth&quot;: {
+    &quot;secret&quot;: &quot;Shhh!&quot;,
+    &quot;audience&quot;: &quot;myPeople!&quot;
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>secret</em></td>
+<td><code>string</code></td>
+<td>Used to sign/validate JSON Web Tokens (JWT)</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>audience</em></td>
+<td><code>string</code></td>
+<td>The audience of a token is the intended recipient of the token - typically, the base address of the resource being accessed</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="boots-after">Boots after</h3>
+
+<p><code>server</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

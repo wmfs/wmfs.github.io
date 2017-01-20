@@ -307,11 +307,44 @@
 
 			
 
-<p>Provides a generic mechanism to help tag/classify search results, tasks, forms etc.<hr></p>
+<p>Provides a generic mechanism to help tag/classify search results, tasks, forms etc. This service is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<ul>
+<li>This service doesn&rsquo;t require any configuration to boot.</li>
+</ul>
+
+<h2 id="blueprint-dirs">Blueprint dirs</h2>
+
+<blockquote>
+<p>This service can load resources defined in the following Blueprint directories:</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Content</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>/tags</code></td>
+<td>JSON files providing &#39;tags&#39; which are used throughout Flobot to help categorise things and aid discovery</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="boots-after">Boots after</h3>
+
+<p><code>storage</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

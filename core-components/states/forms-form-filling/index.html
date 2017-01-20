@@ -307,11 +307,57 @@
 
 			
 
-<p>Indicates which form a human needs to complete - and waits until data is submitted<hr></p>
+<p>Indicates which form a human needs to interact with - and waits until a response is received. This state is provided via the
+<a href="https://github.com/wmfs/flobot-forms-plugin#readme">forms</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot-forms-plugin#readme">forms</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;formFilling&quot;: {
+    &quot;options&quot;: {
+      &quot;formId&quot;: &quot;catEditingForm&quot;,
+      &quot;target&quot;: &quot;catData&quot;
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>formId</em></td>
+<td><code>string</code></td>
+<td>The id of a form in the current namespace that a human needs to interact with</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>target</em></td>
+<td><code>string</code></td>
+<td>A &#39;.&#39; delimited path to where data that&#39;s submitted via the form should be set on the Flobot context</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>false</code></p>
+
+<blockquote>
+<p><strong>Note:</strong> This state will require an external update before flow will advance</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

@@ -307,11 +307,26 @@
 
 			
 
-<p>Allows tracking of documents created via blueprints, so they don&#39;t get reverted when Flobot restarts<hr></p>
+<p>Allows tracking of documents created via blueprints, so they don&#39;t get reverted when Flobot restarts. This service is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<ul>
+<li>This service doesn&rsquo;t require any configuration to boot.</li>
+</ul>
+
+<h3 id="boots-before">Boots before</h3>
+
+<p><code>flobots</code></p>
+
+<h3 id="boots-after">Boots after</h3>
+
+<p><code>storage</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

@@ -307,11 +307,43 @@
 
 			
 
-<p>Get a value from the Flobot&#39;s context<hr></p>
+<p>Get a value from the Flobot&#39;s context. This command is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="command-config">Command config</h2>
 
-<p>This command is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;catName&quot;: {
+    &quot;$value&quot;: {
+      &quot;path&quot;: &quot;myCatData.name&quot;
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>path</em></td>
+<td><code>string</code></td>
+<td>A &#39;.&#39; delimited path pointing to a value on the Flobot context</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

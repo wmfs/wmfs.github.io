@@ -307,11 +307,97 @@
 
 			
 
-<p>Replaces the default in-memory storage solution with a MongoDB-backed alternative<hr></p>
+<p>Replaces the default in-memory storage solution with a MongoDB-backed alternative. This service is provided via the
+<a href="https://github.com/wmfs/flobot-mongodb-plugin#readme">mongodb</a> plugin  - note that alternative <code>storage</code> services are offered via the following plugins:</p>
 
-<h3 id="related">Related</h3>
+<ul>
+<li><a href="https://wmfs.github.io/core-components/services/flobot-storage">flobot</a></li>
+</ul>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot-mongodb-plugin#readme">mongodb</a> plugin</p>
+<h2 id="boot-config">Boot config</h2>
+
+<pre><code class="language-json">{
+  &quot;mongodbConnection&quot;: {
+    &quot;host&quot;: &quot;localhost&quot;,
+    &quot;port&quot;: 27017,
+    &quot;database&quot;: &quot;flobotTest&quot;
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>host</em></td>
+<td><code>string</code></td>
+<td>Host name of MongoDB instance to connect to</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>port</em></td>
+<td><code>number</code></td>
+<td>Port number where MongoDB is running</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>database</em></td>
+<td><code>string</code></td>
+<td>Database name where all model-data should be persisted</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>username</em></td>
+<td><code>string</code></td>
+<td>Username to use when connecting</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>password</em></td>
+<td><code>string</code></td>
+<td>Password to use when connecting</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="blueprint-dirs">Blueprint dirs</h2>
+
+<blockquote>
+<p>This service can load resources defined in the following Blueprint directories:</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Content</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>/models</code></td>
+<td>One JSON file per model (contents to be a JSON schema for defining the model&#39;s data structure)</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

@@ -307,11 +307,104 @@
 
 			
 
-<p>Indexes an Elasticsearch document<hr></p>
+<p>Indexes an Elasticsearch document. This state is provided via the
+<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;settingSearchIndex&quot;: {
+    &quot;options&quot;: {
+      &quot;docName&quot;: &quot;cat&quot;,
+      &quot;tags&quot;: [
+        &quot;pet&quot;,
+        &quot;cat&quot;
+      ],
+      &quot;keyPaths&quot;: {
+        &quot;name&quot;: &quot;catDocFromParams.name&quot;
+      },
+      &quot;title&quot;: {
+        &quot;$sprintf&quot;: {
+          &quot;template&quot;: &quot;%s (%s)&quot;,
+          &quot;inputPaths&quot;: [
+            &quot;catDocFromParams.name&quot;,
+            &quot;catDocFromParams.size&quot;
+          ]
+        }
+      },
+      &quot;summary&quot;: {
+        &quot;$value&quot;: {
+          &quot;path&quot;: &quot;catDocFromParams.comment&quot;
+        }
+      },
+      &quot;launches&quot;: [
+        {
+          &quot;title&quot;: &quot;Edit&quot;,
+          &quot;flowId&quot;: &quot;catEditingFlow&quot;
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>docName</em></td>
+<td><code>string</code></td>
+<td>Used to calculate the name of an Elasticsearch type where the document should be indexed (type names are derived as [namespace]_[docName]).</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>keyPaths</em></td>
+<td><code>object</code></td>
+<td>Used to derive the id of the document to delete. Provide key/value pairs&hellip; the key will be ignored (for now), but the value should be a &#39;.&#39; delimited path pointing to a value on the Flobot context. These context-values will be joined with &#39;_&#39; to form a unique identifier for the document.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>title</em></td>
+<td><code>string</code></td>
+<td>A short label to identify a document - a good candidate for using a <strong>command</strong> (e.g. <code>$value</code>, <code>$sprintf</code>) to assemble some dynamic content from the Flobot context.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>summary</em></td>
+<td><code>string</code></td>
+<td>Provide a brief summary of the document being indexed (again consider use of <code>$value</code>, <code>sprintf</code> commands for dynamic content).</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>launches</em></td>
+<td><code>array</code></td>
+<td>In the case where a user has searched and found the document that&#39;s to be indexed, chances are they&#39;ll want to perform an action on it (view, edit etc.) Each of the possible actions are termed a <em>launch</em>&#39;. Launches are simple objects that contain the <code>title</code> of the action (e.g. <em>Edit</em> or <em>View</em> - but can be anything) and a <code>flowId</code> of any flow that can perform that action.</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

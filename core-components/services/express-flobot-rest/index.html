@@ -307,11 +307,24 @@
 
 			
 
-<p>Exposes the core Flobot abilities (start, get, update and cancel) over a JWT-secured REST API<hr></p>
+<p>Exposes the core Flobot abilities (start, get, update and cancel) over a JWT-secured REST API. This service is provided via the
+<a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a> plugin</p>
+<ul>
+<li>This service doesn&rsquo;t require any configuration to boot.</li>
+</ul>
+
+<h3 id="boots-after">Boots after</h3>
+
+<p><code>auth</code>
+ <code>rbac</code>
+ <code>forms</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

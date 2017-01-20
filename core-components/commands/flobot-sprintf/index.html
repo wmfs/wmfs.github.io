@@ -307,11 +307,55 @@
 
 			
 
-<p>Derive options via a sprintf string template<hr></p>
+<p>Derive a runtime value using a <a href="https://github.com/alexei/sprintf.js">sprintf</a> string template. This command is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="command-config">Command config</h2>
 
-<p>This command is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;title&quot;: {
+    &quot;$sprintf&quot;: {
+      &quot;template&quot;: &quot;%s %s (aged %d years)&quot;,
+      &quot;inputPaths&quot;: [
+        &quot;employeeData.firstName&quot;,
+        &quot;employeeData.lastName&quot;,
+        &quot;employeeData.age&quot;
+      ]
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>template</em></td>
+<td><code>string</code></td>
+<td>A string template that can contain <code>%s</code>, <code>%d</code> and similar placeholders</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>inputPaths</em></td>
+<td><code>array</code></td>
+<td>An array of strings - the values of which should be &#39;.&#39; delimited paths pointing to values on the Flobot context. These context values will be combined as per the <code>template</code> to return the output string. See <a href="https://github.com/alexei/sprintf.js#javascript-vsprintf">vsprintf</a> for more info.</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

@@ -307,11 +307,64 @@
 
 			
 
-<p>Integrates Flobot with <a href="https://nodemailer.com/">Nodemailer</a> to offer email-sending capabilities<hr></p>
+<p>Integrates Flobot with <a href="https://nodemailer.com/">Nodemailer</a> to offer email-sending capabilities. This service is provided via the
+<a href="https://github.com/wmfs/flobot-alerts-plugin#readme">alerts</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot-alerts-plugin#readme">alerts</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;email&quot;: {
+    &quot;from&quot;: &quot;someone&lt;someone@flobotjs.com&gt;&quot;,
+    &quot;transport&quot;: {
+      &quot;host&quot;: &quot;smtp.some-server&quot;,
+      &quot;port&quot;: 587,
+      &quot;secure&quot;: false,
+      &quot;auth&quot;: {
+        &quot;user&quot;: &quot;someone@flobotjs.com&quot;,
+        &quot;pass&quot;: &quot;secret!&quot;
+      },
+      &quot;tls&quot;: {
+        &quot;ciphers&quot;: &quot;SSLv3&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>from</em></td>
+<td><code>string</code></td>
+<td>The e-mail address of the sender. All e-mail addresses can be plain <code>sender@server.com</code> or formatted <code>Sender Name &lt;sender@server.com&gt;</code>. See <a href="https://nodemailer.com/address-formatting/">Address Formatting</a> for more details.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>transport</em></td>
+<td><code>object</code></td>
+<td>A <a href="https://nodemailer.com/">Nodemailer</a> configuration object, connection URL</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="boots-before">Boots before</h3>
+
+<p><code>flobots</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

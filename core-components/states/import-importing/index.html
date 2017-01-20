@@ -307,11 +307,53 @@
 
 			
 
-<p>Streams data from a pre-prepared directory and into storage<hr></p>
+<p>Streams data from a pre-prepared directory and into storage. This state is provided via the
+<a href="https://github.com/wmfs/flobot-import-plugin#readme">import</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot-import-plugin#readme">import</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;importing&quot;: {
+    &quot;options&quot;: {
+      &quot;importFrom&quot;: {
+        &quot;$value&quot;: {
+          &quot;path&quot;: &quot;importInfo.outputDir&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>importFrom</em></td>
+<td><code>string</code></td>
+<td>A path indicating where to find the processed import directory (which is available via the <code>producing-import-files</code> state)</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

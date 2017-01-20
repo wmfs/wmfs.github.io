@@ -307,11 +307,57 @@
 
 			
 
-<p>Configure states by referring to environment variables<hr></p>
+<p>Allows a state to refer to an environment variable. This command is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="command-config">Command config</h2>
 
-<p>This command is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;sendingEmail&quot;: {
+    &quot;options&quot;: {
+      &quot;to&quot;: {
+        &quot;$env&quot;: {
+          &quot;variableName&quot;: &quot;FLOBOT_WELCOME_RECIPIENTS&quot;,
+          &quot;failIfNotSet&quot;: true
+        }
+      },
+      &quot;subject&quot;: &quot;Welcome to Flobot!&quot;,
+      &quot;text&quot;: &quot;Congratulations... you are now part of the wonderful world of Flobot! &lt;3&quot;
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>variableName</em></td>
+<td><code>string</code></td>
+<td>Name of an environment variable to read a value from</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>failIfNotSet</em></td>
+<td><code>boolean</code></td>
+<td>Should things fail if the environment variable hasn&#39;t been set? Defaults to <code>false</code>.</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

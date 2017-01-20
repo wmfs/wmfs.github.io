@@ -23,7 +23,7 @@
 &lt;p&gt;&lt;strong&gt;Everything in Flobot is built around flows: definitions of real-world business processes.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;An organization is likely to contain hundreds of business processes, of all shapes-and-sizes. Flows can underpin something as simple as searching for a document through to complex multi-team undertakings.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;An organisation is likely to contain hundreds of business processes, of all shapes-and-sizes. Flows can underpin something as simple as searching for a document through to complex multi-team undertakings.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Flows may involve people from multiple teams or require no human input at all. It&amp;rsquo;s likely an employee&amp;rsquo;s role will require interaction with several flows - but probably not all of them.&lt;/p&gt;&lt;/li&gt;
 
@@ -46,6 +46,8 @@
 &lt;li&gt;&lt;p&gt;And to finish, the employee will have a new entry added to their sickness record.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr&gt;
+
 &lt;h2 id=&#34;states&#34;&gt;States&lt;/h2&gt;
 
 &lt;p&gt;Each of the circles in the previous diagram are known as &lt;strong&gt;States&lt;/strong&gt;.  More accurately, a Flobot flow contains all the necessary information to assemble a &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;Finite State Machine&lt;/a&gt; (&lt;strong&gt;FSM&lt;/strong&gt;), that being:&lt;/p&gt;
@@ -60,62 +62,11 @@
 
 &lt;p&gt;Flobot offers a pool of different &lt;strong&gt;State Classes&lt;/strong&gt; from which flows can be constructed. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few state classes.&lt;/p&gt;
 
-&lt;p&gt;For example, the state classes below should be enough to model large swathes of organizational data collection:&lt;/p&gt;
+&lt;p&gt;For example, the state classes below should be enough to model large swathes of organisational data collection:&lt;/p&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;State class&lt;/th&gt;
-&lt;th&gt;What does the state do?&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
+&lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;formFilling&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Provides the details of a form for a human to complete. Things will wait in this state until some data is submitted&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;saving-doc&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Saves a document to a database (e.g. the data collected via a &lt;code&gt;formFilling&lt;/code&gt; state)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;settingSearchIndex&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Adds some details to a search index so that people can search and find it again later&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;finding-one&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Fetches a single document from a database&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;deleting-one&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Deletes a document from a database&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;deletingFromSearchIndex&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Removes details from a search index - so that it won&amp;rsquo;t show-up in searches anymore&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;sendingEmail&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Generates and sends an email&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;importing&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Imports some data from CSV files or similar&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-&lt;li&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;http://localhost:1313/state-classes/&#34;&gt;State Classes&lt;/a&gt; section.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;hr&gt;
 
 &lt;h2 id=&#34;flobots&#34;&gt;Flobots&lt;/h2&gt;
 
@@ -207,68 +158,75 @@ This is an example of what might be persisted for a Flobot travelling around the
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;hr&gt;
+
 &lt;h2 id=&#34;blueprints&#34;&gt;Blueprints&lt;/h2&gt;
 
 &lt;p&gt;On their own, flow definitions aren&amp;rsquo;t enough&amp;hellip; for everything to spark, states need to be fed things like data models, form layouts, images, custom logic, templates etc.
 This is where Flobot &lt;strong&gt;Blueprints&lt;/strong&gt; come in. The actual content of a Blueprint is beyond the scope of this article, but just to say Blueprints themselves are nothing special, just a simple folder structure:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/blueprint-dir.png&#34; alt=&#34;Simple blueprint structure showing a root directory and folders such as &#39;flows&#39;, &#39;forms&#39; and &#39;models&#39;&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Directory&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;p&gt;Given an organization could potentially attract hundreds of flows, blueprints can logically group together related flows (perhaps into teams or functional areas) to help make things more manageable.
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/flows&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Flow definitions defined in JSON files&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/functions&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;One file per Node.js module (which should export a single function).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/registryKeys&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;A collection of JSON files which are used to create entries in the Flobot registry.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/models&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;One JSON file per model (contents to be a JSON schema for defining the model&amp;#39;s data structure)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/tags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;JSON files providing &amp;#39;tags&amp;#39; which are used throughout Flobot to help categorise things and aid discovery&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/images&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;A place to put images that can be served-up in Forms and similar&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/forms&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;One JSON file per Form (currently need to be in &lt;a href=&#34;http://schemaform.io/&#34;&gt;Schemaform&lt;/a&gt; format)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Given an organisation could potentially attract hundreds of flows, blueprints can logically group together related flows (perhaps into teams or functional areas) to help make things more manageable.
 Blueprints also help with versioning, collaboration (on Github or similar) and interoperability.&lt;/p&gt;
 
 &lt;p&gt;The Flobot framework can load any number of blueprints at startup, potentially serving all back-office functionality from a single server.&lt;/p&gt;
+
+&lt;hr&gt;
 
 &lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
 
 &lt;p&gt;Flobot takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;#states&#34;&gt;State Classes&lt;/a&gt; to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a &lt;strong&gt;plugin&lt;/strong&gt; architecture.
 A Flobot plugin extends the core framework with related State Classes (along with other internal components required to run them).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Some example of some official Flobot plugins:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-plugins&#34;&gt;list of core plugins&lt;/a&gt; to get a feel for what plugins are all about&lt;/strong&gt;&lt;/p&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Plugin&lt;/th&gt;
-&lt;th&gt;Module description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin&#34;&gt;Express&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Makes Flobot accessible via the web. Provides a secure REST API for controlling Flobots and a static server for serving blueprint assets&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-mongodb-plugin&#34;&gt;MongoDB&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Replaces the default in-memory storage service with a MongoDB backed alternative&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin&#34;&gt;Elasticsearch&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds Elasticsearch search-index integration&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin&#34;&gt;Forms&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;For collecting data from humans&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin&#34;&gt;Import&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Stream data from .CSV files into Flobot storage&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin&#34;&gt;Alerts&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides states to send emails and similar&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Flobot&amp;rsquo;s current library of state classes is certainly far from exhaustive and organizations will undoubtedly have specialist requirements of their own.
-Thankfully it&amp;rsquo;s really straightforward to write new plugins for Flobot to add missing capabilities.&lt;/p&gt;
+&lt;p&gt;Flobot&amp;rsquo;s current library of state classes is certainly far from exhaustive and organisations will undoubtedly have specialist requirements of their own.
+It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing capabilities.&lt;/p&gt;
 </description>
     </item>
     

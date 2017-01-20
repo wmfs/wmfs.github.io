@@ -391,13 +391,13 @@
 
 <tr>
 <td><a href="states/flobot-finding-one">findingOne</a></td>
-<td>Fetches a single document from storage and adds to a Flobot&#39;s context</td>
+<td>Fetches a single document from storage and adds to a Flobot context</td>
 <td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="states/forms-form-filling">formFilling</a></td>
-<td>Indicates which form a human needs to complete - and waits until data is submitted</td>
+<td>Indicates which form a human needs to interact with - and waits until a response is received</td>
 <td><a href="https://github.com/wmfs/flobot-forms-plugin#readme"> forms</a></td>
 </tr>
 
@@ -427,7 +427,7 @@
 
 <tr>
 <td><a href="states/alerts-sending-email">sendingEmail</a></td>
-<td>For sending an email!</td>
+<td>For sending an emails - just a thin wrapper over <a href="https://nodemailer.com/">Nodemailer</a></td>
 <td><a href="https://github.com/wmfs/flobot-alerts-plugin#readme"> alerts</a></td>
 </tr>
 
@@ -459,13 +459,13 @@
 <tbody>
 <tr>
 <td><a href="commands/flobot-env">env</a></td>
-<td>Configure states by referring to environment variables</td>
+<td>Allows a state to refer to an environment variable</td>
 <td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="commands/flobot-sprintf">sprintf</a></td>
-<td>Derive options via a sprintf string template</td>
+<td>Derive a runtime value using a <a href="https://github.com/alexei/sprintf.js">sprintf</a> string template</td>
 <td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
 </tr>
 
@@ -508,7 +508,7 @@
 
 <tr>
 <td><a href="services/flobot-caches">caches</a></td>
-<td>Adds <a href="https://www.npmjs.com/package/lru-cache">lru-cache</a>-based caching to Flobot</td>
+<td>Adds <a href="https://www.npmjs.com/package/lru-cache">lru-cache</a>-based caching to Flobot. Note defaults will be used if no <code>caches</code> configuration is provided.</td>
 <td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
 </tr>
 
@@ -562,7 +562,7 @@
 
 <tr>
 <td><a href="services/express-rbac">rbac</a></td>
-<td>RBAC (Role Based Access Control) solution for Flobot. Uses the <code>storage</code> service for persistence and supports role inheritance,</td>
+<td>Provides JWT-based authentication capabilities</td>
 <td><a href="https://github.com/wmfs/flobot-express-plugin#readme"> express</a></td>
 </tr>
 
@@ -592,7 +592,7 @@
 
 <tr>
 <td><a href="services/flobot-storage">storage</a></td>
-<td>This is the default in-memory storage service that ships with Flobot. Useful for testing and not much else. See other <code>storage</code> services from other plugins.</td>
+<td>This is the default in-memory storage service that ships with Flobot. Useful for testing and not much else.</td>
 <td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
 </tr>
 

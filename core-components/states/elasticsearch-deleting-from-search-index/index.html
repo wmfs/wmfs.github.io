@@ -307,11 +307,59 @@
 
 			
 
-<p>Removes a document from an Elasticsearch index<hr></p>
+<p>Removes a document from an Elasticsearch index. This state is provided via the
+<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;deletingFromSearchIndex&quot;: {
+    &quot;options&quot;: {
+      &quot;docName&quot;: &quot;cat&quot;,
+      &quot;keyPaths&quot;: {
+        &quot;name&quot;: &quot;catDocKey.name&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>docName</em></td>
+<td><code>string</code></td>
+<td>Used to resolve the name of an Elasticsearch type where the document to be deleted will be found (type names are derived as [namespace]_[docName]).</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>keyPaths</em></td>
+<td><code>object</code></td>
+<td>Used to derive the id of the document to delete. Provide key/value pairs&hellip; the key will be ignored (for now), but the value should be a &#39;.&#39; delimited path pointing to a value on the Flobot context. These context-values will be joined with &#39;_&#39; to form a unique identifier to delete.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

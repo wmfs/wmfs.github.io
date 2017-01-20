@@ -307,11 +307,91 @@
 
 			
 
-<p>For sending an email!<hr></p>
+<p>For sending an emails - just a thin wrapper over <a href="https://nodemailer.com/">Nodemailer</a>. This state is provided via the
+<a href="https://github.com/wmfs/flobot-alerts-plugin#readme">alerts</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot-alerts-plugin#readme">alerts</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;sendingEmail&quot;: {
+    &quot;options&quot;: {
+      &quot;to&quot;: {
+        &quot;$env&quot;: {
+          &quot;variableName&quot;: &quot;FLOBOT_WELCOME_RECIPIENTS&quot;,
+          &quot;failIfNotSet&quot;: true
+        }
+      },
+      &quot;subject&quot;: &quot;Welcome to Flobot!&quot;,
+      &quot;text&quot;: &quot;Congratulations... you are now part of the wonderful world of Flobot! &lt;3&quot;
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>to</em></td>
+<td><code>string</code></td>
+<td>Comma separated list or an array of recipients e-mail addresses that will appear on the To: field</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>cc</em></td>
+<td><code>string</code></td>
+<td>Comma separated list or an array of recipients e-mail addresses that will appear on the Cc: field</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>bcc</em></td>
+<td><code>string</code></td>
+<td>Comma separated list or an array of recipients e-mail addresses that will appear on the Bcc: field</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>subject</em></td>
+<td><code>string</code></td>
+<td>The subject of the e-mail</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>text</em></td>
+<td><code>string</code></td>
+<td>The plaintext version of the message as an Unicode string, Buffer, Stream or an attachment-like object ({path: &#39;/var/data/&hellip;&#39;})</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>html</em></td>
+<td><code>string</code></td>
+<td>The HTML version of the message as an Unicode string, Buffer, Stream or an attachment-like object ({path: &#39;http://&hellip;&#39;})</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

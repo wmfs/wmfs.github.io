@@ -307,11 +307,101 @@
 
 			
 
-<p>Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent <strong>importing</strong>.<hr></p>
+<p>Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent <strong>importing</strong>. This state is provided via the
+<a href="https://github.com/wmfs/flobot-import-plugin#readme">import</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot-import-plugin#readme">import</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;producingImportFiles&quot;: {
+    &quot;options&quot;: {
+      &quot;parserName&quot;: &quot;csv&quot;,
+      &quot;parserOptions&quot;: {
+        &quot;quote&quot;: &quot;\&quot;&quot;,
+        &quot;delimiter&quot;: &quot;,&quot;,
+        &quot;newline&quot;: &quot;\n&quot;,
+        &quot;skipFirstLine&quot;: true,
+        &quot;trimWhitespace&quot;: true
+      },
+      &quot;targetModels&quot;: [
+        {
+          &quot;modelId&quot;: &quot;planet&quot;,
+          &quot;fieldSources&quot;: {
+            &quot;planetName&quot;: {
+              &quot;source&quot;: &quot;csvIndex&quot;,
+              &quot;options&quot;: {
+                &quot;index&quot;: 0
+              }
+            },
+            &quot;title&quot;: {
+              &quot;source&quot;: &quot;csvIndex&quot;,
+              &quot;options&quot;: {
+                &quot;index&quot;: 1
+              }
+            },
+            &quot;radiusKm&quot;: {
+              &quot;source&quot;: &quot;csvIndex&quot;,
+              &quot;options&quot;: {
+                &quot;index&quot;: 2
+              }
+            },
+            &quot;radiusMiles&quot;: {
+              &quot;source&quot;: &quot;function&quot;,
+              &quot;options&quot;: {
+                &quot;functionName&quot;: &quot;mileMaker&quot;
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>parserName</em></td>
+<td></td>
+<td>Name of the parser to process the raw source files. Currently only <code>csv</code> is supported.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>parserOptions</em></td>
+<td><code>object</code></td>
+<td>Parser-specific options</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>targetModels</em></td>
+<td><code>array</code></td>
+<td>For defining how raw data should be stored in models</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

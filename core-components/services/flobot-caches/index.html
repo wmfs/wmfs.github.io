@@ -307,11 +307,50 @@
 
 			
 
-<p>Adds <a href="https://www.npmjs.com/package/lru-cache">lru-cache</a>-based caching to Flobot<hr></p>
+<p>Adds <a href="https://www.npmjs.com/package/lru-cache">lru-cache</a>-based caching to Flobot. Note defaults will be used if no <code>caches</code> configuration is provided. This service is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;caches&quot;: {
+    &quot;userMemberships&quot;: {
+      &quot;max&quot;: 500
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>max</em></td>
+<td><code>number</code></td>
+<td>The maximum size of the cache, checked by applying the length function to all values in the cache. Not setting this will fall-back to a service-level default.</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>maxAge</em></td>
+<td><code>number</code></td>
+<td>Maximum age in ms. Items are not pro-actively pruned out as they age, but if you try to get an item that is too old, it&rsquo;ll drop it and return undefined</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

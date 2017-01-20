@@ -307,11 +307,73 @@
 
 			
 
-<p>For integrating Flobot with an Elasticsearch server<hr></p>
+<p>For integrating Flobot with an Elasticsearch server. This service is provided via the
+<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;elasticsearch&quot;: {
+    &quot;indexName&quot;: &quot;flobot_test_search&quot;,
+    &quot;host&quot;: &quot;localhost:9200&quot;,
+    &quot;log&quot;: &quot;error&quot;,
+    &quot;dropIfExists&quot;: false
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>indexName</em></td>
+<td><code>string</code></td>
+<td>Name of the Elasticsearch index to create (defaults to <code>flobot_search</code>)</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>host</em></td>
+<td><code>string</code></td>
+<td>Host string of the Elasticsearch server to connect to (e.g. <code>localhost:9200</code>)</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>log</em></td>
+<td><code>string</code></td>
+<td>Passed straight to <a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/configuration.html">Elasticsearch config</a> (Valid values include <code>error</code>, <code>warning</code> and <code>info</code>)</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>dropIfExists</em></td>
+<td><code>boolean</code></td>
+<td>If <code>true</code> then the entire Elasticsearch index will be dropped at boot-time. (Not surprisingly, defaults to <code>false</code>)</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="boots-before">Boots before</h3>
+
+<p><code>flobots</code></p>
+
+<h3 id="boots-after">Boots after</h3>
+
+<p><code>tags</code></p>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

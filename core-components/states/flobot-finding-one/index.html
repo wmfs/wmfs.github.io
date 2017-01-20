@@ -307,11 +307,78 @@
 
 			
 
-<p>Fetches a single document from storage and adds to a Flobot&#39;s context<hr></p>
+<p>Fetches a single document from storage and adds to a Flobot context. This state is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;findingOne&quot;: {
+    &quot;options&quot;: {
+      &quot;modelId&quot;: &quot;cat&quot;,
+      &quot;target&quot;: &quot;catDocFromStorage&quot;,
+      &quot;where&quot;: {
+        &quot;name&quot;: {
+          &quot;$value&quot;: {
+            &quot;path&quot;: &quot;catDocFromParams.name&quot;
+          }
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>modelId</em></td>
+<td><code>string</code></td>
+<td>This is the id of a model within the current namespace from which a single document will be fetched.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>target</em></td>
+<td><code>string</code></td>
+<td>This is a &#39;.&#39; delimited path of where the fetched document should be set on the Flobot context.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>select</em></td>
+<td><code>string</code></td>
+<td>Limits the fields (using a <a href="http://mongoosejs.com/docs/queries.html">Mongoose</a>-style syntax) that are returned. Defaults to <code>-_id -__v -createdAt -updatedAt</code>.</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>where</em></td>
+<td><code>object</code></td>
+<td>A MongoDB-style query object to define which document to find (for more information see <a href="https://docs.mongodb.com/manual/tutorial/query-documents/#specify-query-filter-conditions">here</a> and <a href="https://github.com/davidgtonge/underscore-query">here</a>). Use <strong>commands</strong> such as <code>$value</code> to dynamically access values on the Flobot context.</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

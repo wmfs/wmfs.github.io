@@ -307,11 +307,61 @@
 
 			
 
-<p>Saves a document to storage<hr></p>
+<p>Saves a document to storage. This state is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="state-config">State config</h2>
 
-<p>This state is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;persisting&quot;: {
+    &quot;options&quot;: {
+      &quot;modelId&quot;: &quot;cat&quot;,
+      &quot;doc&quot;: {
+        &quot;$value&quot;: {
+          &quot;path&quot;: &quot;catDocFromParams&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>modelId</em></td>
+<td><code>string</code></td>
+<td>This is the id of a model within the current namespace which will be used to persist the document.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>doc</em></td>
+<td><code>object</code></td>
+<td>The document that needs storing. Use <strong>commands</strong> such as <code>$value</code> and similar to dynamically access Flobot context</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">

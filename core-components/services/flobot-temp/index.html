@@ -307,11 +307,39 @@
 
 			
 
-<p>Helps configure and manage a temporary folder for Flobot to use<hr></p>
+<p>Helps configure and manage a temporary folder for Flobot to use. This service is provided via the
+<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h3 id="related">Related</h3>
+<h2 id="boot-config">Boot config</h2>
 
-<p>This service is provided via the <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin</p>
+<pre><code class="language-json">{
+  &quot;tempDir&quot;: &quot;/some/dir/somewhere&quot;
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>tempDir</em></td>
+<td><code>string</code></td>
+<td>A path pointing to a directory to use as an alternative to the system-allocated temp dir</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="related">Related</h2>
 
 
 			<aside class="copyright" role="note">
