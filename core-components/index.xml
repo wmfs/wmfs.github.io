@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Fri, 20 Jan 2017 23:05:54 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Jan 2017 23:18:04 +0000</lastBuildDate>
     <atom:link href="https://wmfs.github.io/core-components/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Core Components</title>
       <link>https://wmfs.github.io/core-components/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/</guid>
       <description>
@@ -335,7 +335,7 @@
     <item>
       <title>deletingFromSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</guid>
       <description>
@@ -399,7 +399,7 @@
     <item>
       <title>findingOne state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
       <description>
@@ -482,7 +482,7 @@
     <item>
       <title>formFilling state</title>
       <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
       <description>
@@ -544,7 +544,7 @@
     <item>
       <title>importing state</title>
       <link>https://wmfs.github.io/core-components/states/import-importing/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-importing/</guid>
       <description>
@@ -602,7 +602,7 @@
     <item>
       <title>persisting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-persisting/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-persisting/</guid>
       <description>
@@ -668,7 +668,7 @@
     <item>
       <title>producingImportFiles state</title>
       <link>https://wmfs.github.io/core-components/states/import-producing-import-files/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-producing-import-files/</guid>
       <description>
@@ -774,7 +774,7 @@
     <item>
       <title>searching state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-searching/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-searching/</guid>
       <description>
@@ -803,7 +803,7 @@
     <item>
       <title>sendingEmail state</title>
       <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
       <description>
@@ -899,7 +899,7 @@
     <item>
       <title>settingSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</guid>
       <description>
@@ -1008,7 +1008,7 @@
     <item>
       <title>starting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
       <description>
@@ -1037,7 +1037,7 @@
     <item>
       <title>env command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-env/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-env/</guid>
       <description>
@@ -1099,7 +1099,7 @@
     <item>
       <title>sprintf command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-sprintf/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-sprintf/</guid>
       <description>
@@ -1159,7 +1159,7 @@
     <item>
       <title>value command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-value/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-value/</guid>
       <description>
@@ -1207,7 +1207,7 @@
     <item>
       <title>auth service</title>
       <link>https://wmfs.github.io/core-components/services/express-auth/</link>
-      <pubDate>Fri, 20 Jan 2017 23:05:54 +0000</pubDate>
+      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/services/express-auth/</guid>
       <description>
