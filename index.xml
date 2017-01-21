@@ -241,7 +241,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
 &lt;h2 id=&#34;install-node-js&#34;&gt;Install Node.js&lt;/h2&gt;
 
 &lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; Flobot requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.
-To check everything&amp;rsquo;s OK, try running this from the commandline:&lt;/p&gt;
+To check everything&amp;rsquo;s OK, run &lt;code&gt;node&lt;/code&gt; from the command line:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node --version
 v6.9.1
@@ -454,7 +454,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>Core Components</title>
       <link>https://wmfs.github.io/core-components/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/</guid>
       <description>
@@ -802,7 +802,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>deletingFromSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</guid>
       <description>
@@ -866,7 +866,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>findingOne state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
       <description>
@@ -949,7 +949,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>formFilling state</title>
       <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
       <description>
@@ -1011,7 +1011,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>importing state</title>
       <link>https://wmfs.github.io/core-components/states/import-importing/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-importing/</guid>
       <description>
@@ -1069,7 +1069,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>logging state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-logging/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-logging/</guid>
       <description>
@@ -1117,7 +1117,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>persisting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-persisting/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-persisting/</guid>
       <description>
@@ -1183,7 +1183,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>producingImportFiles state</title>
       <link>https://wmfs.github.io/core-components/states/import-producing-import-files/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-producing-import-files/</guid>
       <description>
@@ -1289,7 +1289,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>searching state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-searching/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-searching/</guid>
       <description>
@@ -1318,7 +1318,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>sendingEmail state</title>
       <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
       <description>
@@ -1414,7 +1414,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>settingSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</guid>
       <description>
@@ -1523,7 +1523,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     <item>
       <title>starting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
-      <pubDate>Sat, 21 Jan 2017 21:46:21 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:58:47 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
       <description>

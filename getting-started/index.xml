@@ -23,7 +23,7 @@
 &lt;h2 id=&#34;install-node-js&#34;&gt;Install Node.js&lt;/h2&gt;
 
 &lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; Flobot requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.
-To check everything&amp;rsquo;s OK, try running this from the commandline:&lt;/p&gt;
+To check everything&amp;rsquo;s OK, run &lt;code&gt;node&lt;/code&gt; from the command line:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node --version
 v6.9.1
