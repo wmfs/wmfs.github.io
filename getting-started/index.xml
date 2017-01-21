@@ -23,7 +23,7 @@
 &lt;h2 id=&#34;install-node-js&#34;&gt;Install Node.js&lt;/h2&gt;
 
 &lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; Flobot requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.
-To prove everything is OK, try entering this from the commandline:&lt;/p&gt;
+To check everything&amp;rsquo;s OK, try running this from the commandline:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node --version
 v6.9.1
@@ -31,7 +31,7 @@ v6.9.1
 
 &lt;h2 id=&#34;configure-npm&#34;&gt;Configure npm&lt;/h2&gt;
 
-&lt;p&gt;The &lt;code&gt;npm&lt;/code&gt; command (Node Package Manager) is installed automatically as part of Node.js. But again, might be worth a check all is well:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;npm&lt;/code&gt; command (Node Package Manager) comes bundled with Node.js. But again, might be worth a quick check:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm --version
 3.5.2
@@ -40,13 +40,17 @@ v6.9.1
 &lt;h3 id=&#34;running-npm-behind-a-proxy&#34;&gt;Running npm`behind a proxy&lt;/h3&gt;
 
 &lt;p&gt;To download packages from the &lt;strong&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;mothership&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;npm&lt;/strong&gt; will need access to all your internets.
-If you&amp;rsquo;re going to be using Flobot from behind a proxy server, then there&amp;rsquo;s some one-off hurt to get through at his point.&lt;/p&gt;
+If you&amp;rsquo;re going to be using Flobot from behind a proxy server, then there&amp;rsquo;s some one-off hurt to get through at his point:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm blah1
-$ npm blah2
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm config set proxy       &amp;quot;http://domain%5Cusername:password@servername:port/&amp;quot;
+$ npm config set https-proxy &amp;quot;http://domain%5Cusername:password@servername:port/&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;And to check all of that&amp;rsquo;s working then try the following (which should contact the &lt;strong&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;mothership&lt;/a&gt;&lt;/strong&gt; to find out the latest published version of the &lt;a href=&#34;https://www.npmjs.com/package/flobot&#34;&gt;Flobot package&lt;/a&gt;):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use URL encoding to include &lt;code&gt;\&lt;/code&gt; characters (i.e. replace them with &lt;code&gt;%5C&lt;/code&gt; as above). More &lt;a href=&#34;http://stackoverflow.com/questions/25660936/using-npm-behind-corporate-proxy-pac&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To check NPM is using your proxy correctly, try the following (which should contact the &lt;strong&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;mothership&lt;/a&gt;&lt;/strong&gt; to find out the latest published version of the &lt;a href=&#34;https://www.npmjs.com/package/flobot&#34;&gt;Flobot package&lt;/a&gt;):&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm show flobot version
 0.0.4
@@ -212,11 +216,11 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
 &lt;ul&gt;
 &lt;li&gt;As before, if everything goes as expected during the boot process, Flobot will offer some &lt;code&gt;services&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Several services are returned to the callback function, including &lt;a href=&#34;http://localhost:1313/core-components/services/flobot-flobots/&#34;&gt;flobots&lt;/a&gt; that we&amp;rsquo;re using here&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;flobots&lt;/code&gt; service offers an API with a few methods including &lt;code&gt;startNewFlobot&lt;/code&gt;. The minimum required to &lt;code&gt;startNewFlobot&lt;/code&gt; (as seen in this example) is a &lt;strong&gt;flowId&lt;/strong&gt; - here we&amp;rsquo;re using the flowId &lt;code&gt;tutorial_helloWorld_1_0&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;flobots&lt;/code&gt; service offers an API with a few methods including &lt;code&gt;startNewFlobot&lt;/code&gt;. The minimum required to call &lt;code&gt;startNewFlobot&lt;/code&gt; (as seen in this example) is a &lt;strong&gt;flowId&lt;/strong&gt; - here we&amp;rsquo;re using the flowId &lt;code&gt;tutorial_helloWorld_1_0&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;These flowIds are conjured by combining the name of the blueprint&amp;rsquo;s namespace (&lt;code&gt;tutorial&lt;/code&gt;), the flow&amp;rsquo;s name (&lt;code&gt;helloWorld&lt;/code&gt; - which has been inferred from the &lt;code&gt;/flows/hello-world.json&lt;/code&gt; filename) and the version number of the flow (as defined in the &lt;code&gt;/flows/hello-world.json&lt;/code&gt; file).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;&amp;hellip;once that&amp;rsquo;s in order, run again:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;hellip;once the replacement callback function is in-place, re-run:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node index.js
 &lt;/code&gt;&lt;/pre&gt;
@@ -224,7 +228,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
 &lt;p&gt;&lt;strong&gt;Boom!&lt;/strong&gt; You should now see &lt;code&gt;Hello World!&lt;/code&gt; printed on the console.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;In this first tutorial we&amp;rsquo;ve used some of the major components of the framework (&lt;a href=&#34;https://wmfs.github.io/key-concepts/#blueprints&#34;&gt;blueprints&lt;/a&gt;, &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flows&lt;/a&gt;, &lt;a href=&#34;https://wmfs.github.io/key-concepts/#states&#34;&gt;states&lt;/a&gt; and &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flobots&#34;&gt;flobots&lt;/a&gt;). The good news is thaat the distance from this point to running more complex flows only requires the introduction of a few more components.&lt;/p&gt;
+&lt;p&gt;In this first tutorial we&amp;rsquo;ve used some of the major components of the framework (&lt;a href=&#34;https://wmfs.github.io/key-concepts/#blueprints&#34;&gt;blueprints&lt;/a&gt;, &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flows&lt;/a&gt;, &lt;a href=&#34;https://wmfs.github.io/key-concepts/#states&#34;&gt;states&lt;/a&gt; and &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flobots&#34;&gt;flobots&lt;/a&gt;). The good news is that the distance from this point to running more complex flows only requires the introduction of a few more components.&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>

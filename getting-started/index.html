@@ -315,7 +315,7 @@
 <h2 id="install-node-js">Install Node.js</h2>
 
 <p>First ensure you have <a href="https://nodejs.org/en/">Node.js</a> installed&hellip; Flobot requires at least <code>v6.9 LTS</code>.
-To prove everything is OK, try entering this from the commandline:</p>
+To check everything&rsquo;s OK, try running this from the commandline:</p>
 
 <pre><code class="language-sh">$ node --version
 v6.9.1
@@ -323,7 +323,7 @@ v6.9.1
 
 <h2 id="configure-npm">Configure npm</h2>
 
-<p>The <code>npm</code> command (Node Package Manager) is installed automatically as part of Node.js. But again, might be worth a check all is well:</p>
+<p>The <code>npm</code> command (Node Package Manager) comes bundled with Node.js. But again, might be worth a quick check:</p>
 
 <pre><code class="language-sh">$ npm --version
 3.5.2
@@ -332,13 +332,17 @@ v6.9.1
 <h3 id="running-npm-behind-a-proxy">Running npm`behind a proxy</h3>
 
 <p>To download packages from the <strong><a href="https://www.npmjs.com/">mothership</a></strong>, <strong>npm</strong> will need access to all your internets.
-If you&rsquo;re going to be using Flobot from behind a proxy server, then there&rsquo;s some one-off hurt to get through at his point.</p>
+If you&rsquo;re going to be using Flobot from behind a proxy server, then there&rsquo;s some one-off hurt to get through at his point:</p>
 
-<pre><code class="language-sh">$ npm blah1
-$ npm blah2
+<pre><code class="language-sh">$ npm config set proxy       &quot;http://domain%5Cusername:password@servername:port/&quot;
+$ npm config set https-proxy &quot;http://domain%5Cusername:password@servername:port/&quot;
 </code></pre>
 
-<p>And to check all of that&rsquo;s working then try the following (which should contact the <strong><a href="https://www.npmjs.com/">mothership</a></strong> to find out the latest published version of the <a href="https://www.npmjs.com/package/flobot">Flobot package</a>):</p>
+<blockquote>
+<p><strong>Note:</strong> Use URL encoding to include <code>\</code> characters (i.e. replace them with <code>%5C</code> as above). More <a href="http://stackoverflow.com/questions/25660936/using-npm-behind-corporate-proxy-pac">here</a>.</p>
+</blockquote>
+
+<p>To check NPM is using your proxy correctly, try the following (which should contact the <strong><a href="https://www.npmjs.com/">mothership</a></strong> to find out the latest published version of the <a href="https://www.npmjs.com/package/flobot">Flobot package</a>):</p>
 
 <pre><code class="language-sh">$ npm show flobot version
 0.0.4
@@ -504,11 +508,11 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 <ul>
 <li>As before, if everything goes as expected during the boot process, Flobot will offer some <code>services</code></li>
 <li>Several services are returned to the callback function, including <a href="http://localhost:1313/core-components/services/flobot-flobots/">flobots</a> that we&rsquo;re using here</li>
-<li>The <code>flobots</code> service offers an API with a few methods including <code>startNewFlobot</code>. The minimum required to <code>startNewFlobot</code> (as seen in this example) is a <strong>flowId</strong> - here we&rsquo;re using the flowId <code>tutorial_helloWorld_1_0</code>.</li>
+<li>The <code>flobots</code> service offers an API with a few methods including <code>startNewFlobot</code>. The minimum required to call <code>startNewFlobot</code> (as seen in this example) is a <strong>flowId</strong> - here we&rsquo;re using the flowId <code>tutorial_helloWorld_1_0</code>.</li>
 <li>These flowIds are conjured by combining the name of the blueprint&rsquo;s namespace (<code>tutorial</code>), the flow&rsquo;s name (<code>helloWorld</code> - which has been inferred from the <code>/flows/hello-world.json</code> filename) and the version number of the flow (as defined in the <code>/flows/hello-world.json</code> file).</li>
 </ul>
 
-<p><strong>&hellip;once that&rsquo;s in order, run again:</strong></p>
+<p><strong>&hellip;once the replacement callback function is in-place, re-run:</strong></p>
 
 <pre><code class="language-sh">$ node index.js
 </code></pre>
@@ -516,7 +520,7 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 <p><strong>Boom!</strong> You should now see <code>Hello World!</code> printed on the console.</p>
 
 <blockquote>
-<p>In this first tutorial we&rsquo;ve used some of the major components of the framework (<a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>, <a href="https://wmfs.github.io/key-concepts/#flows">flows</a>, <a href="https://wmfs.github.io/key-concepts/#states">states</a> and <a href="https://wmfs.github.io/key-concepts/#flobots">flobots</a>). The good news is thaat the distance from this point to running more complex flows only requires the introduction of a few more components.</p>
+<p>In this first tutorial we&rsquo;ve used some of the major components of the framework (<a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>, <a href="https://wmfs.github.io/key-concepts/#flows">flows</a>, <a href="https://wmfs.github.io/key-concepts/#states">states</a> and <a href="https://wmfs.github.io/key-concepts/#flobots">flobots</a>). The good news is that the distance from this point to running more complex flows only requires the introduction of a few more components.</p>
 </blockquote>
 
 
