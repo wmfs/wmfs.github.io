@@ -20,28 +20,28 @@
 
 &lt;h2 id=&#34;flows&#34;&gt;Flows&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Everything in Flobot is built around flows: definitions of real-world business processes.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Everything in Flobot is built around a flow.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;An organisation is likely to contain hundreds of business processes, of all shapes-and-sizes. Flows can underpin something as simple as searching for a document through to complex multi-team undertakings.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;An organisation is likely to contain hundreds of business processes. In Flobot, each of these processes can be modelled as a &amp;ldquo;&lt;strong&gt;flow&lt;/strong&gt;&amp;rdquo;. Flows can underpin something as simple as a user searching for a document through to  a complex multi-team endeavour.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Flows may involve people from multiple teams or require no human input at all. It&amp;rsquo;s likely an employee&amp;rsquo;s role will require interaction with several flows - but probably not all of them.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Flows may involve lots of people or may require no human input at all. It&amp;rsquo;s likely an employee&amp;rsquo;s role will require interaction with several flows - but probably not all of them.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Flows play nicely with industry representations such as &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;State Diagrams&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Activity_diagram&#34;&gt;Activity Diagrams&lt;/a&gt; and &lt;a href=&#34;http://www.bpmn.org/&#34;&gt;Business Process Diagrams&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;the-booking-someone-sick-flow&#34;&gt;The booking-someone-sick flow&lt;/h3&gt;
 
+&lt;p&gt;The flow represented in the diagram below allows an Operator (or more accurately a &lt;em&gt;user&lt;/em&gt; who has been assigned the Operator &lt;em&gt;role&lt;/em&gt;) to process the necessary housekeeping when someone phones-in sick.&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/simple-flow.png&#34; alt=&#34;Simple state diagram for booking-someone-sick&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;In the diagram above, the operator has been granted access to this particular flow and can &lt;em&gt;instigate&lt;/em&gt; it&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As described in the next section, each  circle in this diagram is known as a &lt;a href=&#34;#states&#34;&gt;State&lt;/a&gt;. The &lt;em&gt;initial&lt;/em&gt; state requires the operator to capture details of the sickness by filling-in a quick form.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;The &lt;em&gt;initial&lt;/em&gt; step is for the operator to complete a form containing all the details of the sickness.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Once the form has been completed, the flow advances to a state where an email is sent to the employee&amp;rsquo;s manager.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Once the form has been completed, an email is sent to the employee&amp;rsquo;s manager containing a summary about the absence.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What happens next is dependent on whether the absence will reduce staffing below some critical level. Either things are fine and the flow can move to the final step or the Operations Room will be alerted to the staffing shortfall.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What state the flow moves to next is dependent on whether the absence will reduce staffing below some critical level. Either things are fine and the flow can move to the final state or the Operations Room will be alerted to a staffing shortfall.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;And to finish, the employee will have a new entry added to their sickness record.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -50,19 +50,17 @@
 
 &lt;h2 id=&#34;states&#34;&gt;States&lt;/h2&gt;
 
-&lt;p&gt;Each of the circles in the previous diagram are known as &lt;strong&gt;States&lt;/strong&gt;.  More accurately, a Flobot flow contains all the necessary information to assemble a &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;Finite State Machine&lt;/a&gt; (&lt;strong&gt;FSM&lt;/strong&gt;), that being:&lt;/p&gt;
+&lt;p&gt;Each of the circles in the previous diagram are known as &lt;strong&gt;States&lt;/strong&gt;.  Each Flobot flow contains all the necessary information to assemble a &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;Finite State Machine&lt;/a&gt; (&lt;strong&gt;FSM&lt;/strong&gt;), that being:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;A list of possible states (an FSM can be in exactly one of a finite number of states at any given time)&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;How states are connected together (along with any conditions that are required)&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Which is the &lt;em&gt;initial&lt;/em&gt; state (i.e. the state that is active when things first start)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which state the FSM should find itself in as it starts (i.e. the flow&amp;rsquo;s &lt;em&gt;initial&lt;/em&gt; state)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Flobot offers a pool of different &lt;strong&gt;State Classes&lt;/strong&gt; from which flows can be constructed. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few state classes.&lt;/p&gt;
-
-&lt;p&gt;For example, the state classes below should be enough to model large swathes of organisational data collection:&lt;/p&gt;
+&lt;p&gt;Flobot provides a pool of different &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;State Classes&lt;/a&gt;, each state in a flow will be associated with a particular &lt;em&gt;State Class&lt;/em&gt;. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
@@ -79,7 +77,7 @@
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;States&lt;/strong&gt; can be seen as the railway stations - they&amp;rsquo;re reached by travelling around flows. Journeys start at the &lt;em&gt;initial&lt;/em&gt; state.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Flobots&lt;/strong&gt; therefore can be seen as individual trains as they transition from state-to-state. A single flow can have any number of Flobots making their way around it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Flobots&lt;/strong&gt; therefore can be seen as trains as they move from state-to-state. A single flow can have any number of Flobots making their way around it.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -153,7 +151,7 @@ This is an example of what might be persisted for a Flobot travelling around the
 
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;ctx&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is a simple key/value store that&amp;rsquo;s unique to each Flobot. In analogy terms, a good place to store the number of passengers on this particular train. This &lt;strong&gt;context&lt;/strong&gt; is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each &lt;del&gt;train&lt;/del&gt; Flobot.&lt;/td&gt;
+&lt;td&gt;This is a simple key/value store that&amp;rsquo;s unique to each Flobot. In analogy terms, this is a good place to store the spped of a train. This &lt;strong&gt;context&lt;/strong&gt; is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each &lt;del&gt;train&lt;/del&gt; Flobot.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -238,21 +236,221 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
       <guid>https://wmfs.github.io/getting-started/</guid>
       <description>
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;In this section we&amp;rsquo;ll be writing a simple blueprint and running a Flobot&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; Flobot requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;install-node-js&#34;&gt;Install Node.js&lt;/h2&gt;
 
-&lt;p&gt;Flobot itself can then be downloaded via &lt;code&gt;npm&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; Flobot requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.
+To prove everything is OK, try entering this from the commandline:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;npm install flobot --save
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node --version
+v6.9.1
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configure-npm&#34;&gt;Configure npm&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;npm&lt;/code&gt; command (Node Package Manager) is installed automatically as part of Node.js. But again, might be worth a check all is well:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm --version
+3.5.2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;running-npm-behind-a-proxy&#34;&gt;Running npm`behind a proxy&lt;/h3&gt;
+
+&lt;p&gt;To download packages from the &lt;strong&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;mothership&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;npm&lt;/strong&gt; will need access to all your internets.
+If you&amp;rsquo;re going to be using Flobot from behind a proxy server, then there&amp;rsquo;s some one-off hurt to get through at his point.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm blah1
+$ npm blah2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And to check all of that&amp;rsquo;s working then try the following (which should contact the &lt;strong&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;mothership&lt;/a&gt;&lt;/strong&gt; to find out the latest published version of the &lt;a href=&#34;https://www.npmjs.com/package/flobot&#34;&gt;Flobot package&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm show flobot version
+0.0.4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;hello-world&#34;&gt;Hello World!&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;To help show what Flobot is about we&amp;rsquo;ll go through the steps to get &lt;code&gt;Hello World!&lt;/code&gt; printed to the console.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;All functionality in Flobot is delivered via a &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flow&lt;/a&gt; and flows are defined in &lt;a href=&#34;https://wmfs.github.io/key-concepts/#blueprints&#34;&gt;blueprints&lt;/a&gt;.
+So to get &lt;code&gt;Hello World!&lt;/code&gt; onto the screen, we&amp;rsquo;re going to need ourselves a blueprint&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Nothing to it: make a directory, with a &lt;code&gt;/flows&lt;/code&gt; sub-directory and a &lt;code&gt;/blueprint.json&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/hello-world-directory-structure.png&#34; alt=&#34;Directory structure for the Hello World! tutorial&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Edit the content of the &lt;code&gt;/blueprint.json&lt;/code&gt; file, so it looks like:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;namespace&amp;quot;: &amp;quot;tutorial&amp;quot;,
+  &amp;quot;name&amp;quot;: &amp;quot;helloWorld&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;1.0&amp;quot;,
+
+  &amp;quot;label&amp;quot;: &amp;quot;Hello World! tutorial&amp;quot;,
+  &amp;quot;author&amp;quot;: &amp;quot;John Doe&amp;quot;,
+
+  &amp;quot;organisation&amp;quot;: &amp;quot;Flobots&amp;quot;,
+  &amp;quot;description&amp;quot;: &amp;quot;Provides a simple flow to print &#39;Hello World!&#39; to the console&amp;quot;,
+  &amp;quot;tags&amp;quot;: [&amp;quot;tutorial&amp;quot;, &amp;quot;test&amp;quot;] 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The important takeaway here is that our blueprint is named &lt;code&gt;helloWorld&lt;/code&gt; and it will live within the &lt;code&gt;tutorial&lt;/code&gt; namespace. Blueprints which share the same namespace can refer to each others components. The rest of the &lt;code&gt;blueprint.json&lt;/code&gt; is meta tinsel.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Now we need to define a &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flow&lt;/a&gt; for Flobot to run&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a &lt;code&gt;/flows/hello-world.json&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/hello-world-json.png&#34; alt=&#34;Revised structure showing hello-world.json file&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;hellip;and edit its content to:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;description&amp;quot;: &amp;quot;Prints &#39;Hello World!&#39; to the console and nothing else&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;1.0&amp;quot;,
+  &amp;quot;initialStateId&amp;quot;: &amp;quot;logging&amp;quot;,
+  &amp;quot;fsm&amp;quot;: {
+    &amp;quot;logging&amp;quot;: {
+      &amp;quot;options&amp;quot;: {
+        &amp;quot;text&amp;quot;: &amp;quot;Hello World!&amp;quot;
+      }     
+    }    
+  }  
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;That&amp;rsquo;s the blueprint finished!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;fsm&lt;/code&gt; property is the meat of each flow and defines one or more &lt;a href=&#34;https://wmfs.github.io/key-concepts/#states&#34;&gt;states&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The keys of the &lt;code&gt;fsm&lt;/code&gt; object are the ids for each state in the flow. So in this example we&amp;rsquo;re working with one state with an id of &lt;code&gt;logging&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;initialStateId&lt;/code&gt; property is important: it indicates which state things should start from&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As a quick aside, to keep things simple, some shorthand is in-play in this flow.
+Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;State Class&lt;/a&gt;. This can be done explicitily using the &lt;code&gt;className&lt;/code&gt; property:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;&amp;quot;fsm&amp;quot;: {
+  &amp;quot;logging&amp;quot;: {
+    &amp;quot;className&amp;quot;: &amp;quot;logging&amp;quot;
+    &amp;quot;options&amp;quot;: {
+      &amp;quot;text&amp;quot;: &amp;quot;Hello World!&amp;quot;     
+    }    
+  }  
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip;but if you omit &lt;code&gt;className&lt;/code&gt; (like we did in our example flow) it will be inferred from the state&amp;rsquo;s id.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Now we need to create a project to run our new blueprint&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Make a totally fresh directory somewhere (&lt;strong&gt;not&lt;/strong&gt; inside the blueprint) and create an &lt;code&gt;/index.js&lt;/code&gt; file inside it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/hello-world-flobot.png&#34; alt=&#34;Startings of a Flobot project structure&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Then, from &lt;em&gt;within that directory&lt;/em&gt;, use the &lt;code&gt;npm&lt;/code&gt; command to install the &lt;a href=&#34;https://www.npmjs.com/package/flobot&#34;&gt;flobot package&lt;/a&gt;:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm install flobot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After some huffing-and-puffing a new &lt;code&gt;/node_modules&lt;/code&gt; directory should appear full of wondrous things:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/node_modules.png&#34; alt=&#34;Shows a new node_modules dir has appeared&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Now we&amp;rsquo;ll make sure Flobot can boot without any problems&amp;hellip; edit the &lt;code&gt;/index.js&lt;/code&gt; to be:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt; &#39;use strict&#39;
+ var flobot = require(&#39;flobot&#39;)
+ 
+ flobot.boot(
+   {
+     blueprintPaths: [
+     
+       // Change the path below to point to wherever you created
+       // that blueprint directory earlier...
+      &#39;/myProjects/blueprints/hello-world-blueprint&#39;
+      
+     ]
+   },
+   
+   // Callback function
+   function (err, services) { 
+     if (err) {
+       console.error(&#39;There were errors.&#39;)
+     } else {
+       console.log(&#39;Done booting.&#39;)
+     }         
+   }
+   
+ )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure you change the blueprint path to point to your &lt;code&gt;hello-world-blueprint&lt;/code&gt; directory, then from the same directory that the &lt;strong&gt;&lt;code&gt;index.js&lt;/code&gt;&lt;/strong&gt; file is located, run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node index.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip;a chunk of output should then appear - for everything to have worked it should end with &lt;code&gt;Done booting&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This is a relatively exciting moment! Flobot has booted, consumed our demo blueprint and offered us lots of ready-to-use &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-services&#34;&gt;services&lt;/a&gt; - the reason we&amp;rsquo;re not seeing &lt;code&gt;Hello World!&lt;/code&gt; yet is that we haven&amp;rsquo;t used any of those services.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s run a Flobot!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Edit the &lt;code&gt;./index.js&lt;/code&gt; file again, keep the changes you made previously but replace the callback function with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;
+  // Callback function
+  function (err, services) {
+    if (err) {
+      console.error(&#39;There were errors booting.&#39;)
+    } else {
+      // No problems booting, so start a new Flobot...
+      services.flobots.startNewFlobot(
+        &#39;tutorial_helloWorld_1_0&#39;, // flowId
+        {}, // Flobot options
+        function (err, flobot) {
+          if (err) {
+            console.error(&#39;There were errors running the Flobot&#39;)
+          }
+        }
+      )
+    }
+  }
+  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;As before, if everything goes as expected during the boot process, Flobot will offer some &lt;code&gt;services&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Several services are returned to the callback function, including &lt;a href=&#34;http://localhost:1313/core-components/services/flobot-flobots/&#34;&gt;flobots&lt;/a&gt; that we&amp;rsquo;re using here&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;flobots&lt;/code&gt; service offers an API with a few methods including &lt;code&gt;startNewFlobot&lt;/code&gt;. The minimum required to &lt;code&gt;startNewFlobot&lt;/code&gt; (as seen in this example) is a &lt;strong&gt;flowId&lt;/strong&gt; - here we&amp;rsquo;re using the flowId &lt;code&gt;tutorial_helloWorld_1_0&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;These flowIds are conjured by combining the name of the blueprint&amp;rsquo;s namespace (&lt;code&gt;tutorial&lt;/code&gt;), the flow&amp;rsquo;s name (&lt;code&gt;helloWorld&lt;/code&gt; - which has been inferred from the &lt;code&gt;/flows/hello-world.json&lt;/code&gt; filename) and the version number of the flow (as defined in the &lt;code&gt;/flows/hello-world.json&lt;/code&gt; file).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;hellip;once that&amp;rsquo;s in order, run again:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node index.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Boom!&lt;/strong&gt; You should now see &lt;code&gt;Hello World!&lt;/code&gt; printed on the console.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In this first tutorial we&amp;rsquo;ve used some of the major components of the framework (&lt;a href=&#34;https://wmfs.github.io/key-concepts/#blueprints&#34;&gt;blueprints&lt;/a&gt;, &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flows&lt;/a&gt;, &lt;a href=&#34;https://wmfs.github.io/key-concepts/#states&#34;&gt;states&lt;/a&gt; and &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flobots&#34;&gt;flobots&lt;/a&gt;). The good news is thaat the distance from this point to running more complex flows only requires the introduction of a few more components.&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
     </item>
     
     <item>
       <title>Core Components</title>
       <link>https://wmfs.github.io/core-components/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/</guid>
       <description>
@@ -352,6 +550,12 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
 &lt;td&gt;&lt;a href=&#34;states/import-importing&#34;&gt;importing&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Streams data from a pre-prepared directory and into storage&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt; import&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/flobot-logging&#34;&gt;logging&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Just logs any data sent to it to the console&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -594,7 +798,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>deletingFromSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</guid>
       <description>
@@ -658,7 +862,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>findingOne state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
       <description>
@@ -741,7 +945,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>formFilling state</title>
       <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
       <description>
@@ -803,7 +1007,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>importing state</title>
       <link>https://wmfs.github.io/core-components/states/import-importing/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-importing/</guid>
       <description>
@@ -859,9 +1063,57 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     </item>
     
     <item>
+      <title>logging state</title>
+      <link>https://wmfs.github.io/core-components/states/flobot-logging/</link>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/flobot-logging/</guid>
+      <description>
+
+&lt;p&gt;Just logs any data sent to it to the console. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;text&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;A value to send to the console&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>persisting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-persisting/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-persisting/</guid>
       <description>
@@ -927,7 +1179,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>producingImportFiles state</title>
       <link>https://wmfs.github.io/core-components/states/import-producing-import-files/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-producing-import-files/</guid>
       <description>
@@ -1033,7 +1285,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>searching state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-searching/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-searching/</guid>
       <description>
@@ -1062,7 +1314,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>sendingEmail state</title>
       <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
       <description>
@@ -1158,7 +1410,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>settingSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</guid>
       <description>
@@ -1267,7 +1519,7 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
     <item>
       <title>starting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
+      <pubDate>Sat, 21 Jan 2017 21:05:26 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
       <description>
@@ -1286,68 +1538,6 @@ It&amp;rsquo;s straightforward to write new plugins for Flobot to add missing ca
 &lt;blockquote&gt;
 &lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>env command</title>
-      <link>https://wmfs.github.io/core-components/commands/flobot-env/</link>
-      <pubDate>Fri, 20 Jan 2017 23:18:04 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/core-components/commands/flobot-env/</guid>
-      <description>
-
-&lt;p&gt;Allows a state to refer to an environment variable. This command is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;sendingEmail&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;to&amp;quot;: {
-        &amp;quot;$env&amp;quot;: {
-          &amp;quot;variableName&amp;quot;: &amp;quot;FLOBOT_WELCOME_RECIPIENTS&amp;quot;,
-          &amp;quot;failIfNotSet&amp;quot;: true
-        }
-      },
-      &amp;quot;subject&amp;quot;: &amp;quot;Welcome to Flobot!&amp;quot;,
-      &amp;quot;text&amp;quot;: &amp;quot;Congratulations... you are now part of the wonderful world of Flobot! &amp;lt;3&amp;quot;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;variableName&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Name of an environment variable to read a value from&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;failIfNotSet&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Should things fail if the environment variable hasn&amp;#39;t been set? Defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
 &lt;hr&gt;
 

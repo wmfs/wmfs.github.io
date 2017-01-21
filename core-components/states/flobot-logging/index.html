@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>persisting state - Flobot Documentation</title>
+    <title>logging state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/states/flobot-persisting/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/flobot-logging/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/states/flobot-persisting/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/flobot-logging/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        persisting state
+        logging state
       </div>
     </div>
 
@@ -303,27 +303,16 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>persisting state </h1>
+			<h1>logging state </h1>
 
 			
 
-<p>Saves a document to storage. This state is provided via the
+<p>Just logs any data sent to it to the console. This state is provided via the
 <a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
-<pre><code class="language-json">{
-  &quot;persisting&quot;: {
-    &quot;options&quot;: {
-      &quot;modelId&quot;: &quot;cat&quot;,
-      &quot;doc&quot;: {
-        &quot;$value&quot;: {
-          &quot;path&quot;: &quot;catDocFromParams&quot;
-        }
-      }
-    }
-  }
-}
+<pre><code class="language-json">
 </code></pre>
 
 <table>
@@ -338,17 +327,10 @@
 
 <tbody>
 <tr>
-<td><em>modelId</em></td>
-<td><code>string</code></td>
-<td>This is the id of a model within the current namespace which will be used to persist the document.</td>
-<td>Yes</td>
-</tr>
-
-<tr>
-<td><em>doc</em></td>
-<td><code>object</code></td>
-<td>The document that needs storing. Use <strong>commands</strong> such as <code>$value</code> and similar to dynamically access Flobot context</td>
-<td>Yes</td>
+<td><em>text</em></td>
+<td></td>
+<td>A value to send to the console</td>
+<td>No</td>
 </tr>
 </tbody>
 </table>
@@ -380,7 +362,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/states/flobot-logging/" title="logging state">
+      <a href="https://wmfs.github.io/core-components/states/import-importing/" title="importing state">
         <span class="direction">
           Previous
         </span>
@@ -390,7 +372,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              logging state
+              importing state
             </div>
           </div>
         </div>
@@ -400,14 +382,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/states/import-producing-import-files/" title="producingImportFiles state">
+      <a href="https://wmfs.github.io/core-components/states/flobot-persisting/" title="persisting state">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              producingImportFiles state
+              persisting state
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

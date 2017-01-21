@@ -20,28 +20,28 @@
 
 &lt;h2 id=&#34;flows&#34;&gt;Flows&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Everything in Flobot is built around flows: definitions of real-world business processes.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Everything in Flobot is built around a flow.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;An organisation is likely to contain hundreds of business processes, of all shapes-and-sizes. Flows can underpin something as simple as searching for a document through to complex multi-team undertakings.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;An organisation is likely to contain hundreds of business processes. In Flobot, each of these processes can be modelled as a &amp;ldquo;&lt;strong&gt;flow&lt;/strong&gt;&amp;rdquo;. Flows can underpin something as simple as a user searching for a document through to  a complex multi-team endeavour.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Flows may involve people from multiple teams or require no human input at all. It&amp;rsquo;s likely an employee&amp;rsquo;s role will require interaction with several flows - but probably not all of them.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Flows may involve lots of people or may require no human input at all. It&amp;rsquo;s likely an employee&amp;rsquo;s role will require interaction with several flows - but probably not all of them.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Flows play nicely with industry representations such as &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;State Diagrams&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Activity_diagram&#34;&gt;Activity Diagrams&lt;/a&gt; and &lt;a href=&#34;http://www.bpmn.org/&#34;&gt;Business Process Diagrams&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;the-booking-someone-sick-flow&#34;&gt;The booking-someone-sick flow&lt;/h3&gt;
 
+&lt;p&gt;The flow represented in the diagram below allows an Operator (or more accurately a &lt;em&gt;user&lt;/em&gt; who has been assigned the Operator &lt;em&gt;role&lt;/em&gt;) to process the necessary housekeeping when someone phones-in sick.&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/simple-flow.png&#34; alt=&#34;Simple state diagram for booking-someone-sick&#34; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;In the diagram above, the operator has been granted access to this particular flow and can &lt;em&gt;instigate&lt;/em&gt; it&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As described in the next section, each  circle in this diagram is known as a &lt;a href=&#34;#states&#34;&gt;State&lt;/a&gt;. The &lt;em&gt;initial&lt;/em&gt; state requires the operator to capture details of the sickness by filling-in a quick form.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;The &lt;em&gt;initial&lt;/em&gt; step is for the operator to complete a form containing all the details of the sickness.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Once the form has been completed, the flow advances to a state where an email is sent to the employee&amp;rsquo;s manager.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Once the form has been completed, an email is sent to the employee&amp;rsquo;s manager containing a summary about the absence.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What happens next is dependent on whether the absence will reduce staffing below some critical level. Either things are fine and the flow can move to the final step or the Operations Room will be alerted to the staffing shortfall.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What state the flow moves to next is dependent on whether the absence will reduce staffing below some critical level. Either things are fine and the flow can move to the final state or the Operations Room will be alerted to a staffing shortfall.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;And to finish, the employee will have a new entry added to their sickness record.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -50,19 +50,17 @@
 
 &lt;h2 id=&#34;states&#34;&gt;States&lt;/h2&gt;
 
-&lt;p&gt;Each of the circles in the previous diagram are known as &lt;strong&gt;States&lt;/strong&gt;.  More accurately, a Flobot flow contains all the necessary information to assemble a &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;Finite State Machine&lt;/a&gt; (&lt;strong&gt;FSM&lt;/strong&gt;), that being:&lt;/p&gt;
+&lt;p&gt;Each of the circles in the previous diagram are known as &lt;strong&gt;States&lt;/strong&gt;.  Each Flobot flow contains all the necessary information to assemble a &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;Finite State Machine&lt;/a&gt; (&lt;strong&gt;FSM&lt;/strong&gt;), that being:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;A list of possible states (an FSM can be in exactly one of a finite number of states at any given time)&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;How states are connected together (along with any conditions that are required)&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Which is the &lt;em&gt;initial&lt;/em&gt; state (i.e. the state that is active when things first start)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which state the FSM should find itself in as it starts (i.e. the flow&amp;rsquo;s &lt;em&gt;initial&lt;/em&gt; state)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Flobot offers a pool of different &lt;strong&gt;State Classes&lt;/strong&gt; from which flows can be constructed. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few state classes.&lt;/p&gt;
-
-&lt;p&gt;For example, the state classes below should be enough to model large swathes of organisational data collection:&lt;/p&gt;
+&lt;p&gt;Flobot provides a pool of different &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;State Classes&lt;/a&gt;, each state in a flow will be associated with a particular &lt;em&gt;State Class&lt;/em&gt;. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
@@ -79,7 +77,7 @@
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;States&lt;/strong&gt; can be seen as the railway stations - they&amp;rsquo;re reached by travelling around flows. Journeys start at the &lt;em&gt;initial&lt;/em&gt; state.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Flobots&lt;/strong&gt; therefore can be seen as individual trains as they transition from state-to-state. A single flow can have any number of Flobots making their way around it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Flobots&lt;/strong&gt; therefore can be seen as trains as they move from state-to-state. A single flow can have any number of Flobots making their way around it.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -153,7 +151,7 @@ This is an example of what might be persisted for a Flobot travelling around the
 
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;ctx&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is a simple key/value store that&amp;rsquo;s unique to each Flobot. In analogy terms, a good place to store the number of passengers on this particular train. This &lt;strong&gt;context&lt;/strong&gt; is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each &lt;del&gt;train&lt;/del&gt; Flobot.&lt;/td&gt;
+&lt;td&gt;This is a simple key/value store that&amp;rsquo;s unique to each Flobot. In analogy terms, this is a good place to store the spped of a train. This &lt;strong&gt;context&lt;/strong&gt; is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each &lt;del&gt;train&lt;/del&gt; Flobot.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

@@ -310,14 +310,214 @@
 
 			
 
-<h2 id="installation">Installation</h2>
+<p><strong>In this section we&rsquo;ll be writing a simple blueprint and running a Flobot&hellip;</strong></p>
 
-<p>First ensure you have <a href="https://nodejs.org/en/">Node.js</a> installed&hellip; Flobot requires at least <code>v6.9 LTS</code>.</p>
+<h2 id="install-node-js">Install Node.js</h2>
 
-<p>Flobot itself can then be downloaded via <code>npm</code>:</p>
+<p>First ensure you have <a href="https://nodejs.org/en/">Node.js</a> installed&hellip; Flobot requires at least <code>v6.9 LTS</code>.
+To prove everything is OK, try entering this from the commandline:</p>
 
-<pre><code class="language-sh">npm install flobot --save
+<pre><code class="language-sh">$ node --version
+v6.9.1
 </code></pre>
+
+<h2 id="configure-npm">Configure npm</h2>
+
+<p>The <code>npm</code> command (Node Package Manager) is installed automatically as part of Node.js. But again, might be worth a check all is well:</p>
+
+<pre><code class="language-sh">$ npm --version
+3.5.2
+</code></pre>
+
+<h3 id="running-npm-behind-a-proxy">Running npm`behind a proxy</h3>
+
+<p>To download packages from the <strong><a href="https://www.npmjs.com/">mothership</a></strong>, <strong>npm</strong> will need access to all your internets.
+If you&rsquo;re going to be using Flobot from behind a proxy server, then there&rsquo;s some one-off hurt to get through at his point.</p>
+
+<pre><code class="language-sh">$ npm blah1
+$ npm blah2
+</code></pre>
+
+<p>And to check all of that&rsquo;s working then try the following (which should contact the <strong><a href="https://www.npmjs.com/">mothership</a></strong> to find out the latest published version of the <a href="https://www.npmjs.com/package/flobot">Flobot package</a>):</p>
+
+<pre><code class="language-sh">$ npm show flobot version
+0.0.4
+</code></pre>
+
+<hr>
+
+<h2 id="hello-world">Hello World!</h2>
+
+<p><strong>To help show what Flobot is about we&rsquo;ll go through the steps to get <code>Hello World!</code> printed to the console.</strong></p>
+
+<p>All functionality in Flobot is delivered via a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> and flows are defined in <a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>.
+So to get <code>Hello World!</code> onto the screen, we&rsquo;re going to need ourselves a blueprint&hellip;</p>
+
+<p>Nothing to it: make a directory, with a <code>/flows</code> sub-directory and a <code>/blueprint.json</code> file:</p>
+
+<p><img src="https://wmfs.github.io/images/hello-world-directory-structure.png" alt="Directory structure for the Hello World! tutorial" /></p>
+
+<p><strong>Edit the content of the <code>/blueprint.json</code> file, so it looks like:</strong></p>
+
+<pre><code class="language-json">{
+  &quot;namespace&quot;: &quot;tutorial&quot;,
+  &quot;name&quot;: &quot;helloWorld&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+
+  &quot;label&quot;: &quot;Hello World! tutorial&quot;,
+  &quot;author&quot;: &quot;John Doe&quot;,
+
+  &quot;organisation&quot;: &quot;Flobots&quot;,
+  &quot;description&quot;: &quot;Provides a simple flow to print 'Hello World!' to the console&quot;,
+  &quot;tags&quot;: [&quot;tutorial&quot;, &quot;test&quot;] 
+}
+</code></pre>
+
+<ul>
+<li>The important takeaway here is that our blueprint is named <code>helloWorld</code> and it will live within the <code>tutorial</code> namespace. Blueprints which share the same namespace can refer to each others components. The rest of the <code>blueprint.json</code> is meta tinsel.</li>
+</ul>
+
+<p><strong>Now we need to define a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> for Flobot to run</strong></p>
+
+<p>Create a <code>/flows/hello-world.json</code> file:</p>
+
+<p><img src="https://wmfs.github.io/images/hello-world-json.png" alt="Revised structure showing hello-world.json file" /></p>
+
+<p><strong>&hellip;and edit its content to:</strong></p>
+
+<pre><code class="language-json">{
+  &quot;description&quot;: &quot;Prints 'Hello World!' to the console and nothing else&quot;,
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;initialStateId&quot;: &quot;logging&quot;,
+  &quot;fsm&quot;: {
+    &quot;logging&quot;: {
+      &quot;options&quot;: {
+        &quot;text&quot;: &quot;Hello World!&quot;
+      }     
+    }    
+  }  
+}
+</code></pre>
+
+<p><strong>That&rsquo;s the blueprint finished!</strong></p>
+
+<ul>
+<li>The <code>fsm</code> property is the meat of each flow and defines one or more <a href="https://wmfs.github.io/key-concepts/#states">states</a></li>
+<li>The keys of the <code>fsm</code> object are the ids for each state in the flow. So in this example we&rsquo;re working with one state with an id of <code>logging</code></li>
+<li>The <code>initialStateId</code> property is important: it indicates which state things should start from</li>
+</ul>
+
+<p>As a quick aside, to keep things simple, some shorthand is in-play in this flow.
+Each state needs associating with a <a href="https://wmfs.github.io/core-components/#list-of-state-classes">State Class</a>. This can be done explicitily using the <code>className</code> property:</p>
+
+<pre><code class="language-json">&quot;fsm&quot;: {
+  &quot;logging&quot;: {
+    &quot;className&quot;: &quot;logging&quot;
+    &quot;options&quot;: {
+      &quot;text&quot;: &quot;Hello World!&quot;     
+    }    
+  }  
+}
+</code></pre>
+
+<p>&hellip;but if you omit <code>className</code> (like we did in our example flow) it will be inferred from the state&rsquo;s id.</p>
+
+<p><strong>Now we need to create a project to run our new blueprint&hellip;</strong></p>
+
+<p>Make a totally fresh directory somewhere (<strong>not</strong> inside the blueprint) and create an <code>/index.js</code> file inside it:</p>
+
+<p><img src="https://wmfs.github.io/images/hello-world-flobot.png" alt="Startings of a Flobot project structure" /></p>
+
+<p><strong>Then, from <em>within that directory</em>, use the <code>npm</code> command to install the <a href="https://www.npmjs.com/package/flobot">flobot package</a>:</strong></p>
+
+<pre><code class="language-sh">$ npm install flobot
+</code></pre>
+
+<p>After some huffing-and-puffing a new <code>/node_modules</code> directory should appear full of wondrous things:</p>
+
+<p><img src="https://wmfs.github.io/images/node_modules.png" alt="Shows a new node_modules dir has appeared" /></p>
+
+<p><strong>Now we&rsquo;ll make sure Flobot can boot without any problems&hellip; edit the <code>/index.js</code> to be:</strong></p>
+
+<pre><code class="language-javascript"> 'use strict'
+ var flobot = require('flobot')
+ 
+ flobot.boot(
+   {
+     blueprintPaths: [
+     
+       // Change the path below to point to wherever you created
+       // that blueprint directory earlier...
+      '/myProjects/blueprints/hello-world-blueprint'
+      
+     ]
+   },
+   
+   // Callback function
+   function (err, services) { 
+     if (err) {
+       console.error('There were errors.')
+     } else {
+       console.log('Done booting.')
+     }         
+   }
+   
+ )
+</code></pre>
+
+<p>Make sure you change the blueprint path to point to your <code>hello-world-blueprint</code> directory, then from the same directory that the <strong><code>index.js</code></strong> file is located, run:</p>
+
+<pre><code class="language-sh">$ node index.js
+</code></pre>
+
+<p>&hellip;a chunk of output should then appear - for everything to have worked it should end with <code>Done booting</code>.</p>
+
+<ul>
+<li>This is a relatively exciting moment! Flobot has booted, consumed our demo blueprint and offered us lots of ready-to-use <a href="https://wmfs.github.io/core-components/#list-of-services">services</a> - the reason we&rsquo;re not seeing <code>Hello World!</code> yet is that we haven&rsquo;t used any of those services.</li>
+</ul>
+
+<p><strong>Let&rsquo;s run a Flobot!</strong></p>
+
+<p>Edit the <code>./index.js</code> file again, keep the changes you made previously but replace the callback function with:</p>
+
+<pre><code class="language-javascript">
+  // Callback function
+  function (err, services) {
+    if (err) {
+      console.error('There were errors booting.')
+    } else {
+      // No problems booting, so start a new Flobot...
+      services.flobots.startNewFlobot(
+        'tutorial_helloWorld_1_0', // flowId
+        {}, // Flobot options
+        function (err, flobot) {
+          if (err) {
+            console.error('There were errors running the Flobot')
+          }
+        }
+      )
+    }
+  }
+  
+</code></pre>
+
+<ul>
+<li>As before, if everything goes as expected during the boot process, Flobot will offer some <code>services</code></li>
+<li>Several services are returned to the callback function, including <a href="http://localhost:1313/core-components/services/flobot-flobots/">flobots</a> that we&rsquo;re using here</li>
+<li>The <code>flobots</code> service offers an API with a few methods including <code>startNewFlobot</code>. The minimum required to <code>startNewFlobot</code> (as seen in this example) is a <strong>flowId</strong> - here we&rsquo;re using the flowId <code>tutorial_helloWorld_1_0</code>.</li>
+<li>These flowIds are conjured by combining the name of the blueprint&rsquo;s namespace (<code>tutorial</code>), the flow&rsquo;s name (<code>helloWorld</code> - which has been inferred from the <code>/flows/hello-world.json</code> filename) and the version number of the flow (as defined in the <code>/flows/hello-world.json</code> file).</li>
+</ul>
+
+<p><strong>&hellip;once that&rsquo;s in order, run again:</strong></p>
+
+<pre><code class="language-sh">$ node index.js
+</code></pre>
+
+<p><strong>Boom!</strong> You should now see <code>Hello World!</code> printed on the console.</p>
+
+<blockquote>
+<p>In this first tutorial we&rsquo;ve used some of the major components of the framework (<a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>, <a href="https://wmfs.github.io/key-concepts/#flows">flows</a>, <a href="https://wmfs.github.io/key-concepts/#states">states</a> and <a href="https://wmfs.github.io/key-concepts/#flobots">flobots</a>). The good news is thaat the distance from this point to running more complex flows only requires the introduction of a few more components.</p>
+</blockquote>
 
 
 			<aside class="copyright" role="note">
