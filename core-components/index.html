@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.2</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -325,6 +325,10 @@
 
 <h2 id="list-of-plugins">List of plugins</h2>
 
+<blockquote>
+<p>Plugins extend Flobot with functionally-related State Classes, Commands and Services etc.</p>
+</blockquote>
+
 <table>
 <thead>
 <tr>
@@ -372,6 +376,10 @@
 </table>
 
 <h2 id="list-of-state-classes">List of State Classes</h2>
+
+<blockquote>
+<p>Flows are built from states, and states themselves are an instance of a state class</p>
+</blockquote>
 
 <table>
 <thead>
@@ -453,6 +461,10 @@
 
 <h2 id="list-of-commands">List of commands</h2>
 
+<blockquote>
+<p>Commands allow states to be configured to access dynamic runtime values (e.g. from the Flobot context, environment variable etc.)</p>
+</blockquote>
+
 <table>
 <thead>
 <tr>
@@ -485,10 +497,9 @@
 
 <h2 id="list-of-services">List of services</h2>
 
-<div class="admonition warning">
-<p class="admonition-title">Advanced</p>
-<p>If you&rsquo;re not going to be writing your own Flobot plugins, you can probably give this section a miss for now.</p>
-</div>
+<blockquote>
+<p>After the boot-up process, Flobot will return many ready-to-use <em>services</em>. Most services are internal things (like <a href="https://wmfs.github.io/core-components/services/flobot-caches">caches</a>) and are probably only of interest if you&rsquo;re writing your own plugins. However, some services (like <a href="https://wmfs.github.io/core-components/services/express-server">server</a>) offer key Flobot functionality.</p>
+</blockquote>
 
 <table>
 <thead>
