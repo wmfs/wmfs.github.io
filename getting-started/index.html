@@ -314,7 +314,7 @@
 
 <h2 id="install-node-js">Install Node.js</h2>
 
-<p>First ensure you have <a href="https://nodejs.org/en/">Node.js</a> installed&hellip; Flobot requires at least <code>v6.9 LTS</code>.</p>
+<p>First ensure you have <a href="https://nodejs.org/en/">Node.js</a> installed&hellip; FlobotJS requires at least <code>v6.9 LTS</code>.</p>
 
 <p>To check everything&rsquo;s OK, run <code>node</code> from the command line:</p>
 
@@ -333,7 +333,7 @@ v6.9.1
 <h3 id="running-npm-behind-a-proxy">Running npm`behind a proxy</h3>
 
 <p>To download packages from the <strong><a href="https://www.npmjs.com/">mothership</a></strong>, <strong>npm</strong> will need access to all your internets.
-If you&rsquo;re going to be using Flobot from behind a proxy server, then there&rsquo;s some one-off hurt to get through at his point:</p>
+If you&rsquo;re going to be using FlobotJS from behind a proxy server, then there&rsquo;s some one-off hurt to get through at his point:</p>
 
 <pre><code class="language-sh">$ npm config set proxy       &quot;http://domain%5Cusername:password@servername:port/&quot;
 $ npm config set https-proxy &quot;http://domain%5Cusername:password@servername:port/&quot;
@@ -353,9 +353,9 @@ $ npm config set https-proxy &quot;http://domain%5Cusername:password@servername:
 
 <h2 id="hello-world">Hello World!</h2>
 
-<p><strong>To help show what Flobot is about we&rsquo;ll go through the steps to get <code>Hello World!</code> printed to the console.</strong></p>
+<p><strong>To help show what FlobotJS is about we&rsquo;ll go through the steps to get <code>Hello World!</code> printed to the console.</strong></p>
 
-<p>All functionality in Flobot is delivered via a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> and flows are defined in <a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>.
+<p>All functionality in FlobotJS is delivered via a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> and flows are defined in <a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>.
 So to get <code>Hello World!</code> onto the screen, we&rsquo;re going to need ourselves a blueprint&hellip;</p>
 
 <p>Nothing to it: make a directory, with a <code>/flows</code> sub-directory and a <code>/blueprint.json</code> file:</p>
@@ -382,7 +382,7 @@ So to get <code>Hello World!</code> onto the screen, we&rsquo;re going to need o
 <li>The important takeaway here is that our blueprint is named <code>helloWorld</code> and it will live within the <code>tutorial</code> namespace. Blueprints which share the same namespace can refer to each others components. The rest of the <code>blueprint.json</code> is meta tinsel.</li>
 </ul>
 
-<p><strong>Now we need to define a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> for Flobot to run</strong></p>
+<p><strong>Now we need to define a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> for FlobotJS to run</strong></p>
 
 <p>Create a <code>/flows/hello-world.json</code> file:</p>
 
@@ -431,7 +431,7 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 
 <p>Make a totally fresh directory somewhere (<strong>not</strong> inside the blueprint) and create an <code>/index.js</code> file inside it:</p>
 
-<p><img src="https://wmfs.github.io/images/hello-world-flobot.png" alt="Startings of a Flobot project structure" /></p>
+<p><img src="https://wmfs.github.io/images/hello-world-flobot.png" alt="Startings of a FlobotJS project structure" /></p>
 
 <p><strong>Then, from <em>within that directory</em>, use the <code>npm</code> command to install the <a href="https://www.npmjs.com/package/flobot">flobot package</a>:</strong></p>
 
@@ -442,7 +442,7 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 
 <p><img src="https://wmfs.github.io/images/node_modules.png" alt="Shows a new node_modules dir has appeared" /></p>
 
-<p><strong>Now we&rsquo;ll make sure Flobot can boot without any problems&hellip; edit the <code>/index.js</code> to be:</strong></p>
+<p><strong>Now we&rsquo;ll make sure FlobotJS can boot without any problems&hellip; edit the <code>/index.js</code> to be:</strong></p>
 
 <pre><code class="language-javascript"> 'use strict'
  var flobot = require('flobot')
@@ -478,7 +478,7 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 <p>&hellip;a chunk of output should then appear - for everything to have worked it should end with <code>Done booting</code>.</p>
 
 <ul>
-<li>This is a relatively exciting moment! Flobot has booted, consumed our demo blueprint and offered us lots of ready-to-use <a href="https://wmfs.github.io/core-components/#list-of-services">services</a> - the reason we&rsquo;re not seeing <code>Hello World!</code> yet is that we haven&rsquo;t used any of those services.</li>
+<li>This is a relatively exciting moment! FlobotJS has booted, consumed our demo blueprint and offered us lots of ready-to-use <a href="https://wmfs.github.io/core-components/#list-of-services">services</a> - the reason we&rsquo;re not seeing <code>Hello World!</code> yet is that we haven&rsquo;t used any of those services.</li>
 </ul>
 
 <p><strong>Let&rsquo;s run a Flobot!</strong></p>
@@ -507,7 +507,7 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 </code></pre>
 
 <ul>
-<li>As before, if everything goes as expected during the boot process, Flobot will offer some <code>services</code></li>
+<li>As before, if everything goes as expected during the boot process, FlobotJS will now offer some <code>services</code></li>
 <li>Several services are returned to the callback function, including <a href="http://localhost:1313/core-components/services/flobot-flobots/">flobots</a> that we&rsquo;re using here</li>
 <li>The <code>flobots</code> service offers an API with a few methods including <code>startNewFlobot</code>. The minimum required to call <code>startNewFlobot</code> (as seen in this example) is a <strong>flowId</strong> - here we&rsquo;re using the flowId <code>tutorial_helloWorld_1_0</code>.</li>
 <li>These flowIds are conjured by combining the name of the blueprint&rsquo;s namespace (<code>tutorial</code>), the flow&rsquo;s name (<code>helloWorld</code> - which has been inferred from the <code>/flows/hello-world.json</code> filename) and the version number of the flow (as defined in the <code>/flows/hello-world.json</code> file).</li>

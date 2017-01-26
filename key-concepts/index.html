@@ -312,10 +312,10 @@
 
 <h2 id="flows">Flows</h2>
 
-<p><strong>Everything in Flobot is built around a flow.</strong></p>
+<p><strong>Everything in FlobotJS is built around a flow.</strong></p>
 
 <ul>
-<li><p>An organisation is likely to contain hundreds of business processes. In Flobot, each of these processes can be modelled as a &ldquo;<strong>flow</strong>&rdquo;. Flows can underpin something as simple as a user searching for a document through to  a complex multi-team endeavour.</p></li>
+<li><p>An organisation is likely to contain hundreds of business processes. In FlobotJS, each of these processes can be modelled as a &ldquo;<strong>flow</strong>&rdquo;. Flows can underpin something as simple as a user searching for a document through to  a complex multi-team endeavour.</p></li>
 
 <li><p>Flows may involve lots of people or may require no human input at all. It&rsquo;s likely an employee&rsquo;s role will require interaction with several flows - but probably not all of them.</p></li>
 
@@ -352,7 +352,7 @@
 <li><p>Which state the FSM should find itself in as it starts (i.e. the flow&rsquo;s <em>initial</em> state)</p></li>
 </ul>
 
-<p>Flobot provides a pool of different <a href="https://wmfs.github.io/core-components/#list-of-state-classes">State Classes</a>, each state in a flow will be associated with a particular <em>State Class</em>. It&rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.</p>
+<p>FlobotJS provides a pool of different <a href="https://wmfs.github.io/core-components/#list-of-state-classes">State Classes</a>, each state in a flow will be associated with a particular <em>State Class</em>. It&rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.</p>
 
 <p><strong>For a full list of states that are currently available out-of-the-box, please see the <a href="https://wmfs.github.io/core-components/#list-of-state-classes">list of core states</a>.</strong></p>
 
@@ -443,7 +443,7 @@ This is an example of what might be persisted for a Flobot travelling around the
 
 <tr>
 <td><code>ctx</code></td>
-<td>This is a simple key/value store that&rsquo;s unique to each Flobot. In analogy terms, this is a good place to store the spped of a train. This <strong>context</strong> is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each <del>train</del> Flobot.</td>
+<td>This is a simple key/value store that&rsquo;s unique to each Flobot. In analogy terms, this is a good place to store the speed of a train. This <strong>context</strong> is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each <del>train</del> Flobot.</td>
 </tr>
 </tbody>
 </table>
@@ -453,7 +453,7 @@ This is an example of what might be persisted for a Flobot travelling around the
 <h2 id="blueprints">Blueprints</h2>
 
 <p>On their own, flow definitions aren&rsquo;t enough&hellip; for everything to spark, states need to be fed things like data models, form layouts, images, custom logic, templates etc.
-This is where Flobot <strong>Blueprints</strong> come in. The actual content of a Blueprint is beyond the scope of this article, but just to say Blueprints themselves are nothing special, just a simple folder structure:</p>
+This is where FlobotJS <strong>Blueprints</strong> come in. The actual content of a Blueprint is beyond the scope of this article, but just to say Blueprints themselves are nothing special, just a simple folder structure:</p>
 
 <table>
 <thead>
@@ -504,19 +504,19 @@ This is where Flobot <strong>Blueprints</strong> come in. The actual content of 
 <p>Given an organisation could potentially attract hundreds of flows, blueprints can logically group together related flows (perhaps into teams or functional areas) to help make things more manageable.
 Blueprints also help with versioning, collaboration (on Github or similar) and interoperability.</p>
 
-<p>The Flobot framework can load any number of blueprints at startup, potentially serving all back-office functionality from a single server.</p>
+<p>The FlobotJS framework can load any number of blueprints at startup, potentially serving all back-office functionality from a single server.</p>
 
 <hr>
 
 <h2 id="plugins">Plugins</h2>
 
-<p>Flobot takes a batteries-included approach and hopefully ships with enough <a href="#states">State Classes</a> to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a <strong>plugin</strong> architecture.
-A Flobot plugin extends the core framework with related State Classes (along with other internal components required to run them).</p>
+<p>FlobotJS takes a batteries-included approach and hopefully ships with enough <a href="#states">State Classes</a> to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a <strong>plugin</strong> architecture.
+A FlobotJS plugin extends the core framework with related State Classes (along with other internal components required to run them).</p>
 
 <p><strong>Please see the <a href="https://wmfs.github.io/core-components/#list-of-plugins">list of core plugins</a> to get a feel for what plugins are all about</strong></p>
 
-<p>Flobot&rsquo;s current library of state classes is certainly far from exhaustive and organisations will undoubtedly have specialist requirements of their own.
-It&rsquo;s straightforward to write new plugins for Flobot to add missing capabilities.</p>
+<p>FlobotJS&rsquo;s current library of state classes is certainly far from exhaustive and organisations will undoubtedly have specialist requirements of their own.
+It&rsquo;s straightforward to write a new plugin for FlobotJS and add missing capabilities.</p>
 
 
 			<aside class="copyright" role="note">

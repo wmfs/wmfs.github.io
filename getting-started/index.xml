@@ -22,7 +22,7 @@
 
 &lt;h2 id=&#34;install-node-js&#34;&gt;Install Node.js&lt;/h2&gt;
 
-&lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; Flobot requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;First ensure you have &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; installed&amp;hellip; FlobotJS requires at least &lt;code&gt;v6.9 LTS&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;To check everything&amp;rsquo;s OK, run &lt;code&gt;node&lt;/code&gt; from the command line:&lt;/p&gt;
 
@@ -41,7 +41,7 @@ v6.9.1
 &lt;h3 id=&#34;running-npm-behind-a-proxy&#34;&gt;Running npm`behind a proxy&lt;/h3&gt;
 
 &lt;p&gt;To download packages from the &lt;strong&gt;&lt;a href=&#34;https://www.npmjs.com/&#34;&gt;mothership&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;npm&lt;/strong&gt; will need access to all your internets.
-If you&amp;rsquo;re going to be using Flobot from behind a proxy server, then there&amp;rsquo;s some one-off hurt to get through at his point:&lt;/p&gt;
+If you&amp;rsquo;re going to be using FlobotJS from behind a proxy server, then there&amp;rsquo;s some one-off hurt to get through at his point:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ npm config set proxy       &amp;quot;http://domain%5Cusername:password@servername:port/&amp;quot;
 $ npm config set https-proxy &amp;quot;http://domain%5Cusername:password@servername:port/&amp;quot;
@@ -61,9 +61,9 @@ $ npm config set https-proxy &amp;quot;http://domain%5Cusername:password@servern
 
 &lt;h2 id=&#34;hello-world&#34;&gt;Hello World!&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;To help show what Flobot is about we&amp;rsquo;ll go through the steps to get &lt;code&gt;Hello World!&lt;/code&gt; printed to the console.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To help show what FlobotJS is about we&amp;rsquo;ll go through the steps to get &lt;code&gt;Hello World!&lt;/code&gt; printed to the console.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;All functionality in Flobot is delivered via a &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flow&lt;/a&gt; and flows are defined in &lt;a href=&#34;https://wmfs.github.io/key-concepts/#blueprints&#34;&gt;blueprints&lt;/a&gt;.
+&lt;p&gt;All functionality in FlobotJS is delivered via a &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flow&lt;/a&gt; and flows are defined in &lt;a href=&#34;https://wmfs.github.io/key-concepts/#blueprints&#34;&gt;blueprints&lt;/a&gt;.
 So to get &lt;code&gt;Hello World!&lt;/code&gt; onto the screen, we&amp;rsquo;re going to need ourselves a blueprint&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;Nothing to it: make a directory, with a &lt;code&gt;/flows&lt;/code&gt; sub-directory and a &lt;code&gt;/blueprint.json&lt;/code&gt; file:&lt;/p&gt;
@@ -90,7 +90,7 @@ So to get &lt;code&gt;Hello World!&lt;/code&gt; onto the screen, we&amp;rsquo;re
 &lt;li&gt;The important takeaway here is that our blueprint is named &lt;code&gt;helloWorld&lt;/code&gt; and it will live within the &lt;code&gt;tutorial&lt;/code&gt; namespace. Blueprints which share the same namespace can refer to each others components. The rest of the &lt;code&gt;blueprint.json&lt;/code&gt; is meta tinsel.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Now we need to define a &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flow&lt;/a&gt; for Flobot to run&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now we need to define a &lt;a href=&#34;https://wmfs.github.io/key-concepts/#flows&#34;&gt;flow&lt;/a&gt; for FlobotJS to run&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Create a &lt;code&gt;/flows/hello-world.json&lt;/code&gt; file:&lt;/p&gt;
 
@@ -139,7 +139,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
 
 &lt;p&gt;Make a totally fresh directory somewhere (&lt;strong&gt;not&lt;/strong&gt; inside the blueprint) and create an &lt;code&gt;/index.js&lt;/code&gt; file inside it:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/hello-world-flobot.png&#34; alt=&#34;Startings of a Flobot project structure&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/hello-world-flobot.png&#34; alt=&#34;Startings of a FlobotJS project structure&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Then, from &lt;em&gt;within that directory&lt;/em&gt;, use the &lt;code&gt;npm&lt;/code&gt; command to install the &lt;a href=&#34;https://www.npmjs.com/package/flobot&#34;&gt;flobot package&lt;/a&gt;:&lt;/strong&gt;&lt;/p&gt;
 
@@ -150,7 +150,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
 
 &lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/node_modules.png&#34; alt=&#34;Shows a new node_modules dir has appeared&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Now we&amp;rsquo;ll make sure Flobot can boot without any problems&amp;hellip; edit the &lt;code&gt;/index.js&lt;/code&gt; to be:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now we&amp;rsquo;ll make sure FlobotJS can boot without any problems&amp;hellip; edit the &lt;code&gt;/index.js&lt;/code&gt; to be:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt; &#39;use strict&#39;
  var flobot = require(&#39;flobot&#39;)
@@ -186,7 +186,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
 &lt;p&gt;&amp;hellip;a chunk of output should then appear - for everything to have worked it should end with &lt;code&gt;Done booting&lt;/code&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;This is a relatively exciting moment! Flobot has booted, consumed our demo blueprint and offered us lots of ready-to-use &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-services&#34;&gt;services&lt;/a&gt; - the reason we&amp;rsquo;re not seeing &lt;code&gt;Hello World!&lt;/code&gt; yet is that we haven&amp;rsquo;t used any of those services.&lt;/li&gt;
+&lt;li&gt;This is a relatively exciting moment! FlobotJS has booted, consumed our demo blueprint and offered us lots of ready-to-use &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-services&#34;&gt;services&lt;/a&gt; - the reason we&amp;rsquo;re not seeing &lt;code&gt;Hello World!&lt;/code&gt; yet is that we haven&amp;rsquo;t used any of those services.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s run a Flobot!&lt;/strong&gt;&lt;/p&gt;
@@ -215,7 +215,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;As before, if everything goes as expected during the boot process, Flobot will offer some &lt;code&gt;services&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;As before, if everything goes as expected during the boot process, FlobotJS will now offer some &lt;code&gt;services&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Several services are returned to the callback function, including &lt;a href=&#34;http://localhost:1313/core-components/services/flobot-flobots/&#34;&gt;flobots&lt;/a&gt; that we&amp;rsquo;re using here&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;flobots&lt;/code&gt; service offers an API with a few methods including &lt;code&gt;startNewFlobot&lt;/code&gt;. The minimum required to call &lt;code&gt;startNewFlobot&lt;/code&gt; (as seen in this example) is a &lt;strong&gt;flowId&lt;/strong&gt; - here we&amp;rsquo;re using the flowId &lt;code&gt;tutorial_helloWorld_1_0&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;These flowIds are conjured by combining the name of the blueprint&amp;rsquo;s namespace (&lt;code&gt;tutorial&lt;/code&gt;), the flow&amp;rsquo;s name (&lt;code&gt;helloWorld&lt;/code&gt; - which has been inferred from the &lt;code&gt;/flows/hello-world.json&lt;/code&gt; filename) and the version number of the flow (as defined in the &lt;code&gt;/flows/hello-world.json&lt;/code&gt; file).&lt;/li&gt;
