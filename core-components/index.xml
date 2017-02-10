@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Thu, 26 Jan 2017 16:54:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Feb 2017 14:52:31 +0000</lastBuildDate>
     <atom:link href="https://wmfs.github.io/core-components/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Core Components</title>
       <link>https://wmfs.github.io/core-components/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/</guid>
       <description>
@@ -100,6 +100,12 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/elasticsearch-deleting-flobot-tasks&#34;&gt;deletingFlobotTasks&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Deletes any task documents with a key of the current Flobot&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;states/elasticsearch-deleting-from-search-index&#34;&gt;deletingFromSearchIndex&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Removes a document from an Elasticsearch index&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
@@ -127,6 +133,12 @@
 &lt;td&gt;&lt;a href=&#34;states/flobot-logging&#34;&gt;logging&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Just logs any data sent to it to the console&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/elasticsearch-making-task&#34;&gt;makingTask&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Creates a new Flobot that&amp;#39;s configured to be used as a task&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -286,9 +298,9 @@
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/express-rbac&#34;&gt;rbac&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-rbac&#34;&gt;rbac&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -340,9 +352,9 @@
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/express-users&#34;&gt;users&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/flobot-users&#34;&gt;users&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds user-management capabilities to Flobot (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -350,9 +362,43 @@
     </item>
     
     <item>
+      <title>deletingFlobotTasks state</title>
+      <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/</link>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/</guid>
+      <description>
+
+&lt;p&gt;Deletes any task documents with a key of the current Flobot. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;deletingFlobotTasks&amp;quot;: {
+    &amp;quot;options&amp;quot;: {}
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>deletingFromSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</guid>
       <description>
@@ -416,7 +462,7 @@
     <item>
       <title>findingOne state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
       <description>
@@ -499,7 +545,7 @@
     <item>
       <title>formFilling state</title>
       <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
       <description>
@@ -541,7 +587,7 @@
 &lt;td&gt;&lt;em&gt;target&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;A &amp;#39;.&amp;#39; delimited path to where data that&amp;#39;s submitted via the form should be set on the Flobot context&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -561,7 +607,7 @@
     <item>
       <title>importing state</title>
       <link>https://wmfs.github.io/core-components/states/import-importing/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-importing/</guid>
       <description>
@@ -619,7 +665,7 @@
     <item>
       <title>logging state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-logging/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-logging/</guid>
       <description>
@@ -665,9 +711,43 @@
     </item>
     
     <item>
+      <title>makingTask state</title>
+      <link>https://wmfs.github.io/core-components/states/elasticsearch-making-task/</link>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/elasticsearch-making-task/</guid>
+      <description>
+
+&lt;p&gt;Creates a new Flobot that&amp;#39;s configured to be used as a task. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;addingTask&amp;quot;: {
+    &amp;quot;options&amp;quot;: {}
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>persisting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-persisting/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-persisting/</guid>
       <description>
@@ -733,7 +813,7 @@
     <item>
       <title>producingImportFiles state</title>
       <link>https://wmfs.github.io/core-components/states/import-producing-import-files/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/import-producing-import-files/</guid>
       <description>
@@ -839,7 +919,7 @@
     <item>
       <title>searching state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-searching/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-searching/</guid>
       <description>
@@ -868,7 +948,7 @@
     <item>
       <title>sendingEmail state</title>
       <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
       <description>
@@ -964,7 +1044,7 @@
     <item>
       <title>settingSearchIndex state</title>
       <link>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</guid>
       <description>
@@ -1073,7 +1153,7 @@
     <item>
       <title>starting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
       <description>
@@ -1102,7 +1182,7 @@
     <item>
       <title>env command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-env/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
+      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-env/</guid>
       <description>
@@ -1151,114 +1231,6 @@
 &lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Should things fail if the environment variable hasn&amp;#39;t been set? Defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>sprintf command</title>
-      <link>https://wmfs.github.io/core-components/commands/flobot-sprintf/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/core-components/commands/flobot-sprintf/</guid>
-      <description>
-
-&lt;p&gt;Derive a runtime value using a &lt;a href=&#34;https://github.com/alexei/sprintf.js&#34;&gt;sprintf&lt;/a&gt; string template. This command is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;title&amp;quot;: {
-    &amp;quot;$sprintf&amp;quot;: {
-      &amp;quot;template&amp;quot;: &amp;quot;%s %s (aged %d years)&amp;quot;,
-      &amp;quot;inputPaths&amp;quot;: [
-        &amp;quot;employeeData.firstName&amp;quot;,
-        &amp;quot;employeeData.lastName&amp;quot;,
-        &amp;quot;employeeData.age&amp;quot;
-      ]
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;template&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A string template that can contain &lt;code&gt;%s&lt;/code&gt;, &lt;code&gt;%d&lt;/code&gt; and similar placeholders&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;inputPaths&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;An array of strings - the values of which should be &amp;#39;.&amp;#39; delimited paths pointing to values on the Flobot context. These context values will be combined as per the &lt;code&gt;template&lt;/code&gt; to return the output string. See &lt;a href=&#34;https://github.com/alexei/sprintf.js#javascript-vsprintf&#34;&gt;vsprintf&lt;/a&gt; for more info.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>value command</title>
-      <link>https://wmfs.github.io/core-components/commands/flobot-value/</link>
-      <pubDate>Thu, 26 Jan 2017 16:54:36 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/core-components/commands/flobot-value/</guid>
-      <description>
-
-&lt;p&gt;Get a value from the Flobot&amp;#39;s context. This command is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;catName&amp;quot;: {
-    &amp;quot;$value&amp;quot;: {
-      &amp;quot;path&amp;quot;: &amp;quot;myCatData.name&amp;quot;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;path&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A &amp;#39;.&amp;#39; delimited path pointing to a value on the Flobot context&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

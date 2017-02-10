@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
         
           <br>
           wmfs/flobot
@@ -430,6 +430,40 @@
 <p><strong>Examples</strong></p>
 
 <pre><code class="language-javascript">search.refresh(
+  function (err) {
+    // Expect err to be null
+  }
+)
+</code></pre>
+
+<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></strong></p>
+
+<h2 id="adddoc">addDoc</h2>
+
+<p>Adds a document to the search index</p>
+
+<p><strong>Parameters</strong></p>
+
+<ul>
+<li><code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> An id to uniquely identify the document within a type</li>
+<li><code>typeName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> An index-type name into which the document will be created</li>
+<li><code>body</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> The document to store</li>
+<li><code>callback</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></strong> Called with a standard error</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<pre><code class="language-javascript">search.addDoc(
+  'alan', // id
+  'cats', // typeName
+  {
+    title: 'Alan',
+    summary: 'Alan is a cat',
+    searchText: 'alan cat',
+    key: '123',
+    tags: ['cats', 'pets'],
+    updatedAt: new Date()
+  },
   function (err) {
     // Expect err to be null
   }

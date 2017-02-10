@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>commands service - Flobot Documentation</title>
+    <title>deletingFlobotTasks state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/services/flobot-commands/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/services/flobot-commands/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        commands service
+        deletingFlobotTasks state
       </div>
     </div>
 
@@ -303,18 +303,29 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>commands service </h1>
+			<h1>deletingFlobotTasks state </h1>
 
 			
 
-<p>Service to support blueprint commands. This service is provided via the
-<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Deletes any task documents with a key of the current Flobot. This state is provided via the
+<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h2 id="boot-config">Boot config</h2>
+<h2 id="state-config">State config</h2>
 
-<ul>
-<li>This service doesn&rsquo;t require any configuration to boot.</li>
-</ul>
+<pre><code class="language-json">{
+  &quot;deletingFlobotTasks&quot;: {
+    &quot;options&quot;: {}
+  }
+}
+</code></pre>
+
+<p><em>None.</em></p>
+
+<p><code>autoNudge</code>: <code>true</code></p>
+
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
 
 <hr>
 
@@ -337,7 +348,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/commands/flobot-value/" title="value command">
+      <a href="https://wmfs.github.io/license/" title="License">
         <span class="direction">
           Previous
         </span>
@@ -347,7 +358,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              value command
+              License
             </div>
           </div>
         </div>
@@ -357,14 +368,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/services/alerts-email/" title="email service">
+      <a href="https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/" title="deletingFromSearchIndex state">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              email service
+              deletingFromSearchIndex state
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
