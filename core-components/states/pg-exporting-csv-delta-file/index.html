@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>importing state - Flobot Documentation</title>
+    <title>exportingCsvDeltaFile state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/states/import-importing/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/states/import-importing/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        importing state
+        exportingCsvDeltaFile state
       </div>
     </div>
 
@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -303,47 +303,46 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>importing state </h1>
+			<h1>exportingCsvDeltaFile state </h1>
 
 			
 
-<p>Streams data from a pre-prepared directory and into storage. This state is provided via the
-<a href="https://github.com/wmfs/flobot-import-plugin#readme">import</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over <a href="https://www.npmjs.com/package/pg-delta-file">pg-delta-file</a>. This state is provided via the
+<a href="https://github.com/wmfs/tymly#readme">pg</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
 <pre><code class="language-json">{
-  &quot;importing&quot;: {
+  &quot;exportingCsvDeltaFile&quot;: {
     &quot;options&quot;: {
-      &quot;importFrom&quot;: {
-        &quot;$value&quot;: {
-          &quot;path&quot;: &quot;importInfo.outputDir&quot;
+      &quot;since&quot;: &quot;2000-07-16T20:37:26.847Z&quot;,
+      &quot;createdColumnName&quot;: &quot;_created&quot;,
+      &quot;modifiedColumnName&quot;: &quot;_modified&quot;,
+      &quot;actionAliases&quot;: {
+        &quot;insert&quot;: &quot;u&quot;,
+        &quot;update&quot;: &quot;u&quot;,
+        &quot;delete&quot;: &quot;d&quot;
+      },
+      &quot;tables&quot;: [
+        {
+          &quot;tableName&quot;: &quot;people&quot;,
+          &quot;csvColumns&quot;: [
+            &quot;PERSON&quot;,
+            &quot;$ACTION&quot;,
+            &quot;$ROW_NUM&quot;,
+            &quot;@social_security_id&quot;,
+            &quot;@first_name&quot;,
+            &quot;@last_name&quot;,
+            &quot;@age&quot;
+          ]
         }
-      }
+      ]
     }
   }
 }
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><em>importFrom</em></td>
-<td><code>string</code></td>
-<td>A path indicating where to find the processed import directory (which is available via the <code>producing-import-files</code> state)</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
+<p><em>None.</em></p>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 
@@ -372,7 +371,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/states/forms-form-filling/" title="formFilling state">
+      <a href="https://wmfs.github.io/license/" title="License">
         <span class="direction">
           Previous
         </span>
@@ -382,7 +381,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              formFilling state
+              License
             </div>
           </div>
         </div>
@@ -392,14 +391,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/states/flobot-logging/" title="logging state">
+      <a href="https://wmfs.github.io/core-components/states/flobot-finding-by-id/" title="findingById state">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              logging state
+              findingById state
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

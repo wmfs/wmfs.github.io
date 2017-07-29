@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>search service - Flobot Documentation</title>
+    <title>importingCsvFiles state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/services/elasticsearch-search/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/pg-importing-csv-files/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/services/elasticsearch-search/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/pg-importing-csv-files/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        search service
+        importingCsvFiles state
       </div>
     </div>
 
@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -303,183 +303,82 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>search service </h1>
+			<h1>importingCsvFiles state </h1>
 
 			
 
-<p>For integrating Flobot with an Elasticsearch server. This service is provided via the
-<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Smash CSV files into more manageable files based on column values - just a thin wrapper over <a href="https://www.npmjs.com/package/smithereens">Smithereens</a>. This state is provided via the
+<a href="https://github.com/wmfs/tymly#readme">pg</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
-<h2 id="boot-config">Boot config</h2>
+<h2 id="state-config">State config</h2>
 
 <pre><code class="language-json">{
-  &quot;elasticsearch&quot;: {
-    &quot;indexName&quot;: &quot;flobot_test_search&quot;,
-    &quot;host&quot;: &quot;localhost:9200&quot;,
-    &quot;log&quot;: &quot;error&quot;,
-    &quot;dropIfExists&quot;: false
+  &quot;processingCsvFiles&quot;: {
+    &quot;options&quot;: {
+      &quot;parser&quot;: {
+        &quot;quote&quot;: &quot;\&quot;&quot;,
+        &quot;delimiter&quot;: &quot;,&quot;,
+        &quot;newline&quot;: &quot;\r\n&quot;,
+        &quot;skipFirstLine&quot;: false,
+        &quot;trimWhitespace&quot;: true
+      },
+      &quot;dirSplits&quot;: [
+        {
+          &quot;columnIndex&quot;: 3,
+          &quot;valueToDirMap&quot;: {
+            &quot;c&quot;: &quot;children&quot;,
+            &quot;a&quot;: &quot;adults&quot;
+          }
+        }
+      ],
+      &quot;fileSplits&quot;: {
+        &quot;columnIndex&quot;: 4,
+        &quot;valueToFileMap&quot;: {
+          &quot;u&quot;: {
+            &quot;filename&quot;: &quot;changes&quot;,
+            &quot;outputColumns&quot;: [
+              {
+                &quot;name&quot;: &quot;person_no&quot;,
+                &quot;columnIndex&quot;: 0
+              },
+              {
+                &quot;name&quot;: &quot;first_name&quot;,
+                &quot;columnIndex&quot;: 1
+              },
+              {
+                &quot;name&quot;: &quot;last_name&quot;,
+                &quot;columnIndex&quot;: 2
+              }
+            ]
+          },
+          &quot;d&quot;: {
+            &quot;filename&quot;: &quot;deletes&quot;,
+            &quot;outputColumns&quot;: [
+              {
+                &quot;name&quot;: &quot;person_no&quot;,
+                &quot;columnIndex&quot;: 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    &quot;events&quot;: {
+      &quot;csvFilesProcessed&quot;: {
+        &quot;to&quot;: &quot;importingCsvFiles&quot;
+      }
+    }
   }
 }
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
+<p><em>None.</em></p>
 
-<tbody>
-<tr>
-<td><em>indexName</em></td>
-<td><code>string</code></td>
-<td>Name of the Elasticsearch index to create (defaults to <code>flobot_search</code>)</td>
-<td>No</td>
-</tr>
+<p><code>autoNudge</code>: <code>true</code></p>
 
-<tr>
-<td><em>host</em></td>
-<td><code>string</code></td>
-<td>Host string of the Elasticsearch server to connect to (e.g. <code>localhost:9200</code>)</td>
-<td>Yes</td>
-</tr>
-
-<tr>
-<td><em>log</em></td>
-<td><code>string</code></td>
-<td>Passed straight to <a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/configuration.html">Elasticsearch config</a> (Valid values include <code>error</code>, <code>warning</code> and <code>info</code>)</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td><em>dropIfExists</em></td>
-<td><code>boolean</code></td>
-<td>If <code>true</code> then the entire Elasticsearch index will be dropped at boot-time. (Not surprisingly, defaults to <code>false</code>)</td>
-<td>No</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="service-methods-properties">Service methods/properties</h1>
-
-<!-- Generated by documentation.js. Update this documentation by updating the source code. -->
-
-<h2 id="createindex">createIndex</h2>
-
-<p>Creates a new Elasticsearch</p>
-
-<p><strong>Parameters</strong></p>
-
-<ul>
-<li><code>indexName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> Name of an Elasticsearch index to create</li>
-<li><code>messages</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> A <code>messages</code> object that&rsquo;s created at boot-time to help collate multiple errors/warnings etc. Optional.</li>
-<li><code>callback</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></strong> Called with a standard error</li>
-</ul>
-
-<p><strong>Examples</strong></p>
-
-<pre><code class="language-javascript">search.createIndex(
-  'flobot_search', // indexName
-  null, // messages
-  function (err) {
-    // Expect err to be null
-  }
-)
-</code></pre>
-
-<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></strong></p>
-
-<h2 id="deleteindex">deleteIndex</h2>
-
-<p>Deletes an existing Elasticsearch index</p>
-
-<p><strong>Parameters</strong></p>
-
-<ul>
-<li><code>indexName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> Name of an Elasticsearch index to delete</li>
-<li><code>messages</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> A <code>messages</code> object that&rsquo;s created at boot-time to help collate multiple errors/warnings etc. Optional.</li>
-<li><code>callback</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></strong> Called with a standard error</li>
-</ul>
-
-<p><strong>Examples</strong></p>
-
-<pre><code class="language-javascript">search.deleteIndex(
-  'flobot_search', // indexName
-  null, // messages
-  function (err) {
-    // Expect err to be null
-  }
-)
-</code></pre>
-
-<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></strong></p>
-
-<h2 id="refresh">refresh</h2>
-
-<p>Refreshes all Elasticsearch indices (i.e. makes all known documents searchable)</p>
-
-<p><strong>Parameters</strong></p>
-
-<ul>
-<li><code>callback</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></strong> Called with a standard error</li>
-</ul>
-
-<p><strong>Examples</strong></p>
-
-<pre><code class="language-javascript">search.refresh(
-  function (err) {
-    // Expect err to be null
-  }
-)
-</code></pre>
-
-<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></strong></p>
-
-<h2 id="adddoc">addDoc</h2>
-
-<p>Adds a document to the search index</p>
-
-<p><strong>Parameters</strong></p>
-
-<ul>
-<li><code>id</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> An id to uniquely identify the document within a type</li>
-<li><code>typeName</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> An index-type name into which the document will be created</li>
-<li><code>body</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> The document to store</li>
-<li><code>callback</code> <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></strong> Called with a standard error</li>
-</ul>
-
-<p><strong>Examples</strong></p>
-
-<pre><code class="language-javascript">search.addDoc(
-  'alan', // id
-  'cats', // typeName
-  {
-    title: 'Alan',
-    summary: 'Alan is a cat',
-    searchText: 'alan cat',
-    key: '123',
-    tags: ['cats', 'pets'],
-    updatedAt: new Date()
-  },
-  function (err) {
-    // Expect err to be null
-  }
-)
-</code></pre>
-
-<p>Returns <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></strong>
-<hr></p>
-
-<h3 id="boots-before">Boots before</h3>
-
-<p><code>flobots</code></p>
-
-<h3 id="boots-after">Boots after</h3>
-
-<p><code>tags</code></p>
+<blockquote>
+<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+</blockquote>
 
 <hr>
 
@@ -502,7 +401,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/services/flobot-registry/" title="registry service">
+      <a href="https://wmfs.github.io/core-components/states/forms-form-filling/" title="formFilling state">
         <span class="direction">
           Previous
         </span>
@@ -512,7 +411,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              registry service
+              formFilling state
             </div>
           </div>
         </div>
@@ -522,14 +421,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/services/express-server/" title="server service">
+      <a href="https://wmfs.github.io/core-components/states/flobot-logging/" title="logging state">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              server service
+              logging state
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>persisting state - Flobot Documentation</title>
+    <title>processingCsvFiles state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/states/flobot-persisting/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/etl-processing-csv-files/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/states/flobot-persisting/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/etl-processing-csv-files/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        persisting state
+        processingCsvFiles state
       </div>
     </div>
 
@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -303,55 +303,76 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>persisting state </h1>
+			<h1>processingCsvFiles state </h1>
 
 			
 
-<p>Saves a document to storage. This state is provided via the
-<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Smash CSV files into more manageable files based on column values - just a thin wrapper over <a href="https://www.npmjs.com/package/smithereens">Smithereens</a>. This state is provided via the
+<a href="https://github.com/wmfs/tymly#readme">etl</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
 <pre><code class="language-json">{
-  &quot;persisting&quot;: {
+  &quot;processingCsvFiles&quot;: {
     &quot;options&quot;: {
-      &quot;modelId&quot;: &quot;cat&quot;,
-      &quot;doc&quot;: {
-        &quot;$value&quot;: {
-          &quot;path&quot;: &quot;catDocFromParams&quot;
+      &quot;parser&quot;: {
+        &quot;quote&quot;: &quot;\&quot;&quot;,
+        &quot;delimiter&quot;: &quot;,&quot;,
+        &quot;newline&quot;: &quot;\r\n&quot;,
+        &quot;skipFirstLine&quot;: false,
+        &quot;trimWhitespace&quot;: true
+      },
+      &quot;dirSplits&quot;: [
+        {
+          &quot;columnIndex&quot;: 3,
+          &quot;valueToDirMap&quot;: {
+            &quot;c&quot;: &quot;children&quot;,
+            &quot;a&quot;: &quot;adults&quot;
+          }
         }
+      ],
+      &quot;fileSplits&quot;: {
+        &quot;columnIndex&quot;: 4,
+        &quot;valueToFileMap&quot;: {
+          &quot;u&quot;: {
+            &quot;filename&quot;: &quot;changes&quot;,
+            &quot;outputColumns&quot;: [
+              {
+                &quot;name&quot;: &quot;person_no&quot;,
+                &quot;columnIndex&quot;: 0
+              },
+              {
+                &quot;name&quot;: &quot;first_name&quot;,
+                &quot;columnIndex&quot;: 1
+              },
+              {
+                &quot;name&quot;: &quot;last_name&quot;,
+                &quot;columnIndex&quot;: 2
+              }
+            ]
+          },
+          &quot;d&quot;: {
+            &quot;filename&quot;: &quot;deletes&quot;,
+            &quot;outputColumns&quot;: [
+              {
+                &quot;name&quot;: &quot;person_no&quot;,
+                &quot;columnIndex&quot;: 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    &quot;events&quot;: {
+      &quot;csvFilesProcessed&quot;: {
+        &quot;to&quot;: &quot;importingCsvFiles&quot;
       }
     }
   }
 }
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><em>modelId</em></td>
-<td><code>string</code></td>
-<td>This is the id of a model within the current namespace which will be used to persist the document.</td>
-<td>Yes</td>
-</tr>
-
-<tr>
-<td><em>doc</em></td>
-<td><code>object</code></td>
-<td>The document that needs storing. Use <strong>commands</strong> such as <code>$value</code> and similar to dynamically access Flobot context</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
+<p><em>None.</em></p>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 
@@ -380,7 +401,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/states/elasticsearch-making-task/" title="makingTask state">
+      <a href="https://wmfs.github.io/core-components/states/flobot-logging/" title="logging state">
         <span class="direction">
           Previous
         </span>
@@ -390,7 +411,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              makingTask state
+              logging state
             </div>
           </div>
         </div>
@@ -400,14 +421,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/states/import-producing-import-files/" title="producingImportFiles state">
+      <a href="https://wmfs.github.io/core-components/states/alerts-sending-email/" title="sendingEmail state">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              producingImportFiles state
+              sendingEmail state
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

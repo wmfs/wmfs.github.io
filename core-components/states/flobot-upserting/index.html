@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>producingImportFiles state - Flobot Documentation</title>
+    <title>upserting state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/states/import-producing-import-files/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/flobot-upserting/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/states/import-producing-import-files/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/flobot-upserting/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        producingImportFiles state
+        upserting state
       </div>
     </div>
 
@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -303,57 +303,24 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>producingImportFiles state </h1>
+			<h1>upserting state </h1>
 
 			
 
-<p>Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent <strong>importing</strong>. This state is provided via the
-<a href="https://github.com/wmfs/flobot-import-plugin#readme">import</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Saves a document to storage. This state is provided via the
+<a href="https://github.com/wmfs/tymly#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
 <pre><code class="language-json">{
-  &quot;producingImportFiles&quot;: {
+  &quot;upserting&quot;: {
     &quot;options&quot;: {
-      &quot;parserName&quot;: &quot;csv&quot;,
-      &quot;parserOptions&quot;: {
-        &quot;quote&quot;: &quot;\&quot;&quot;,
-        &quot;delimiter&quot;: &quot;,&quot;,
-        &quot;newline&quot;: &quot;\n&quot;,
-        &quot;skipFirstLine&quot;: true,
-        &quot;trimWhitespace&quot;: true
-      },
-      &quot;targetModels&quot;: [
-        {
-          &quot;modelId&quot;: &quot;planet&quot;,
-          &quot;fieldSources&quot;: {
-            &quot;planetName&quot;: {
-              &quot;source&quot;: &quot;csvIndex&quot;,
-              &quot;options&quot;: {
-                &quot;index&quot;: 0
-              }
-            },
-            &quot;title&quot;: {
-              &quot;source&quot;: &quot;csvIndex&quot;,
-              &quot;options&quot;: {
-                &quot;index&quot;: 1
-              }
-            },
-            &quot;radiusKm&quot;: {
-              &quot;source&quot;: &quot;csvIndex&quot;,
-              &quot;options&quot;: {
-                &quot;index&quot;: 2
-              }
-            },
-            &quot;radiusMiles&quot;: {
-              &quot;source&quot;: &quot;function&quot;,
-              &quot;options&quot;: {
-                &quot;functionName&quot;: &quot;mileMaker&quot;
-              }
-            }
-          }
+      &quot;modelId&quot;: &quot;cat&quot;,
+      &quot;doc&quot;: {
+        &quot;$value&quot;: {
+          &quot;path&quot;: &quot;catDocFromParams&quot;
         }
-      ]
+      }
     }
   }
 }
@@ -371,23 +338,16 @@
 
 <tbody>
 <tr>
-<td><em>parserName</em></td>
-<td></td>
-<td>Name of the parser to process the raw source files. Currently only <code>csv</code> is supported.</td>
+<td><em>modelId</em></td>
+<td><code>string</code></td>
+<td>This is the id of a model within the current namespace which will be used to upsert the document.</td>
 <td>Yes</td>
 </tr>
 
 <tr>
-<td><em>parserOptions</em></td>
+<td><em>doc</em></td>
 <td><code>object</code></td>
-<td>Parser-specific options</td>
-<td>Yes</td>
-</tr>
-
-<tr>
-<td><em>targetModels</em></td>
-<td><code>array</code></td>
-<td>For defining how raw data should be stored in models</td>
+<td>The document that needs storing. Use <strong>commands</strong> such as <code>$value</code> and similar to dynamically access Flobot context</td>
 <td>Yes</td>
 </tr>
 </tbody>
@@ -420,7 +380,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/states/flobot-persisting/" title="persisting state">
+      <a href="https://wmfs.github.io/core-components/states/pg-synchronizing-table/" title="synchronizingTable state">
         <span class="direction">
           Previous
         </span>
@@ -430,7 +390,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              persisting state
+              synchronizingTable state
             </div>
           </div>
         </div>
@@ -440,14 +400,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/states/elasticsearch-searching/" title="searching state">
+      <a href="https://wmfs.github.io/core-components/commands/flobot-env/" title="env command">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              searching state
+              env command
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

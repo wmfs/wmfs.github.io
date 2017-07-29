@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>makingTask state - Flobot Documentation</title>
+    <title>storage service - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/states/elasticsearch-making-task/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/services/pg-storage/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/states/elasticsearch-making-task/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/services/pg-storage/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        makingTask state
+        storage service
       </div>
     </div>
 
@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -303,29 +303,51 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>makingTask state </h1>
+			<h1>storage service </h1>
 
 			
 
-<p>Creates a new Flobot that&#39;s configured to be used as a task. This state is provided via the
-<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Replaces the default in-memory storage solution with a MongoDB-backed alternative. This service is provided via the
+<a href="https://github.com/wmfs/tymly#readme">pg</a> plugin  - note that alternative <code>storage</code> services are offered via the following plugins:</p>
 
-<h2 id="state-config">State config</h2>
+<ul>
+<li><a href="https://wmfs.github.io/core-components/services/flobot-storage">flobot</a></li>
+</ul>
+
+<h2 id="boot-config">Boot config</h2>
 
 <pre><code class="language-json">{
-  &quot;addingTask&quot;: {
-    &quot;options&quot;: {}
+  &quot;mongodbConnection&quot;: {
+    &quot;host&quot;: &quot;localhost&quot;,
+    &quot;port&quot;: 27017,
+    &quot;database&quot;: &quot;flobotTest&quot;
   }
 }
 </code></pre>
 
 <p><em>None.</em></p>
 
-<p><code>autoNudge</code>: <code>true</code></p>
+<h2 id="blueprint-dirs">Blueprint dirs</h2>
 
 <blockquote>
-<p>This state will automatically advance the flow and doesn&rsquo;t require any external updates</p>
+<p>This service can load resources defined in the following Blueprint directories:</p>
 </blockquote>
+
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Content</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>/models</code></td>
+<td>One JSON file per model (contents to be a JSON schema for defining the model&#39;s data structure)</td>
+</tr>
+</tbody>
+</table>
 
 <hr>
 
@@ -348,7 +370,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/states/flobot-logging/" title="logging state">
+      <a href="https://wmfs.github.io/core-components/services/flobot-storage/" title="storage service">
         <span class="direction">
           Previous
         </span>
@@ -358,7 +380,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              logging state
+              storage service
             </div>
           </div>
         </div>
@@ -368,14 +390,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/states/flobot-persisting/" title="persisting state">
+      <a href="https://wmfs.github.io/core-components/services/flobot-tags/" title="tags service">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              persisting state
+              tags service
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

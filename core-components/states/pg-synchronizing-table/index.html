@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>searching state - Flobot Documentation</title>
+    <title>synchronizingTable state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/states/elasticsearch-searching/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/pg-synchronizing-table/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/states/elasticsearch-searching/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/pg-synchronizing-table/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        searching state
+        synchronizingTable state
       </div>
     </div>
 
@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -303,18 +303,36 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>searching state </h1>
+			<h1>synchronizingTable state </h1>
 
 			
 
-<p>Runs a query on an Elasticsearch index. This state is provided via the
-<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over <a href="https://www.npmjs.com/package/pg-telepods">pg-telepods</a>. This state is provided via the
+<a href="https://github.com/wmfs/tymly#readme">pg</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
-<ul>
-<li>This state doesn&rsquo;t require any configuration.</li>
-</ul>
+<pre><code class="language-json">{
+  &quot;synchronizingTable&quot;: {
+    &quot;options&quot;: {
+      &quot;transformerFunctionName&quot;: &quot;someBlueprintFunction&quot;,
+      &quot;source&quot;: {
+        &quot;tableName&quot;: &quot;someNamespace.some_table_name&quot;,
+        &quot;hashSumColumnName&quot;: &quot;hash_sum&quot;
+      },
+      &quot;target&quot;: {
+        &quot;tableName&quot;: &quot;someNamespace.another_table_name&quot;,
+        &quot;hashSumColumnName&quot;: &quot;origin_hash_sum&quot;
+      },
+      &quot;join&quot;: {
+        &quot;source_pk_column&quot;: &quot;target_pk_column&quot;
+      }
+    }
+  }
+}
+</code></pre>
+
+<p><em>None.</em></p>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 
@@ -343,7 +361,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/states/import-producing-import-files/" title="producingImportFiles state">
+      <a href="https://wmfs.github.io/core-components/states/flobot-starting/" title="starting state">
         <span class="direction">
           Previous
         </span>
@@ -353,7 +371,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              producingImportFiles state
+              starting state
             </div>
           </div>
         </div>
@@ -363,14 +381,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/states/alerts-sending-email/" title="sendingEmail state">
+      <a href="https://wmfs.github.io/core-components/states/flobot-upserting/" title="upserting state">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              sendingEmail state
+              upserting state
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

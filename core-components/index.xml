@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Fri, 10 Feb 2017 14:52:31 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jul 2017 14:19:03 +0000</lastBuildDate>
     <atom:link href="https://wmfs.github.io/core-components/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Core Components</title>
       <link>https://wmfs.github.io/core-components/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/</guid>
       <description>
@@ -47,38 +47,33 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;The &lt;a href=&#34;https://github.com/wmfs/flobot&#34;&gt;flobot&lt;/a&gt; module has a &lt;a href=&#34;https://github.com/wmfs/flobot/lib/plugin&#34;&gt;built-in plugin&lt;/a&gt; which provides low-level components to help get things started.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt;alerts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;alerts&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds some alerting options to the Flobot framework&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds an Elasticsearch-based search service to the Flobot framework&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;etl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Provides some ETL states for flobot&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt;express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;express&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Exposes the Flobot framework via an Express.js web app.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds some form capabilities to Flobot&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt;import&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;For extracting data from files and loading into Flobot storage&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-mongodb-plugin#readme&#34;&gt;mongodb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Replace Flobot&amp;#39;s out-the-box memory storage with MongoDB&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Replace Flobot&amp;#39;s out-the-box memory storage with PostgreSQL&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -100,81 +95,69 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/elasticsearch-deleting-flobot-tasks&#34;&gt;deletingFlobotTasks&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Deletes any task documents with a key of the current Flobot&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;states/pg-exporting-csv-delta-file&#34;&gt;exportingCsvDeltaFile&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/elasticsearch-deleting-from-search-index&#34;&gt;deletingFromSearchIndex&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Removes a document from an Elasticsearch index&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;states/flobot-finding-by-id&#34;&gt;findingById&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Fetches a single document by its primary key values from storage and adds to a Flobot context&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;states/flobot-finding-one&#34;&gt;findingOne&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Fetches a single document from storage and adds to a Flobot context&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;states/forms-form-filling&#34;&gt;formFilling&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Indicates which form a human needs to interact with - and waits until a response is received&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/import-importing&#34;&gt;importing&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Streams data from a pre-prepared directory and into storage&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt; import&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;states/pg-importing-csv-files&#34;&gt;importingCsvFiles&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;states/flobot-logging&#34;&gt;logging&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Just logs any data sent to it to the console&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/elasticsearch-making-task&#34;&gt;makingTask&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Creates a new Flobot that&amp;#39;s configured to be used as a task&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/flobot-persisting&#34;&gt;persisting&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Saves a document to storage&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/import-producing-import-files&#34;&gt;producingImportFiles&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent &lt;strong&gt;importing&lt;/strong&gt;.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt; import&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/elasticsearch-searching&#34;&gt;searching&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Runs a query on an Elasticsearch index&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;states/etl-processing-csv-files&#34;&gt;processingCsvFiles&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; etl&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;states/alerts-sending-email&#34;&gt;sendingEmail&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/elasticsearch-setting-search-index&#34;&gt;settingSearchIndex&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Indexes an Elasticsearch document&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;states/flobot-starting&#34;&gt;starting&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;An internal (automatically added) state that performs some Flobot-startup tasks&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/pg-synchronizing-table&#34;&gt;synchronizingTable&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;states/flobot-upserting&#34;&gt;upserting&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Saves a document to storage&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -198,19 +181,19 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;commands/flobot-env&#34;&gt;env&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Allows a state to refer to an environment variable&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;commands/flobot-sprintf&#34;&gt;sprintf&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Derive a runtime value using a &lt;a href=&#34;https://github.com/alexei/sprintf.js&#34;&gt;sprintf&lt;/a&gt; string template&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;commands/flobot-value&#34;&gt;value&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Get a value from the Flobot&amp;#39;s context&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -234,127 +217,121 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/express-auth&#34;&gt;auth&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-blueprint-docs&#34;&gt;blueprintDocs&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Allows tracking of documents created via blueprints, so they don&amp;#39;t get reverted when Flobot restarts&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-caches&#34;&gt;caches&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds &lt;a href=&#34;https://www.npmjs.com/package/lru-cache&#34;&gt;lru-cache&lt;/a&gt;-based caching to Flobot. Note defaults will be used if no &lt;code&gt;caches&lt;/code&gt; configuration is provided.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-commands&#34;&gt;commands&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Service to support blueprint commands&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/alerts-email&#34;&gt;email&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Integrates Flobot with &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt; to offer email-sending capabilities&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-expression&#34;&gt;expression&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides safe, &lt;a href=&#34;https://www.npmjs.com/package/esprima&#34;&gt;Esprima&lt;/a&gt;-based expression evaluation&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/express-flobot-rest&#34;&gt;flobotRest&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Exposes the core Flobot abilities (start, get, update and cancel) over a JWT-secured REST API&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-flobots&#34;&gt;flobots&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Creates Finite State Machines based on flow definitions and an API to interact with Flobots&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/forms-forms&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Exposes UI configuration (as supplied via blueprints in &lt;a href=&#34;http://schemaform.io/&#34;&gt;Schema Form&lt;/a&gt; format)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-functions&#34;&gt;functions&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds ability to run custom logic as defined in a blueprint&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-inventory&#34;&gt;inventory&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-rbac&#34;&gt;rbac&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-registry&#34;&gt;registry&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides a mechanism for states to refer to site-specific values&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/elasticsearch-search&#34;&gt;search&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;For integrating Flobot with an Elasticsearch server&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt; elasticsearch&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/express-server&#34;&gt;server&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-express-plugin#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-states&#34;&gt;states&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Stores and prepares State Classes, ahead of generating flows&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;This is the default in-memory storage service that ships with Flobot. Useful for testing and not much else.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/mongodb-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/pg-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Replaces the default in-memory storage solution with a MongoDB-backed alternative&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot-mongodb-plugin#readme&#34;&gt; mongodb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-tags&#34;&gt;tags&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides a generic mechanism to help tag/classify search results, tasks, forms etc.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-temp&#34;&gt;temp&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Helps configure and manage a temporary folder for Flobot to use&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;services/flobot-users&#34;&gt;users&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds user-management capabilities to Flobot (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -362,21 +339,44 @@
     </item>
     
     <item>
-      <title>deletingFlobotTasks state</title>
-      <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <title>exportingCsvDeltaFile state</title>
+      <link>https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/</guid>
+      <guid>https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/</guid>
       <description>
 
-&lt;p&gt;Deletes any task documents with a key of the current Flobot. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;p&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;deletingFlobotTasks&amp;quot;: {
-    &amp;quot;options&amp;quot;: {}
+  &amp;quot;exportingCsvDeltaFile&amp;quot;: {
+    &amp;quot;options&amp;quot;: {
+      &amp;quot;since&amp;quot;: &amp;quot;2000-07-16T20:37:26.847Z&amp;quot;,
+      &amp;quot;createdColumnName&amp;quot;: &amp;quot;_created&amp;quot;,
+      &amp;quot;modifiedColumnName&amp;quot;: &amp;quot;_modified&amp;quot;,
+      &amp;quot;actionAliases&amp;quot;: {
+        &amp;quot;insert&amp;quot;: &amp;quot;u&amp;quot;,
+        &amp;quot;update&amp;quot;: &amp;quot;u&amp;quot;,
+        &amp;quot;delete&amp;quot;: &amp;quot;d&amp;quot;
+      },
+      &amp;quot;tables&amp;quot;: [
+        {
+          &amp;quot;tableName&amp;quot;: &amp;quot;people&amp;quot;,
+          &amp;quot;csvColumns&amp;quot;: [
+            &amp;quot;PERSON&amp;quot;,
+            &amp;quot;$ACTION&amp;quot;,
+            &amp;quot;$ROW_NUM&amp;quot;,
+            &amp;quot;@social_security_id&amp;quot;,
+            &amp;quot;@first_name&amp;quot;,
+            &amp;quot;@last_name&amp;quot;,
+            &amp;quot;@age&amp;quot;
+          ]
+        }
+      ]
+    }
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -396,24 +396,27 @@
     </item>
     
     <item>
-      <title>deletingFromSearchIndex state</title>
-      <link>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <title>findingById state</title>
+      <link>https://wmfs.github.io/core-components/states/flobot-finding-by-id/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/</guid>
+      <guid>https://wmfs.github.io/core-components/states/flobot-finding-by-id/</guid>
       <description>
 
-&lt;p&gt;Removes a document from an Elasticsearch index. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;p&gt;Fetches a single document by its primary key values from storage and adds to a Flobot context. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;deletingFromSearchIndex&amp;quot;: {
+  &amp;quot;findingById&amp;quot;: {
     &amp;quot;options&amp;quot;: {
-      &amp;quot;docName&amp;quot;: &amp;quot;cat&amp;quot;,
-      &amp;quot;keyPaths&amp;quot;: {
-        &amp;quot;name&amp;quot;: &amp;quot;catDocKey.name&amp;quot;
+      &amp;quot;modelId&amp;quot;: &amp;quot;employees&amp;quot;,
+      &amp;quot;target&amp;quot;: &amp;quot;employeeDetails&amp;quot;,
+      &amp;quot;key&amp;quot;: {
+        &amp;quot;$value&amp;quot;: {
+          &amp;quot;path&amp;quot;: &amp;quot;key&amp;quot;
+        }
       }
     }
   }
@@ -432,17 +435,24 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;em&gt;docName&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;modelId&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to resolve the name of an Elasticsearch type where the document to be deleted will be found (type names are derived as [namespace]_[docName]).&lt;/td&gt;
+&lt;td&gt;This is the id of a model within the current namespace from which a single document will be fetched.&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;em&gt;keyPaths&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to derive the id of the document to delete. Provide key/value pairs&amp;hellip; the key will be ignored (for now), but the value should be a &amp;#39;.&amp;#39; delimited path pointing to a value on the Flobot context. These context-values will be joined with &amp;#39;_&amp;#39; to form a unique identifier to delete.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;target&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This is a &amp;#39;.&amp;#39; delimited path of where the fetched document should be set on the Flobot context.&lt;/td&gt;
 &lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;key&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object,array,string,number,integer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Primary key values, either an object of simple key/value pairs, an array of values matching in order with the model&amp;#39;s primaryKey property or a string/number representing the id itself&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -462,25 +472,29 @@
     <item>
       <title>findingOne state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
       <description>
 
 &lt;p&gt;Fetches a single document from storage and adds to a Flobot context. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
   &amp;quot;findingOne&amp;quot;: {
     &amp;quot;options&amp;quot;: {
-      &amp;quot;modelId&amp;quot;: &amp;quot;cat&amp;quot;,
-      &amp;quot;target&amp;quot;: &amp;quot;catDocFromStorage&amp;quot;,
-      &amp;quot;where&amp;quot;: {
-        &amp;quot;name&amp;quot;: {
-          &amp;quot;$value&amp;quot;: {
-            &amp;quot;path&amp;quot;: &amp;quot;catDocFromParams.name&amp;quot;
+      &amp;quot;modelId&amp;quot;: &amp;quot;employees&amp;quot;,
+      &amp;quot;target&amp;quot;: &amp;quot;employeeDetails&amp;quot;,
+      &amp;quot;filter&amp;quot;: {
+        &amp;quot;where&amp;quot;: {
+          &amp;quot;email&amp;quot;: {
+            &amp;quot;equals&amp;quot;: {
+              &amp;quot;$value&amp;quot;: {
+                &amp;quot;path&amp;quot;: &amp;quot;key.email&amp;quot;
+              }
+            }
           }
         }
       }
@@ -515,16 +529,9 @@
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;em&gt;select&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Limits the fields (using a &lt;a href=&#34;http://mongoosejs.com/docs/queries.html&#34;&gt;Mongoose&lt;/a&gt;-style syntax) that are returned. Defaults to &lt;code&gt;-_id -__v -createdAt -updatedAt&lt;/code&gt;.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;where&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;filter&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A MongoDB-style query object to define which document to find (for more information see &lt;a href=&#34;https://docs.mongodb.com/manual/tutorial/query-documents/#specify-query-filter-conditions&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/davidgtonge/underscore-query&#34;&gt;here&lt;/a&gt;). Use &lt;strong&gt;commands&lt;/strong&gt; such as &lt;code&gt;$value&lt;/code&gt; to dynamically access values on the Flobot context.&lt;/td&gt;
+&lt;td&gt;Use to find the correct doc to return.&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -545,13 +552,13 @@
     <item>
       <title>formFilling state</title>
       <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
       <description>
 
 &lt;p&gt;Indicates which form a human needs to interact with - and waits until a response is received. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-forms-plugin#readme&#34;&gt;forms&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;forms&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
@@ -605,50 +612,79 @@
     </item>
     
     <item>
-      <title>importing state</title>
-      <link>https://wmfs.github.io/core-components/states/import-importing/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <title>importingCsvFiles state</title>
+      <link>https://wmfs.github.io/core-components/states/pg-importing-csv-files/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/import-importing/</guid>
+      <guid>https://wmfs.github.io/core-components/states/pg-importing-csv-files/</guid>
       <description>
 
-&lt;p&gt;Streams data from a pre-prepared directory and into storage. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt;import&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;importing&amp;quot;: {
+  &amp;quot;processingCsvFiles&amp;quot;: {
     &amp;quot;options&amp;quot;: {
-      &amp;quot;importFrom&amp;quot;: {
-        &amp;quot;$value&amp;quot;: {
-          &amp;quot;path&amp;quot;: &amp;quot;importInfo.outputDir&amp;quot;
+      &amp;quot;parser&amp;quot;: {
+        &amp;quot;quote&amp;quot;: &amp;quot;\&amp;quot;&amp;quot;,
+        &amp;quot;delimiter&amp;quot;: &amp;quot;,&amp;quot;,
+        &amp;quot;newline&amp;quot;: &amp;quot;\r\n&amp;quot;,
+        &amp;quot;skipFirstLine&amp;quot;: false,
+        &amp;quot;trimWhitespace&amp;quot;: true
+      },
+      &amp;quot;dirSplits&amp;quot;: [
+        {
+          &amp;quot;columnIndex&amp;quot;: 3,
+          &amp;quot;valueToDirMap&amp;quot;: {
+            &amp;quot;c&amp;quot;: &amp;quot;children&amp;quot;,
+            &amp;quot;a&amp;quot;: &amp;quot;adults&amp;quot;
+          }
         }
+      ],
+      &amp;quot;fileSplits&amp;quot;: {
+        &amp;quot;columnIndex&amp;quot;: 4,
+        &amp;quot;valueToFileMap&amp;quot;: {
+          &amp;quot;u&amp;quot;: {
+            &amp;quot;filename&amp;quot;: &amp;quot;changes&amp;quot;,
+            &amp;quot;outputColumns&amp;quot;: [
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 0
+              },
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;first_name&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 1
+              },
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;last_name&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 2
+              }
+            ]
+          },
+          &amp;quot;d&amp;quot;: {
+            &amp;quot;filename&amp;quot;: &amp;quot;deletes&amp;quot;,
+            &amp;quot;outputColumns&amp;quot;: [
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    &amp;quot;events&amp;quot;: {
+      &amp;quot;csvFilesProcessed&amp;quot;: {
+        &amp;quot;to&amp;quot;: &amp;quot;importingCsvFiles&amp;quot;
       }
     }
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;importFrom&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A path indicating where to find the processed import directory (which is available via the &lt;code&gt;producing-import-files&lt;/code&gt; state)&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
 
@@ -665,13 +701,13 @@
     <item>
       <title>logging state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-logging/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-logging/</guid>
       <description>
 
 &lt;p&gt;Just logs any data sent to it to the console. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
@@ -711,21 +747,74 @@
     </item>
     
     <item>
-      <title>makingTask state</title>
-      <link>https://wmfs.github.io/core-components/states/elasticsearch-making-task/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <title>processingCsvFiles state</title>
+      <link>https://wmfs.github.io/core-components/states/etl-processing-csv-files/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/elasticsearch-making-task/</guid>
+      <guid>https://wmfs.github.io/core-components/states/etl-processing-csv-files/</guid>
       <description>
 
-&lt;p&gt;Creates a new Flobot that&amp;#39;s configured to be used as a task. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;etl&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;addingTask&amp;quot;: {
-    &amp;quot;options&amp;quot;: {}
+  &amp;quot;processingCsvFiles&amp;quot;: {
+    &amp;quot;options&amp;quot;: {
+      &amp;quot;parser&amp;quot;: {
+        &amp;quot;quote&amp;quot;: &amp;quot;\&amp;quot;&amp;quot;,
+        &amp;quot;delimiter&amp;quot;: &amp;quot;,&amp;quot;,
+        &amp;quot;newline&amp;quot;: &amp;quot;\r\n&amp;quot;,
+        &amp;quot;skipFirstLine&amp;quot;: false,
+        &amp;quot;trimWhitespace&amp;quot;: true
+      },
+      &amp;quot;dirSplits&amp;quot;: [
+        {
+          &amp;quot;columnIndex&amp;quot;: 3,
+          &amp;quot;valueToDirMap&amp;quot;: {
+            &amp;quot;c&amp;quot;: &amp;quot;children&amp;quot;,
+            &amp;quot;a&amp;quot;: &amp;quot;adults&amp;quot;
+          }
+        }
+      ],
+      &amp;quot;fileSplits&amp;quot;: {
+        &amp;quot;columnIndex&amp;quot;: 4,
+        &amp;quot;valueToFileMap&amp;quot;: {
+          &amp;quot;u&amp;quot;: {
+            &amp;quot;filename&amp;quot;: &amp;quot;changes&amp;quot;,
+            &amp;quot;outputColumns&amp;quot;: [
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 0
+              },
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;first_name&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 1
+              },
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;last_name&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 2
+              }
+            ]
+          },
+          &amp;quot;d&amp;quot;: {
+            &amp;quot;filename&amp;quot;: &amp;quot;deletes&amp;quot;,
+            &amp;quot;outputColumns&amp;quot;: [
+              {
+                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
+                &amp;quot;columnIndex&amp;quot;: 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    &amp;quot;events&amp;quot;: {
+      &amp;quot;csvFilesProcessed&amp;quot;: {
+        &amp;quot;to&amp;quot;: &amp;quot;importingCsvFiles&amp;quot;
+      }
+    }
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -745,216 +834,15 @@
     </item>
     
     <item>
-      <title>persisting state</title>
-      <link>https://wmfs.github.io/core-components/states/flobot-persisting/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/core-components/states/flobot-persisting/</guid>
-      <description>
-
-&lt;p&gt;Saves a document to storage. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;persisting&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;modelId&amp;quot;: &amp;quot;cat&amp;quot;,
-      &amp;quot;doc&amp;quot;: {
-        &amp;quot;$value&amp;quot;: {
-          &amp;quot;path&amp;quot;: &amp;quot;catDocFromParams&amp;quot;
-        }
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;modelId&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is the id of a model within the current namespace which will be used to persist the document.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;doc&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The document that needs storing. Use &lt;strong&gt;commands&lt;/strong&gt; such as &lt;code&gt;$value&lt;/code&gt; and similar to dynamically access Flobot context&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>producingImportFiles state</title>
-      <link>https://wmfs.github.io/core-components/states/import-producing-import-files/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/core-components/states/import-producing-import-files/</guid>
-      <description>
-
-&lt;p&gt;Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent &lt;strong&gt;importing&lt;/strong&gt;. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-import-plugin#readme&#34;&gt;import&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;producingImportFiles&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;parserName&amp;quot;: &amp;quot;csv&amp;quot;,
-      &amp;quot;parserOptions&amp;quot;: {
-        &amp;quot;quote&amp;quot;: &amp;quot;\&amp;quot;&amp;quot;,
-        &amp;quot;delimiter&amp;quot;: &amp;quot;,&amp;quot;,
-        &amp;quot;newline&amp;quot;: &amp;quot;\n&amp;quot;,
-        &amp;quot;skipFirstLine&amp;quot;: true,
-        &amp;quot;trimWhitespace&amp;quot;: true
-      },
-      &amp;quot;targetModels&amp;quot;: [
-        {
-          &amp;quot;modelId&amp;quot;: &amp;quot;planet&amp;quot;,
-          &amp;quot;fieldSources&amp;quot;: {
-            &amp;quot;planetName&amp;quot;: {
-              &amp;quot;source&amp;quot;: &amp;quot;csvIndex&amp;quot;,
-              &amp;quot;options&amp;quot;: {
-                &amp;quot;index&amp;quot;: 0
-              }
-            },
-            &amp;quot;title&amp;quot;: {
-              &amp;quot;source&amp;quot;: &amp;quot;csvIndex&amp;quot;,
-              &amp;quot;options&amp;quot;: {
-                &amp;quot;index&amp;quot;: 1
-              }
-            },
-            &amp;quot;radiusKm&amp;quot;: {
-              &amp;quot;source&amp;quot;: &amp;quot;csvIndex&amp;quot;,
-              &amp;quot;options&amp;quot;: {
-                &amp;quot;index&amp;quot;: 2
-              }
-            },
-            &amp;quot;radiusMiles&amp;quot;: {
-              &amp;quot;source&amp;quot;: &amp;quot;function&amp;quot;,
-              &amp;quot;options&amp;quot;: {
-                &amp;quot;functionName&amp;quot;: &amp;quot;mileMaker&amp;quot;
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;parserName&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Name of the parser to process the raw source files. Currently only &lt;code&gt;csv&lt;/code&gt; is supported.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;parserOptions&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Parser-specific options&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;targetModels&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;For defining how raw data should be stored in models&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>searching state</title>
-      <link>https://wmfs.github.io/core-components/states/elasticsearch-searching/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/core-components/states/elasticsearch-searching/</guid>
-      <description>
-
-&lt;p&gt;Runs a query on an Elasticsearch index. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
       <title>sendingEmail state</title>
       <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
       <description>
 
 &lt;p&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-alerts-plugin#readme&#34;&gt;alerts&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;alerts&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
@@ -1042,124 +930,15 @@
     </item>
     
     <item>
-      <title>settingSearchIndex state</title>
-      <link>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/core-components/states/elasticsearch-setting-search-index/</guid>
-      <description>
-
-&lt;p&gt;Indexes an Elasticsearch document. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot-elasticsearch-plugin#readme&#34;&gt;elasticsearch&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;settingSearchIndex&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;docName&amp;quot;: &amp;quot;cat&amp;quot;,
-      &amp;quot;tags&amp;quot;: [
-        &amp;quot;pet&amp;quot;,
-        &amp;quot;cat&amp;quot;
-      ],
-      &amp;quot;keyPaths&amp;quot;: {
-        &amp;quot;name&amp;quot;: &amp;quot;catDocFromParams.name&amp;quot;
-      },
-      &amp;quot;title&amp;quot;: {
-        &amp;quot;$sprintf&amp;quot;: {
-          &amp;quot;template&amp;quot;: &amp;quot;%s (%s)&amp;quot;,
-          &amp;quot;inputPaths&amp;quot;: [
-            &amp;quot;catDocFromParams.name&amp;quot;,
-            &amp;quot;catDocFromParams.size&amp;quot;
-          ]
-        }
-      },
-      &amp;quot;summary&amp;quot;: {
-        &amp;quot;$value&amp;quot;: {
-          &amp;quot;path&amp;quot;: &amp;quot;catDocFromParams.comment&amp;quot;
-        }
-      },
-      &amp;quot;launches&amp;quot;: [
-        {
-          &amp;quot;title&amp;quot;: &amp;quot;Edit&amp;quot;,
-          &amp;quot;flowId&amp;quot;: &amp;quot;catEditingFlow&amp;quot;
-        }
-      ]
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;docName&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to calculate the name of an Elasticsearch type where the document should be indexed (type names are derived as [namespace]_[docName]).&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;keyPaths&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to derive the id of the document to delete. Provide key/value pairs&amp;hellip; the key will be ignored (for now), but the value should be a &amp;#39;.&amp;#39; delimited path pointing to a value on the Flobot context. These context-values will be joined with &amp;#39;_&amp;#39; to form a unique identifier for the document.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;title&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A short label to identify a document - a good candidate for using a &lt;strong&gt;command&lt;/strong&gt; (e.g. &lt;code&gt;$value&lt;/code&gt;, &lt;code&gt;$sprintf&lt;/code&gt;) to assemble some dynamic content from the Flobot context.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;summary&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Provide a brief summary of the document being indexed (again consider use of &lt;code&gt;$value&lt;/code&gt;, &lt;code&gt;sprintf&lt;/code&gt; commands for dynamic content).&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;launches&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;In the case where a user has searched and found the document that&amp;#39;s to be indexed, chances are they&amp;#39;ll want to perform an action on it (view, edit etc.) Each of the possible actions are termed a &lt;em&gt;launch&lt;/em&gt;&amp;#39;. Launches are simple objects that contain the &lt;code&gt;title&lt;/code&gt; of the action (e.g. &lt;em&gt;Edit&lt;/em&gt; or &lt;em&gt;View&lt;/em&gt; - but can be anything) and a &lt;code&gt;flowId&lt;/code&gt; of any flow that can perform that action.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
       <title>starting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
       <description>
 
 &lt;p&gt;An internal (automatically added) state that performs some Flobot-startup tasks. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
@@ -1180,15 +959,128 @@
     </item>
     
     <item>
+      <title>synchronizingTable state</title>
+      <link>https://wmfs.github.io/core-components/states/pg-synchronizing-table/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/pg-synchronizing-table/</guid>
+      <description>
+
+&lt;p&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;synchronizingTable&amp;quot;: {
+    &amp;quot;options&amp;quot;: {
+      &amp;quot;transformerFunctionName&amp;quot;: &amp;quot;someBlueprintFunction&amp;quot;,
+      &amp;quot;source&amp;quot;: {
+        &amp;quot;tableName&amp;quot;: &amp;quot;someNamespace.some_table_name&amp;quot;,
+        &amp;quot;hashSumColumnName&amp;quot;: &amp;quot;hash_sum&amp;quot;
+      },
+      &amp;quot;target&amp;quot;: {
+        &amp;quot;tableName&amp;quot;: &amp;quot;someNamespace.another_table_name&amp;quot;,
+        &amp;quot;hashSumColumnName&amp;quot;: &amp;quot;origin_hash_sum&amp;quot;
+      },
+      &amp;quot;join&amp;quot;: {
+        &amp;quot;source_pk_column&amp;quot;: &amp;quot;target_pk_column&amp;quot;
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>upserting state</title>
+      <link>https://wmfs.github.io/core-components/states/flobot-upserting/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/states/flobot-upserting/</guid>
+      <description>
+
+&lt;p&gt;Saves a document to storage. This state is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;upserting&amp;quot;: {
+    &amp;quot;options&amp;quot;: {
+      &amp;quot;modelId&amp;quot;: &amp;quot;cat&amp;quot;,
+      &amp;quot;doc&amp;quot;: {
+        &amp;quot;$value&amp;quot;: {
+          &amp;quot;path&amp;quot;: &amp;quot;catDocFromParams&amp;quot;
+        }
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;modelId&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This is the id of a model within the current namespace which will be used to upsert the document.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;doc&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The document that needs storing. Use &lt;strong&gt;commands&lt;/strong&gt; such as &lt;code&gt;$value&lt;/code&gt; and similar to dynamically access Flobot context&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
       <title>env command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-env/</link>
-      <pubDate>Fri, 10 Feb 2017 14:52:31 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-env/</guid>
       <description>
 
 &lt;p&gt;Allows a state to refer to an environment variable. This command is provided via the
-&lt;a href=&#34;https://github.com/wmfs/flobot#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
 
@@ -1231,6 +1123,114 @@
 &lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Should things fail if the environment variable hasn&amp;#39;t been set? Defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>sprintf command</title>
+      <link>https://wmfs.github.io/core-components/commands/flobot-sprintf/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/commands/flobot-sprintf/</guid>
+      <description>
+
+&lt;p&gt;Derive a runtime value using a &lt;a href=&#34;https://github.com/alexei/sprintf.js&#34;&gt;sprintf&lt;/a&gt; string template. This command is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;title&amp;quot;: {
+    &amp;quot;$sprintf&amp;quot;: {
+      &amp;quot;template&amp;quot;: &amp;quot;%s %s (aged %d years)&amp;quot;,
+      &amp;quot;inputPaths&amp;quot;: [
+        &amp;quot;employeeData.firstName&amp;quot;,
+        &amp;quot;employeeData.lastName&amp;quot;,
+        &amp;quot;employeeData.age&amp;quot;
+      ]
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;template&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;A string template that can contain &lt;code&gt;%s&lt;/code&gt;, &lt;code&gt;%d&lt;/code&gt; and similar placeholders&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;inputPaths&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;An array of strings - the values of which should be &amp;#39;.&amp;#39; delimited paths pointing to values on the Flobot context. These context values will be combined as per the &lt;code&gt;template&lt;/code&gt; to return the output string. See &lt;a href=&#34;https://github.com/alexei/sprintf.js#javascript-vsprintf&#34;&gt;vsprintf&lt;/a&gt; for more info.&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>value command</title>
+      <link>https://wmfs.github.io/core-components/commands/flobot-value/</link>
+      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/core-components/commands/flobot-value/</guid>
+      <description>
+
+&lt;p&gt;Get a value from the Flobot&amp;#39;s context. This command is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;catName&amp;quot;: {
+    &amp;quot;$value&amp;quot;: {
+      &amp;quot;path&amp;quot;: &amp;quot;myCatData.name&amp;quot;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;path&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;A &amp;#39;.&amp;#39; delimited path pointing to a value on the Flobot context&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

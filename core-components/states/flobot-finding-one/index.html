@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -308,19 +308,23 @@
 			
 
 <p>Fetches a single document from storage and adds to a Flobot context. This state is provided via the
-<a href="https://github.com/wmfs/flobot#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<a href="https://github.com/wmfs/tymly#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
 <pre><code class="language-json">{
   &quot;findingOne&quot;: {
     &quot;options&quot;: {
-      &quot;modelId&quot;: &quot;cat&quot;,
-      &quot;target&quot;: &quot;catDocFromStorage&quot;,
-      &quot;where&quot;: {
-        &quot;name&quot;: {
-          &quot;$value&quot;: {
-            &quot;path&quot;: &quot;catDocFromParams.name&quot;
+      &quot;modelId&quot;: &quot;employees&quot;,
+      &quot;target&quot;: &quot;employeeDetails&quot;,
+      &quot;filter&quot;: {
+        &quot;where&quot;: {
+          &quot;email&quot;: {
+            &quot;equals&quot;: {
+              &quot;$value&quot;: {
+                &quot;path&quot;: &quot;key.email&quot;
+              }
+            }
           }
         }
       }
@@ -355,16 +359,9 @@
 </tr>
 
 <tr>
-<td><em>select</em></td>
-<td><code>string</code></td>
-<td>Limits the fields (using a <a href="http://mongoosejs.com/docs/queries.html">Mongoose</a>-style syntax) that are returned. Defaults to <code>-_id -__v -createdAt -updatedAt</code>.</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td><em>where</em></td>
+<td><em>filter</em></td>
 <td><code>object</code></td>
-<td>A MongoDB-style query object to define which document to find (for more information see <a href="https://docs.mongodb.com/manual/tutorial/query-documents/#specify-query-filter-conditions">here</a> and <a href="https://github.com/davidgtonge/underscore-query">here</a>). Use <strong>commands</strong> such as <code>$value</code> to dynamically access values on the Flobot context.</td>
+<td>Use to find the correct doc to return.</td>
 <td>No</td>
 </tr>
 </tbody>
@@ -397,7 +394,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/" title="deletingFromSearchIndex state">
+      <a href="https://wmfs.github.io/core-components/states/flobot-finding-by-id/" title="findingById state">
         <span class="direction">
           Previous
         </span>
@@ -407,7 +404,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              deletingFromSearchIndex state
+              findingById state
             </div>
           </div>
         </div>

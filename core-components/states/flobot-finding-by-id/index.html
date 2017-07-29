@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>deletingFlobotTasks state - Flobot Documentation</title>
+    <title>findingById state - Flobot Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="A low-code development framework for Node.js">
     
-    <link rel="canonical" href="https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/">
+    <link rel="canonical" href="https://wmfs.github.io/core-components/states/flobot-finding-by-id/">
     
     <meta name="author" content="Tim Needham">
     
 
-    <meta property="og:url" content="https://wmfs.github.io/core-components/states/elasticsearch-deleting-flobot-tasks/">
+    <meta property="og:url" content="https://wmfs.github.io/core-components/states/flobot-finding-by-id/">
     <meta property="og:title" content="Flobot Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        deletingFlobotTasks state
+        findingById state
       </div>
     </div>
 
@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -303,23 +303,63 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>deletingFlobotTasks state </h1>
+			<h1>findingById state </h1>
 
 			
 
-<p>Deletes any task documents with a key of the current Flobot. This state is provided via the
-<a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
+<p>Fetches a single document by its primary key values from storage and adds to a Flobot context. This state is provided via the
+<a href="https://github.com/wmfs/tymly#readme">flobot</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
 <pre><code class="language-json">{
-  &quot;deletingFlobotTasks&quot;: {
-    &quot;options&quot;: {}
+  &quot;findingById&quot;: {
+    &quot;options&quot;: {
+      &quot;modelId&quot;: &quot;employees&quot;,
+      &quot;target&quot;: &quot;employeeDetails&quot;,
+      &quot;key&quot;: {
+        &quot;$value&quot;: {
+          &quot;path&quot;: &quot;key&quot;
+        }
+      }
+    }
   }
 }
 </code></pre>
 
-<p><em>None.</em></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>modelId</em></td>
+<td><code>string</code></td>
+<td>This is the id of a model within the current namespace from which a single document will be fetched.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>target</em></td>
+<td><code>string</code></td>
+<td>This is a &#39;.&#39; delimited path of where the fetched document should be set on the Flobot context.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>key</em></td>
+<td><code>object,array,string,number,integer</code></td>
+<td>Primary key values, either an object of simple key/value pairs, an array of values matching in order with the model&#39;s primaryKey property or a string/number representing the id itself</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 
@@ -348,7 +388,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://wmfs.github.io/license/" title="License">
+      <a href="https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/" title="exportingCsvDeltaFile state">
         <span class="direction">
           Previous
         </span>
@@ -358,7 +398,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              License
+              exportingCsvDeltaFile state
             </div>
           </div>
         </div>
@@ -368,14 +408,14 @@
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/core-components/states/elasticsearch-deleting-from-search-index/" title="deletingFromSearchIndex state">
+      <a href="https://wmfs.github.io/core-components/states/flobot-finding-one/" title="findingOne state">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              deletingFromSearchIndex state
+              findingOne state
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

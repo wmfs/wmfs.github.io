@@ -142,7 +142,7 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.6</span></strong>
+        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
         
           <br>
           wmfs/flobot
@@ -339,38 +339,33 @@
 
 <tbody>
 <tr>
-<td><a href="https://github.com/wmfs/flobot#readme">flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme">flobot</a></td>
 <td>The <a href="https://github.com/wmfs/flobot">flobot</a> module has a <a href="https://github.com/wmfs/flobot/lib/plugin">built-in plugin</a> which provides low-level components to help get things started.</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/flobot-alerts-plugin#readme">alerts</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme">alerts</a></td>
 <td>Adds some alerting options to the Flobot framework</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme">elasticsearch</a></td>
-<td>Adds an Elasticsearch-based search service to the Flobot framework</td>
+<td><a href="https://github.com/wmfs/tymly#readme">etl</a></td>
+<td>Provides some ETL states for flobot</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/flobot-express-plugin#readme">express</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme">express</a></td>
 <td>Exposes the Flobot framework via an Express.js web app.</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/flobot-forms-plugin#readme">forms</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme">forms</a></td>
 <td>Adds some form capabilities to Flobot</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/flobot-import-plugin#readme">import</a></td>
-<td>For extracting data from files and loading into Flobot storage</td>
-</tr>
-
-<tr>
-<td><a href="https://github.com/wmfs/flobot-mongodb-plugin#readme">mongodb</a></td>
-<td>Replace Flobot&#39;s out-the-box memory storage with MongoDB</td>
+<td><a href="https://github.com/wmfs/tymly#readme">pg</a></td>
+<td>Replace Flobot&#39;s out-the-box memory storage with PostgreSQL</td>
 </tr>
 </tbody>
 </table>
@@ -392,81 +387,69 @@
 
 <tbody>
 <tr>
-<td><a href="states/elasticsearch-deleting-flobot-tasks">deletingFlobotTasks</a></td>
-<td>Deletes any task documents with a key of the current Flobot</td>
-<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme"> elasticsearch</a></td>
+<td><a href="states/pg-exporting-csv-delta-file">exportingCsvDeltaFile</a></td>
+<td>Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over <a href="https://www.npmjs.com/package/pg-delta-file">pg-delta-file</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> pg</a></td>
 </tr>
 
 <tr>
-<td><a href="states/elasticsearch-deleting-from-search-index">deletingFromSearchIndex</a></td>
-<td>Removes a document from an Elasticsearch index</td>
-<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme"> elasticsearch</a></td>
+<td><a href="states/flobot-finding-by-id">findingById</a></td>
+<td>Fetches a single document by its primary key values from storage and adds to a Flobot context</td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="states/flobot-finding-one">findingOne</a></td>
 <td>Fetches a single document from storage and adds to a Flobot context</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="states/forms-form-filling">formFilling</a></td>
 <td>Indicates which form a human needs to interact with - and waits until a response is received</td>
-<td><a href="https://github.com/wmfs/flobot-forms-plugin#readme"> forms</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> forms</a></td>
 </tr>
 
 <tr>
-<td><a href="states/import-importing">importing</a></td>
-<td>Streams data from a pre-prepared directory and into storage</td>
-<td><a href="https://github.com/wmfs/flobot-import-plugin#readme"> import</a></td>
+<td><a href="states/pg-importing-csv-files">importingCsvFiles</a></td>
+<td>Smash CSV files into more manageable files based on column values - just a thin wrapper over <a href="https://www.npmjs.com/package/smithereens">Smithereens</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> pg</a></td>
 </tr>
 
 <tr>
 <td><a href="states/flobot-logging">logging</a></td>
 <td>Just logs any data sent to it to the console</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
-<td><a href="states/elasticsearch-making-task">makingTask</a></td>
-<td>Creates a new Flobot that&#39;s configured to be used as a task</td>
-<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme"> elasticsearch</a></td>
-</tr>
-
-<tr>
-<td><a href="states/flobot-persisting">persisting</a></td>
-<td>Saves a document to storage</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
-</tr>
-
-<tr>
-<td><a href="states/import-producing-import-files">producingImportFiles</a></td>
-<td>Takes data from raw files (e.g. CSV) and outputs a common structure for subsequent <strong>importing</strong>.</td>
-<td><a href="https://github.com/wmfs/flobot-import-plugin#readme"> import</a></td>
-</tr>
-
-<tr>
-<td><a href="states/elasticsearch-searching">searching</a></td>
-<td>Runs a query on an Elasticsearch index</td>
-<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme"> elasticsearch</a></td>
+<td><a href="states/etl-processing-csv-files">processingCsvFiles</a></td>
+<td>Smash CSV files into more manageable files based on column values - just a thin wrapper over <a href="https://www.npmjs.com/package/smithereens">Smithereens</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> etl</a></td>
 </tr>
 
 <tr>
 <td><a href="states/alerts-sending-email">sendingEmail</a></td>
 <td>For sending an emails - just a thin wrapper over <a href="https://nodemailer.com/">Nodemailer</a></td>
-<td><a href="https://github.com/wmfs/flobot-alerts-plugin#readme"> alerts</a></td>
-</tr>
-
-<tr>
-<td><a href="states/elasticsearch-setting-search-index">settingSearchIndex</a></td>
-<td>Indexes an Elasticsearch document</td>
-<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme"> elasticsearch</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> alerts</a></td>
 </tr>
 
 <tr>
 <td><a href="states/flobot-starting">starting</a></td>
 <td>An internal (automatically added) state that performs some Flobot-startup tasks</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
+</tr>
+
+<tr>
+<td><a href="states/pg-synchronizing-table">synchronizingTable</a></td>
+<td>Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over <a href="https://www.npmjs.com/package/pg-telepods">pg-telepods</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> pg</a></td>
+</tr>
+
+<tr>
+<td><a href="states/flobot-upserting">upserting</a></td>
+<td>Saves a document to storage</td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 </tbody>
 </table>
@@ -490,19 +473,19 @@
 <tr>
 <td><a href="commands/flobot-env">env</a></td>
 <td>Allows a state to refer to an environment variable</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="commands/flobot-sprintf">sprintf</a></td>
 <td>Derive a runtime value using a <a href="https://github.com/alexei/sprintf.js">sprintf</a> string template</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="commands/flobot-value">value</a></td>
 <td>Get a value from the Flobot&#39;s context</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 </tbody>
 </table>
@@ -526,127 +509,121 @@
 <tr>
 <td><a href="services/express-auth">auth</a></td>
 <td>Provides JWT-based authentication capabilities</td>
-<td><a href="https://github.com/wmfs/flobot-express-plugin#readme"> express</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> express</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-blueprint-docs">blueprintDocs</a></td>
 <td>Allows tracking of documents created via blueprints, so they don&#39;t get reverted when Flobot restarts</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-caches">caches</a></td>
 <td>Adds <a href="https://www.npmjs.com/package/lru-cache">lru-cache</a>-based caching to Flobot. Note defaults will be used if no <code>caches</code> configuration is provided.</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-commands">commands</a></td>
 <td>Service to support blueprint commands</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/alerts-email">email</a></td>
 <td>Integrates Flobot with <a href="https://nodemailer.com/">Nodemailer</a> to offer email-sending capabilities</td>
-<td><a href="https://github.com/wmfs/flobot-alerts-plugin#readme"> alerts</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> alerts</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-expression">expression</a></td>
 <td>Provides safe, <a href="https://www.npmjs.com/package/esprima">Esprima</a>-based expression evaluation</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/express-flobot-rest">flobotRest</a></td>
 <td>Exposes the core Flobot abilities (start, get, update and cancel) over a JWT-secured REST API</td>
-<td><a href="https://github.com/wmfs/flobot-express-plugin#readme"> express</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> express</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-flobots">flobots</a></td>
 <td>Creates Finite State Machines based on flow definitions and an API to interact with Flobots</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/forms-forms">forms</a></td>
 <td>Exposes UI configuration (as supplied via blueprints in <a href="http://schemaform.io/">Schema Form</a> format)</td>
-<td><a href="https://github.com/wmfs/flobot-forms-plugin#readme"> forms</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> forms</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-functions">functions</a></td>
 <td>Adds ability to run custom logic as defined in a blueprint</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-inventory">inventory</a></td>
 <td>Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-rbac">rbac</a></td>
 <td>Provides JWT-based authentication capabilities</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-registry">registry</a></td>
 <td>Provides a mechanism for states to refer to site-specific values</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
-</tr>
-
-<tr>
-<td><a href="services/elasticsearch-search">search</a></td>
-<td>For integrating Flobot with an Elasticsearch server</td>
-<td><a href="https://github.com/wmfs/flobot-elasticsearch-plugin#readme"> elasticsearch</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/express-server">server</a></td>
 <td>Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints</td>
-<td><a href="https://github.com/wmfs/flobot-express-plugin#readme"> express</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> express</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-states">states</a></td>
 <td>Stores and prepares State Classes, ahead of generating flows</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-storage">storage</a></td>
 <td>This is the default in-memory storage service that ships with Flobot. Useful for testing and not much else.</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
-<td><a href="services/mongodb-storage">storage</a></td>
+<td><a href="services/pg-storage">storage</a></td>
 <td>Replaces the default in-memory storage solution with a MongoDB-backed alternative</td>
-<td><a href="https://github.com/wmfs/flobot-mongodb-plugin#readme"> mongodb</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> pg</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-tags">tags</a></td>
 <td>Provides a generic mechanism to help tag/classify search results, tasks, forms etc.</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-temp">temp</a></td>
 <td>Helps configure and manage a temporary folder for Flobot to use</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 
 <tr>
 <td><a href="services/flobot-users">users</a></td>
 <td>Adds user-management capabilities to Flobot (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)</td>
-<td><a href="https://github.com/wmfs/flobot#readme"> flobot</a></td>
+<td><a href="https://github.com/wmfs/tymly#readme"> flobot</a></td>
 </tr>
 </tbody>
 </table>
