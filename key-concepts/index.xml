@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Key-concepts on Flobot Documentation</title>
+    <title>Key-concepts on FlobotJS Documentation</title>
     <link>https://wmfs.github.io/key-concepts/index.xml</link>
-    <description>Recent content in Key-concepts on Flobot Documentation</description>
+    <description>Recent content in Key-concepts on FlobotJS Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
@@ -60,9 +60,9 @@
 &lt;li&gt;&lt;p&gt;Which state the FSM should find itself in as it starts (i.e. the flow&amp;rsquo;s &lt;em&gt;initial&lt;/em&gt; state)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;FlobotJS provides a pool of different &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;State Classes&lt;/a&gt;, each state in a flow will be associated with a particular &lt;em&gt;State Class&lt;/em&gt;. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.&lt;/p&gt;
+&lt;p&gt;FlobotJS provides a pool of different &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-classes&#34;&gt;State Classes&lt;/a&gt;, each state in a flow will be associated with a particular &lt;em&gt;State Class&lt;/em&gt;. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -221,7 +221,7 @@ Blueprints also help with versioning, collaboration (on Github or similar) and i
 &lt;p&gt;FlobotJS takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;#states&#34;&gt;State Classes&lt;/a&gt; to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a &lt;strong&gt;plugin&lt;/strong&gt; architecture.
 A FlobotJS plugin extends the core framework with related State Classes (along with other internal components required to run them).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-plugins&#34;&gt;list of core plugins&lt;/a&gt; to get a feel for what plugins are all about&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-plugins&#34;&gt;list of core plugins&lt;/a&gt; to get a feel for what plugins are all about&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;FlobotJS&amp;rsquo;s current library of state classes is certainly far from exhaustive and organisations will undoubtedly have specialist requirements of their own.
 It&amp;rsquo;s straightforward to write a new plugin for FlobotJS and add missing capabilities.&lt;/p&gt;

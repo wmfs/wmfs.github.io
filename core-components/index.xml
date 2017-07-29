@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Core-components on Flobot Documentation</title>
+    <title>Core-components on FlobotJS Documentation</title>
     <link>https://wmfs.github.io/core-components/index.xml</link>
-    <description>Recent content in Core-components on Flobot Documentation</description>
+    <description>Recent content in Core-components on FlobotJS Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Sat, 29 Jul 2017 14:19:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jul 2017 19:12:05 +0000</lastBuildDate>
     <atom:link href="https://wmfs.github.io/core-components/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Core Components</title>
       <link>https://wmfs.github.io/core-components/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/</guid>
       <description>
@@ -341,7 +341,7 @@
     <item>
       <title>exportingCsvDeltaFile state</title>
       <link>https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/</guid>
       <description>
@@ -398,7 +398,7 @@
     <item>
       <title>findingById state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-finding-by-id/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-finding-by-id/</guid>
       <description>
@@ -472,7 +472,7 @@
     <item>
       <title>findingOne state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
       <description>
@@ -552,7 +552,7 @@
     <item>
       <title>formFilling state</title>
       <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
       <description>
@@ -614,7 +614,7 @@
     <item>
       <title>importingCsvFiles state</title>
       <link>https://wmfs.github.io/core-components/states/pg-importing-csv-files/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/pg-importing-csv-files/</guid>
       <description>
@@ -701,7 +701,7 @@
     <item>
       <title>logging state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-logging/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-logging/</guid>
       <description>
@@ -749,7 +749,7 @@
     <item>
       <title>processingCsvFiles state</title>
       <link>https://wmfs.github.io/core-components/states/etl-processing-csv-files/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/etl-processing-csv-files/</guid>
       <description>
@@ -836,7 +836,7 @@
     <item>
       <title>sendingEmail state</title>
       <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
       <description>
@@ -932,7 +932,7 @@
     <item>
       <title>starting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
       <description>
@@ -961,7 +961,7 @@
     <item>
       <title>synchronizingTable state</title>
       <link>https://wmfs.github.io/core-components/states/pg-synchronizing-table/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/pg-synchronizing-table/</guid>
       <description>
@@ -1008,7 +1008,7 @@
     <item>
       <title>upserting state</title>
       <link>https://wmfs.github.io/core-components/states/flobot-upserting/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/states/flobot-upserting/</guid>
       <description>
@@ -1074,7 +1074,7 @@
     <item>
       <title>env command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-env/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-env/</guid>
       <description>
@@ -1136,7 +1136,7 @@
     <item>
       <title>sprintf command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-sprintf/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-sprintf/</guid>
       <description>
@@ -1196,7 +1196,7 @@
     <item>
       <title>value command</title>
       <link>https://wmfs.github.io/core-components/commands/flobot-value/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <pubDate>Sat, 29 Jul 2017 19:12:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/core-components/commands/flobot-value/</guid>
       <description>

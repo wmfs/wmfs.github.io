@@ -9,11 +9,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Key Concepts - Flobot Documentation</title>
+    <title>Key Concepts - FlobotJS Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
-    <meta name="description" content="A low-code development framework for Node.js">
+    <meta name="description" content="A low-code platform for Node.js">
     
     <link rel="canonical" href="https://wmfs.github.io/key-concepts/">
     
@@ -21,9 +21,9 @@
     
 
     <meta property="og:url" content="https://wmfs.github.io/key-concepts/">
-    <meta property="og:title" content="Flobot Documentation">
+    <meta property="og:title" content="FlobotJS Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
-    <meta name="apple-mobile-web-app-title" content="Flobot Documentation">
+    <meta name="apple-mobile-web-app-title" content="FlobotJS Documentation">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -109,7 +109,7 @@
 
     
     <div class="button button-github" role="button" aria-label="GitHub">
-      <a href="https://github.com/wmfs/flobot" title="@wmfs/flobot on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      <a href="https://github.com/wmfs/tymly" title="@wmfs/tymly on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
     </div>
     
     
@@ -134,7 +134,7 @@
 <main class="main">
 	<div class="drawer">
 		<nav aria-label="Navigation">
-  <a href="https://github.com/wmfs/flobot" class="project">
+  <a href="https://github.com/wmfs/tymly" class="project">
     <div class="banner">
       
         <div class="logo">
@@ -142,10 +142,10 @@
         </div>
       
       <div class="name">
-        <strong>Flobot Documentation <span class="version">0.0.4</span></strong>
+        <strong>FlobotJS Documentation <span class="version">0.0.11</span></strong>
         
           <br>
-          wmfs/flobot
+          wmfs/tymly
         
       </div>
     </div>
@@ -156,12 +156,12 @@
       
         <ul class="repo">
           <li class="repo-download">
-            <a href="https://github.com/wmfs/flobot/archive/master.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/wmfs/tymly/archive/master.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
           <li class="repo-stars">
-            <a href="https://github.com/wmfs/flobot/stargazers" target="_blank" title="Stargazers" data-action="star">
+            <a href="https://github.com/wmfs/tymly/stargazers" target="_blank" title="Stargazers" data-action="star">
               <i class="icon icon-star"></i> Stars
               <span class="count">&ndash;</span>
             </a>
@@ -241,9 +241,9 @@
 
 
 
-<a  title="Core components" href="https://wmfs.github.io/core-components/">
+<a  title="Reference" href="https://wmfs.github.io/reference/">
 	
-	Core components
+	Reference
 </a>
 
 
@@ -288,8 +288,8 @@
 
           
           <li>
-            <a href="https://github.com/wmfs/flobot" target="_blank" title="@wmfs/flobot on GitHub">
-              @wmfs/flobot on GitHub
+            <a href="https://github.com/wmfs/tymly" target="_blank" title="@wmfs/tymly on GitHub">
+              @wmfs/tymly on GitHub
             </a>
           </li>
           
@@ -352,9 +352,9 @@
 <li><p>Which state the FSM should find itself in as it starts (i.e. the flow&rsquo;s <em>initial</em> state)</p></li>
 </ul>
 
-<p>FlobotJS provides a pool of different <a href="https://wmfs.github.io/core-components/#list-of-state-classes">State Classes</a>, each state in a flow will be associated with a particular <em>State Class</em>. It&rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.</p>
+<p>FlobotJS provides a pool of different <a href="https://wmfs.github.io/reference/#list-of-state-classes">State Classes</a>, each state in a flow will be associated with a particular <em>State Class</em>. It&rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.</p>
 
-<p><strong>For a full list of states that are currently available out-of-the-box, please see the <a href="https://wmfs.github.io/core-components/#list-of-state-classes">list of core states</a>.</strong></p>
+<p><strong>For a full list of states that are currently available out-of-the-box, please see the <a href="https://wmfs.github.io/reference/#list-of-state-classes">list of core states</a>.</strong></p>
 
 <hr>
 
@@ -513,7 +513,7 @@ Blueprints also help with versioning, collaboration (on Github or similar) and i
 <p>FlobotJS takes a batteries-included approach and hopefully ships with enough <a href="#states">State Classes</a> to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a <strong>plugin</strong> architecture.
 A FlobotJS plugin extends the core framework with related State Classes (along with other internal components required to run them).</p>
 
-<p><strong>Please see the <a href="https://wmfs.github.io/core-components/#list-of-plugins">list of core plugins</a> to get a feel for what plugins are all about</strong></p>
+<p><strong>Please see the <a href="https://wmfs.github.io/reference/#list-of-plugins">list of core plugins</a> to get a feel for what plugins are all about</strong></p>
 
 <p>FlobotJS&rsquo;s current library of state classes is certainly far from exhaustive and organisations will undoubtedly have specialist requirements of their own.
 It&rsquo;s straightforward to write a new plugin for FlobotJS and add missing capabilities.</p>
@@ -579,7 +579,7 @@ It&rsquo;s straightforward to write a new plugin for FlobotJS and add missing ca
     <script>
     
       var base_url = 'https:\/\/wmfs.github.io\/';
-      var repo_id  = 'wmfs\/flobot';
+      var repo_id  = 'wmfs\/tymly';
     
     </script>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Flobot Documentation</title>
+    <title>FlobotJS Documentation</title>
     <link>https://wmfs.github.io/index.xml</link>
-    <description>Recent content on Flobot Documentation</description>
+    <description>Recent content on FlobotJS Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
@@ -60,9 +60,9 @@
 &lt;li&gt;&lt;p&gt;Which state the FSM should find itself in as it starts (i.e. the flow&amp;rsquo;s &lt;em&gt;initial&lt;/em&gt; state)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;FlobotJS provides a pool of different &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;State Classes&lt;/a&gt;, each state in a flow will be associated with a particular &lt;em&gt;State Class&lt;/em&gt;. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.&lt;/p&gt;
+&lt;p&gt;FlobotJS provides a pool of different &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-classes&#34;&gt;State Classes&lt;/a&gt;, each state in a flow will be associated with a particular &lt;em&gt;State Class&lt;/em&gt;. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -221,7 +221,7 @@ Blueprints also help with versioning, collaboration (on Github or similar) and i
 &lt;p&gt;FlobotJS takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;#states&#34;&gt;State Classes&lt;/a&gt; to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a &lt;strong&gt;plugin&lt;/strong&gt; architecture.
 A FlobotJS plugin extends the core framework with related State Classes (along with other internal components required to run them).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/core-components/#list-of-plugins&#34;&gt;list of core plugins&lt;/a&gt; to get a feel for what plugins are all about&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-plugins&#34;&gt;list of core plugins&lt;/a&gt; to get a feel for what plugins are all about&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;FlobotJS&amp;rsquo;s current library of state classes is certainly far from exhaustive and organisations will undoubtedly have specialist requirements of their own.
 It&amp;rsquo;s straightforward to write a new plugin for FlobotJS and add missing capabilities.&lt;/p&gt;
@@ -454,10 +454,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>Core Components</title>
-      <link>https://wmfs.github.io/core-components/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/</guid>
+      <guid>https://wmfs.github.io/reference/</guid>
       <description>
 
 &lt;p&gt;This page contains an inventory of all the main types of component supplied via the Flobot module and core plugins:&lt;/p&gt;
@@ -643,7 +643,7 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
 &lt;h2 id=&#34;list-of-services&#34;&gt;List of services&lt;/h2&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;After the boot-up process, Flobot will return many ready-to-use &lt;em&gt;services&lt;/em&gt;. Most services are internal things (like &lt;a href=&#34;https://wmfs.github.io/core-components/services/flobot-caches&#34;&gt;caches&lt;/a&gt;) and are probably only of interest if you&amp;rsquo;re writing your own plugins. However, some services (like &lt;a href=&#34;https://wmfs.github.io/core-components/services/express-server&#34;&gt;server&lt;/a&gt;) offer key Flobot functionality.&lt;/p&gt;
+&lt;p&gt;After the boot-up process, Flobot will return many ready-to-use &lt;em&gt;services&lt;/em&gt;. Most services are internal things (like &lt;a href=&#34;https://wmfs.github.io/reference/services/flobot-caches&#34;&gt;caches&lt;/a&gt;) and are probably only of interest if you&amp;rsquo;re writing your own plugins. However, some services (like &lt;a href=&#34;https://wmfs.github.io/reference/services/express-server&#34;&gt;server&lt;/a&gt;) offer key Flobot functionality.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;table&gt;
@@ -802,10 +802,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>exportingCsvDeltaFile state</title>
-      <link>https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/pg-exporting-csv-delta-file/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/pg-exporting-csv-delta-file/</guid>
+      <guid>https://wmfs.github.io/reference/states/pg-exporting-csv-delta-file/</guid>
       <description>
 
 &lt;p&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;. This state is provided via the
@@ -859,10 +859,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>findingById state</title>
-      <link>https://wmfs.github.io/core-components/states/flobot-finding-by-id/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/flobot-finding-by-id/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/flobot-finding-by-id/</guid>
+      <guid>https://wmfs.github.io/reference/states/flobot-finding-by-id/</guid>
       <description>
 
 &lt;p&gt;Fetches a single document by its primary key values from storage and adds to a Flobot context. This state is provided via the
@@ -933,10 +933,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>findingOne state</title>
-      <link>https://wmfs.github.io/core-components/states/flobot-finding-one/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/flobot-finding-one/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/flobot-finding-one/</guid>
+      <guid>https://wmfs.github.io/reference/states/flobot-finding-one/</guid>
       <description>
 
 &lt;p&gt;Fetches a single document from storage and adds to a Flobot context. This state is provided via the
@@ -1013,10 +1013,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>formFilling state</title>
-      <link>https://wmfs.github.io/core-components/states/forms-form-filling/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/forms-form-filling/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/forms-form-filling/</guid>
+      <guid>https://wmfs.github.io/reference/states/forms-form-filling/</guid>
       <description>
 
 &lt;p&gt;Indicates which form a human needs to interact with - and waits until a response is received. This state is provided via the
@@ -1075,10 +1075,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>importingCsvFiles state</title>
-      <link>https://wmfs.github.io/core-components/states/pg-importing-csv-files/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/pg-importing-csv-files/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/pg-importing-csv-files/</guid>
+      <guid>https://wmfs.github.io/reference/states/pg-importing-csv-files/</guid>
       <description>
 
 &lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This state is provided via the
@@ -1162,10 +1162,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>logging state</title>
-      <link>https://wmfs.github.io/core-components/states/flobot-logging/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/flobot-logging/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/flobot-logging/</guid>
+      <guid>https://wmfs.github.io/reference/states/flobot-logging/</guid>
       <description>
 
 &lt;p&gt;Just logs any data sent to it to the console. This state is provided via the
@@ -1210,10 +1210,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>processingCsvFiles state</title>
-      <link>https://wmfs.github.io/core-components/states/etl-processing-csv-files/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/etl-processing-csv-files/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/etl-processing-csv-files/</guid>
+      <guid>https://wmfs.github.io/reference/states/etl-processing-csv-files/</guid>
       <description>
 
 &lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This state is provided via the
@@ -1297,10 +1297,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>sendingEmail state</title>
-      <link>https://wmfs.github.io/core-components/states/alerts-sending-email/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/alerts-sending-email/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/alerts-sending-email/</guid>
+      <guid>https://wmfs.github.io/reference/states/alerts-sending-email/</guid>
       <description>
 
 &lt;p&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;. This state is provided via the
@@ -1393,10 +1393,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>starting state</title>
-      <link>https://wmfs.github.io/core-components/states/flobot-starting/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/flobot-starting/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/flobot-starting/</guid>
+      <guid>https://wmfs.github.io/reference/states/flobot-starting/</guid>
       <description>
 
 &lt;p&gt;An internal (automatically added) state that performs some Flobot-startup tasks. This state is provided via the
@@ -1422,10 +1422,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>synchronizingTable state</title>
-      <link>https://wmfs.github.io/core-components/states/pg-synchronizing-table/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/pg-synchronizing-table/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/pg-synchronizing-table/</guid>
+      <guid>https://wmfs.github.io/reference/states/pg-synchronizing-table/</guid>
       <description>
 
 &lt;p&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;. This state is provided via the
@@ -1469,10 +1469,10 @@ Each state needs associating with a &lt;a href=&#34;https://wmfs.github.io/core-
     
     <item>
       <title>upserting state</title>
-      <link>https://wmfs.github.io/core-components/states/flobot-upserting/</link>
-      <pubDate>Sat, 29 Jul 2017 14:19:03 +0000</pubDate>
+      <link>https://wmfs.github.io/reference/states/flobot-upserting/</link>
+      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/core-components/states/flobot-upserting/</guid>
+      <guid>https://wmfs.github.io/reference/states/flobot-upserting/</guid>
       <description>
 
 &lt;p&gt;Saves a document to storage. This state is provided via the
