@@ -332,7 +332,46 @@
 }
 </code></pre>
 
-<p><em>None.</em></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>transformerFunctionName</em></td>
+<td><code>string</code></td>
+<td>Identifies which blueprint function should be used to undertake transformation duties. See <a href="https://github.com/wmfs/tymly/tree/master/pg-telepods">pg-telepods</a> for more information.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>source</em></td>
+<td><code>object</code></td>
+<td>Used to define a source table along with any other attributes (such as a hash sum column) for where data is to be sourced from. See <a href="https://github.com/wmfs/tymly/tree/master/pg-telepods">pg-telepods</a> for more information.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>target</em></td>
+<td><code>object</code></td>
+<td>Likewise, defines a target table with similar attributes explaining where data is to sent to. See <a href="https://github.com/wmfs/tymly/tree/master/pg-telepods">pg-telepods</a> for more information.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>join</em></td>
+<td><code>object</code></td>
+<td>A simple object denoting how primary keys on both tables are related - where <code>key</code> values are the name of a column on the source table and its <code>value</code> is a column on the target table</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 

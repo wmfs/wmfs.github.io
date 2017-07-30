@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Sat, 29 Jul 2017 19:24:08 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jul 2017 12:37:32 +0000</lastBuildDate>
     <atom:link href="https://wmfs.github.io/reference/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Core Components</title>
+      <title>Reference</title>
       <link>https://wmfs.github.io/reference/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/</guid>
       <description>
@@ -58,7 +58,7 @@
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;etl&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides some ETL states for flobot&lt;/td&gt;
+&lt;td&gt;A collection of states for helping with Extract, Transform and Load tasks.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -120,7 +120,7 @@
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;states/pg-importing-csv-files&#34;&gt;importingCsvFiles&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
@@ -341,7 +341,7 @@
     <item>
       <title>exportingCsvDeltaFile state</title>
       <link>https://wmfs.github.io/reference/states/pg-exporting-csv-delta-file/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/pg-exporting-csv-delta-file/</guid>
       <description>
@@ -381,7 +381,39 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;since&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The moment-in-time (e.g. an &lt;em&gt;epoch&lt;/em&gt;) that the exported CSV file should contain changes since&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;actionAliases&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Maps the necessary action (&lt;code&gt;insert&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt; or &lt;code&gt;delete&lt;/code&gt;) to a value to include in the outgoing CSV line (see the dynamic &lt;code&gt;$ACTION&lt;/code&gt; column).&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;tables&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;An array of objects that contain a &lt;code&gt;table&lt;/code&gt; object&amp;hellip; which in turn define how to assemble each CSV line. Please see &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt; for more information.&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
 
@@ -398,7 +430,7 @@
     <item>
       <title>findingById state</title>
       <link>https://wmfs.github.io/reference/states/flobot-finding-by-id/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/flobot-finding-by-id/</guid>
       <description>
@@ -472,7 +504,7 @@
     <item>
       <title>findingOne state</title>
       <link>https://wmfs.github.io/reference/states/flobot-finding-one/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/flobot-finding-one/</guid>
       <description>
@@ -552,7 +584,7 @@
     <item>
       <title>formFilling state</title>
       <link>https://wmfs.github.io/reference/states/forms-form-filling/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/forms-form-filling/</guid>
       <description>
@@ -614,77 +646,54 @@
     <item>
       <title>importingCsvFiles state</title>
       <link>https://wmfs.github.io/reference/states/pg-importing-csv-files/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/pg-importing-csv-files/</guid>
       <description>
 
-&lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This state is provided via the
+&lt;p&gt;Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt;. This state is provided via the
 &lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;processingCsvFiles&amp;quot;: {
+  &amp;quot;importingCsvFiles&amp;quot;: {
     &amp;quot;options&amp;quot;: {
-      &amp;quot;parser&amp;quot;: {
-        &amp;quot;quote&amp;quot;: &amp;quot;\&amp;quot;&amp;quot;,
-        &amp;quot;delimiter&amp;quot;: &amp;quot;,&amp;quot;,
-        &amp;quot;newline&amp;quot;: &amp;quot;\r\n&amp;quot;,
-        &amp;quot;skipFirstLine&amp;quot;: false,
-        &amp;quot;trimWhitespace&amp;quot;: true
-      },
-      &amp;quot;dirSplits&amp;quot;: [
-        {
-          &amp;quot;columnIndex&amp;quot;: 3,
-          &amp;quot;valueToDirMap&amp;quot;: {
-            &amp;quot;c&amp;quot;: &amp;quot;children&amp;quot;,
-            &amp;quot;a&amp;quot;: &amp;quot;adults&amp;quot;
-          }
-        }
-      ],
-      &amp;quot;fileSplits&amp;quot;: {
-        &amp;quot;columnIndex&amp;quot;: 4,
-        &amp;quot;valueToFileMap&amp;quot;: {
-          &amp;quot;u&amp;quot;: {
-            &amp;quot;filename&amp;quot;: &amp;quot;changes&amp;quot;,
-            &amp;quot;outputColumns&amp;quot;: [
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 0
-              },
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;first_name&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 1
-              },
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;last_name&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 2
-              }
-            ]
-          },
-          &amp;quot;d&amp;quot;: {
-            &amp;quot;filename&amp;quot;: &amp;quot;deletes&amp;quot;,
-            &amp;quot;outputColumns&amp;quot;: [
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 0
-              }
-            ]
-          }
-        }
-      }
-    },
-    &amp;quot;events&amp;quot;: {
-      &amp;quot;csvFilesProcessed&amp;quot;: {
-        &amp;quot;to&amp;quot;: &amp;quot;importingCsvFiles&amp;quot;
-      }
+      &amp;quot;headerColumnNamePkPrefix&amp;quot;: &amp;quot;.&amp;quot;,
+      &amp;quot;topDownTableOrder&amp;quot;: [
+        &amp;quot;addressbase_holding&amp;quot;
+      ]
     }
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;headerColumnNamePkPrefix&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Used to denote primary key columns when dealing with update/upsert files. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy#options&#34;&gt;options&lt;/a&gt; section in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt; for more details.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;topDownTableOrder&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Used to resolve foreign-key constraint issues - will be deprecated in favour of something more automatic. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy#options&#34;&gt;options&lt;/a&gt; section in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt; for more details.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
 
@@ -701,7 +710,7 @@
     <item>
       <title>logging state</title>
       <link>https://wmfs.github.io/reference/states/flobot-logging/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/flobot-logging/</guid>
       <description>
@@ -749,7 +758,7 @@
     <item>
       <title>processingCsvFiles state</title>
       <link>https://wmfs.github.io/reference/states/etl-processing-csv-files/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/etl-processing-csv-files/</guid>
       <description>
@@ -819,7 +828,39 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;parser&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Object controlling how CSV lines should be parsed. Uses &lt;a href=&#34;https://www.npmjs.com/package/csv-streamify&#34;&gt;csv-streamify&lt;/a&gt; under the bonnet&amp;hellip; with the addition of a &lt;code&gt;skipFirstLine&lt;/code&gt; property (&lt;code&gt;boolean&lt;/code&gt;) for conditionally ignoring header lines.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;dirSplits&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Used to split CSV files across different directories, depending on column values. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens#dirsplit-object&#34;&gt;dirSplit&lt;/a&gt; object in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens&#34;&gt;Smithereens&lt;/a&gt;for more information.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;fileSplits&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;In a similar way, CSV lines can be split across different file too. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens#filesplit-object&#34;&gt;fileSplit&lt;/a&gt; object in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens&#34;&gt;Smithereens&lt;/a&gt;for more information.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
 
@@ -836,7 +877,7 @@
     <item>
       <title>sendingEmail state</title>
       <link>https://wmfs.github.io/reference/states/alerts-sending-email/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/alerts-sending-email/</guid>
       <description>
@@ -932,7 +973,7 @@
     <item>
       <title>starting state</title>
       <link>https://wmfs.github.io/reference/states/flobot-starting/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/flobot-starting/</guid>
       <description>
@@ -961,7 +1002,7 @@
     <item>
       <title>synchronizingTable state</title>
       <link>https://wmfs.github.io/reference/states/pg-synchronizing-table/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/pg-synchronizing-table/</guid>
       <description>
@@ -991,7 +1032,46 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;None.&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Required&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;transformerFunctionName&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Identifies which blueprint function should be used to undertake transformation duties. See &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt; for more information.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;source&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Used to define a source table along with any other attributes (such as a hash sum column) for where data is to be sourced from. See &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt; for more information.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;target&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Likewise, defines a target table with similar attributes explaining where data is to sent to. See &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt; for more information.&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;join&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;A simple object denoting how primary keys on both tables are related - where &lt;code&gt;key&lt;/code&gt; values are the name of a column on the source table and its &lt;code&gt;value&lt;/code&gt; is a column on the target table&lt;/td&gt;
+&lt;td&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
 
@@ -1008,7 +1088,7 @@
     <item>
       <title>upserting state</title>
       <link>https://wmfs.github.io/reference/states/flobot-upserting/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/states/flobot-upserting/</guid>
       <description>
@@ -1074,7 +1154,7 @@
     <item>
       <title>env command</title>
       <link>https://wmfs.github.io/reference/commands/flobot-env/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/commands/flobot-env/</guid>
       <description>
@@ -1136,7 +1216,7 @@
     <item>
       <title>sprintf command</title>
       <link>https://wmfs.github.io/reference/commands/flobot-sprintf/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/commands/flobot-sprintf/</guid>
       <description>
@@ -1196,7 +1276,7 @@
     <item>
       <title>value command</title>
       <link>https://wmfs.github.io/reference/commands/flobot-value/</link>
-      <pubDate>Sat, 29 Jul 2017 19:24:08 +0000</pubDate>
+      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/commands/flobot-value/</guid>
       <description>

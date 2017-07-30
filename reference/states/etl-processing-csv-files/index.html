@@ -372,7 +372,39 @@
 }
 </code></pre>
 
-<p><em>None.</em></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>parser</em></td>
+<td><code>object</code></td>
+<td>Object controlling how CSV lines should be parsed. Uses <a href="https://www.npmjs.com/package/csv-streamify">csv-streamify</a> under the bonnet&hellip; with the addition of a <code>skipFirstLine</code> property (<code>boolean</code>) for conditionally ignoring header lines.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>dirSplits</em></td>
+<td><code>object</code></td>
+<td>Used to split CSV files across different directories, depending on column values. Please see the <a href="https://github.com/wmfs/tymly/tree/master/smithereens#dirsplit-object">dirSplit</a> object in <a href="https://github.com/wmfs/tymly/tree/master/smithereens">Smithereens</a>for more information.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>fileSplits</em></td>
+<td><code>object</code></td>
+<td>In a similar way, CSV lines can be split across different file too. Please see the <a href="https://github.com/wmfs/tymly/tree/master/smithereens#filesplit-object">fileSplit</a> object in <a href="https://github.com/wmfs/tymly/tree/master/smithereens">Smithereens</a>for more information.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 

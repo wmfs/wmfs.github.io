@@ -342,7 +342,39 @@
 }
 </code></pre>
 
-<p><em>None.</em></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>since</em></td>
+<td><code>string</code></td>
+<td>The moment-in-time (e.g. an <em>epoch</em>) that the exported CSV file should contain changes since</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>actionAliases</em></td>
+<td><code>object</code></td>
+<td>Maps the necessary action (<code>insert</code>, <code>update</code> or <code>delete</code>) to a value to include in the outgoing CSV line (see the dynamic <code>$ACTION</code> column).</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td><em>tables</em></td>
+<td><code>array</code></td>
+<td>An array of objects that contain a <code>table</code> object&hellip; which in turn define how to assemble each CSV line. Please see <a href="https://github.com/wmfs/tymly/tree/master/pg-delta-file">pg-delta-file</a> for more information.</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 

@@ -307,72 +307,49 @@
 
 			
 
-<p>Smash CSV files into more manageable files based on column values - just a thin wrapper over <a href="https://www.npmjs.com/package/smithereens">Smithereens</a>. This state is provided via the
+<p>Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over <a href="https://github.com/wmfs/tymly/tree/master/supercopy">Supercopy</a>. This state is provided via the
 <a href="https://github.com/wmfs/tymly#readme">pg</a> plugin  and isn&#39;t offered by any of the other core plugins.</p>
 
 <h2 id="state-config">State config</h2>
 
 <pre><code class="language-json">{
-  &quot;processingCsvFiles&quot;: {
+  &quot;importingCsvFiles&quot;: {
     &quot;options&quot;: {
-      &quot;parser&quot;: {
-        &quot;quote&quot;: &quot;\&quot;&quot;,
-        &quot;delimiter&quot;: &quot;,&quot;,
-        &quot;newline&quot;: &quot;\r\n&quot;,
-        &quot;skipFirstLine&quot;: false,
-        &quot;trimWhitespace&quot;: true
-      },
-      &quot;dirSplits&quot;: [
-        {
-          &quot;columnIndex&quot;: 3,
-          &quot;valueToDirMap&quot;: {
-            &quot;c&quot;: &quot;children&quot;,
-            &quot;a&quot;: &quot;adults&quot;
-          }
-        }
-      ],
-      &quot;fileSplits&quot;: {
-        &quot;columnIndex&quot;: 4,
-        &quot;valueToFileMap&quot;: {
-          &quot;u&quot;: {
-            &quot;filename&quot;: &quot;changes&quot;,
-            &quot;outputColumns&quot;: [
-              {
-                &quot;name&quot;: &quot;person_no&quot;,
-                &quot;columnIndex&quot;: 0
-              },
-              {
-                &quot;name&quot;: &quot;first_name&quot;,
-                &quot;columnIndex&quot;: 1
-              },
-              {
-                &quot;name&quot;: &quot;last_name&quot;,
-                &quot;columnIndex&quot;: 2
-              }
-            ]
-          },
-          &quot;d&quot;: {
-            &quot;filename&quot;: &quot;deletes&quot;,
-            &quot;outputColumns&quot;: [
-              {
-                &quot;name&quot;: &quot;person_no&quot;,
-                &quot;columnIndex&quot;: 0
-              }
-            ]
-          }
-        }
-      }
-    },
-    &quot;events&quot;: {
-      &quot;csvFilesProcessed&quot;: {
-        &quot;to&quot;: &quot;importingCsvFiles&quot;
-      }
+      &quot;headerColumnNamePkPrefix&quot;: &quot;.&quot;,
+      &quot;topDownTableOrder&quot;: [
+        &quot;addressbase_holding&quot;
+      ]
     }
   }
 }
 </code></pre>
 
-<p><em>None.</em></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>headerColumnNamePkPrefix</em></td>
+<td><code>string</code></td>
+<td>Used to denote primary key columns when dealing with update/upsert files. Please see the <a href="https://github.com/wmfs/tymly/tree/master/supercopy#options">options</a> section in <a href="https://github.com/wmfs/tymly/tree/master/supercopy">Supercopy</a> for more details.</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td><em>topDownTableOrder</em></td>
+<td><code>array</code></td>
+<td>Used to resolve foreign-key constraint issues - will be deprecated in favour of something more automatic. Please see the <a href="https://github.com/wmfs/tymly/tree/master/supercopy#options">options</a> section in <a href="https://github.com/wmfs/tymly/tree/master/supercopy">Supercopy</a> for more details.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 
 <p><code>autoNudge</code>: <code>true</code></p>
 

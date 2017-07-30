@@ -13,7 +13,7 @@
   
   <url>
     <loc>https://wmfs.github.io/reference/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
@@ -23,172 +23,172 @@
   
   <url>
     <loc>https://wmfs.github.io/reference/states/pg-exporting-csv-delta-file/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/flobot-finding-by-id/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/flobot-finding-one/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/forms-form-filling/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/pg-importing-csv-files/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/flobot-logging/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/etl-processing-csv-files/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/alerts-sending-email/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/flobot-starting/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/pg-synchronizing-table/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/states/flobot-upserting/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/commands/flobot-env/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/commands/flobot-sprintf/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/commands/flobot-value/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/flobot-tags/</loc>
-    <lastmod>2017-07-29T19:24:13+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/flobot-temp/</loc>
-    <lastmod>2017-07-29T19:24:13+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/flobot-users/</loc>
-    <lastmod>2017-07-29T19:24:13+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/flobot-registry/</loc>
-    <lastmod>2017-07-29T19:24:12+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/express-server/</loc>
-    <lastmod>2017-07-29T19:24:12+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/flobot-states/</loc>
-    <lastmod>2017-07-29T19:24:12+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/flobot-storage/</loc>
-    <lastmod>2017-07-29T19:24:12+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/pg-storage/</loc>
-    <lastmod>2017-07-29T19:24:12+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/flobot-tags/</loc>
+    <lastmod>2017-07-30T12:37:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/flobot-temp/</loc>
+    <lastmod>2017-07-30T12:37:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/flobot-users/</loc>
+    <lastmod>2017-07-30T12:37:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/flobot-registry/</loc>
+    <lastmod>2017-07-30T12:37:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/express-server/</loc>
+    <lastmod>2017-07-30T12:37:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/flobot-states/</loc>
+    <lastmod>2017-07-30T12:37:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/flobot-storage/</loc>
+    <lastmod>2017-07-30T12:37:37+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-functions/</loc>
-    <lastmod>2017-07-29T19:24:11+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:36+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-inventory/</loc>
-    <lastmod>2017-07-29T19:24:11+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:36+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-rbac/</loc>
-    <lastmod>2017-07-29T19:24:11+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:36+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/forms-forms/</loc>
-    <lastmod>2017-07-29T19:24:10+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/flobot-blueprint-docs/</loc>
-    <lastmod>2017-07-29T19:24:09+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:35+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-caches/</loc>
-    <lastmod>2017-07-29T19:24:09+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:34+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-commands/</loc>
-    <lastmod>2017-07-29T19:24:09+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:34+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/alerts-email/</loc>
-    <lastmod>2017-07-29T19:24:09+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:34+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-expression/</loc>
-    <lastmod>2017-07-29T19:24:09+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:34+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/express-flobot-rest/</loc>
-    <lastmod>2017-07-29T19:24:09+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:34+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-flobots/</loc>
-    <lastmod>2017-07-29T19:24:09+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/flobot-blueprint-docs/</loc>
+    <lastmod>2017-07-30T12:37:33+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/express-auth/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
   </url>
   
   <url>
@@ -222,7 +222,7 @@
   
   <url>
     <loc>https://wmfs.github.io/reference/</loc>
-    <lastmod>2017-07-29T19:24:08+00:00</lastmod>
+    <lastmod>2017-07-30T12:37:32+00:00</lastmod>
     <priority>0</priority>
   </url>
   
