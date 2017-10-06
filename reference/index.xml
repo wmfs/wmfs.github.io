@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>References on FlobotJS Documentation</title>
+    <title>References on Tymly Documentation</title>
     <link>https://wmfs.github.io/reference/index.xml</link>
-    <description>Recent content in References on FlobotJS Documentation</description>
+    <description>Recent content in References on Tymly Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Sun, 30 Jul 2017 12:37:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Oct 2017 23:47:52 +0000</lastBuildDate>
     <atom:link href="https://wmfs.github.io/reference/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Reference</title>
       <link>https://wmfs.github.io/reference/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/</guid>
       <description>
 
-&lt;p&gt;This page contains an inventory of all the main types of component supplied via the Flobot module and core plugins:&lt;/p&gt;
+&lt;p&gt;This page contains an inventory of all the main types of component supplied via the Tymly module and core plugins:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/components.png&#34; alt=&#34;Diagram showing how plugins/blueprints/config/services relate to each other&#34; /&gt;&lt;/p&gt;
 
@@ -34,7 +34,7 @@
 &lt;h2 id=&#34;list-of-plugins&#34;&gt;List of plugins&lt;/h2&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Plugins extend Flobot with functionally-related State Classes, Commands and Services etc.&lt;/p&gt;
+&lt;p&gt;Plugins extend Tymly with functionally-related State Classes, Commands and Services etc.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;table&gt;
@@ -47,41 +47,51 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;The &lt;a href=&#34;https://github.com/wmfs/flobot&#34;&gt;flobot&lt;/a&gt; module has a &lt;a href=&#34;https://github.com/wmfs/flobot/lib/plugin&#34;&gt;built-in plugin&lt;/a&gt; which provides low-level components to help get things started.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/packages/tymly&#34;&gt;Tymly&lt;/a&gt; package itself has a &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/packages/tymly/lib/plugin&#34;&gt;built-in plugin&lt;/a&gt; which provides low-level components to help get the party started&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;alerts&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds some alerting options to the Flobot framework&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-alerts-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds some alerting options to the Tymly framework&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;etl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-etl-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;A collection of states for helping with Extract, Transform and Load tasks.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;express&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Exposes the Flobot framework via an Express.js web app.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-express-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Exposes the Tymly framework via an Express.js web app.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds some form capabilities to Flobot&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-forms-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds some form capabilities to Tymly&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Replace Flobot&amp;#39;s out-the-box memory storage with PostgreSQL&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-pg-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Replace Tymly&amp;#39;s out-the-box memory storage with PostgreSQL&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-rankings-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Plugin which handles ranking of data&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-solr-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Plugin which handles interaction with Apache Solr&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;list-of-state-classes&#34;&gt;List of State Classes&lt;/h2&gt;
+&lt;h2 id=&#34;list-of-state-resources&#34;&gt;List of State Resources&lt;/h2&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Flows are built from states, and states themselves are an instance of a state class&lt;/p&gt;
+&lt;p&gt;Task states can refer to resources, here is a list of all the included State Resources&amp;hellip;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;table&gt;
@@ -95,69 +105,75 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/pg-exporting-csv-delta-file&#34;&gt;exportingCsvDeltaFile&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-pg-plugin-exporting-csv-delta-file&#34;&gt;exportingCsvDeltaFile&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-pg-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/flobot-finding-by-id&#34;&gt;findingById&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Fetches a single document by its primary key values from storage and adds to a Flobot context&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-finding-by-id&#34;&gt;findingById&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Fetches a single document by its primary key values from storage and adds to a Tymly context&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/flobot-finding-one&#34;&gt;findingOne&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Fetches a single document from storage and adds to a Flobot context&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-finding-one&#34;&gt;findingOne&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Finds one document from storage&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/forms-form-filling&#34;&gt;formFilling&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-forms-plugin-form-filling&#34;&gt;formFilling&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Indicates which form a human needs to interact with - and waits until a response is received&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-forms-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/pg-importing-csv-files&#34;&gt;importingCsvFiles&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-pg-plugin-importing-csv-files&#34;&gt;importingCsvFiles&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-pg-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/flobot-logging&#34;&gt;logging&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Just logs any data sent to it to the console&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-logging&#34;&gt;logging&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Logs to the console via a template&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/etl-processing-csv-files&#34;&gt;processingCsvFiles&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-etl-plugin-processing-csv-files&#34;&gt;processingCsvFiles&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; etl&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-etl-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/alerts-sending-email&#34;&gt;sendingEmail&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-etl-plugin-processing-xml-files&#34;&gt;processingXmlFiles&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Takes an XML file and converts it to CSV&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-etl-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-rankings-plugin-refresh-ranking&#34;&gt;refreshRanking&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Regenerates a database view of ranked data&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-rankings-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-alerts-plugin-sending-email&#34;&gt;sendingEmail&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-alerts-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/flobot-starting&#34;&gt;starting&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;An internal (automatically added) state that performs some Flobot-startup tasks&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/pg-synchronizing-table&#34;&gt;synchronizingTable&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-pg-plugin-synchronizing-table&#34;&gt;synchronizingTable&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-pg-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;states/flobot-upserting&#34;&gt;upserting&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Saves a document to storage&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;state-resources/tymly-upserting&#34;&gt;upserting&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Perists a document to storage&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -165,7 +181,7 @@
 &lt;h2 id=&#34;list-of-commands&#34;&gt;List of commands&lt;/h2&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Commands allow states to be configured to access dynamic runtime values (e.g. from the Flobot context, environment variable etc.)&lt;/p&gt;
+&lt;p&gt;Commands allow states to be configured to access dynamic runtime values (e.g. from the Tymly context, environment variable etc.)&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;table&gt;
@@ -179,21 +195,21 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;commands/flobot-env&#34;&gt;env&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;commands/tymly-env&#34;&gt;env&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Allows a state to refer to an environment variable&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;commands/flobot-sprintf&#34;&gt;sprintf&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;commands/tymly-sprintf&#34;&gt;sprintf&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Derive a runtime value using a &lt;a href=&#34;https://github.com/alexei/sprintf.js&#34;&gt;sprintf&lt;/a&gt; string template&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;commands/flobot-value&#34;&gt;value&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Get a value from the Flobot&amp;#39;s context&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;commands/tymly-value&#34;&gt;value&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Get a value from the Tymly&amp;#39;s context&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -201,7 +217,7 @@
 &lt;h2 id=&#34;list-of-services&#34;&gt;List of services&lt;/h2&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;After the boot-up process, Flobot will return many ready-to-use &lt;em&gt;services&lt;/em&gt;. Most services are internal things (like &lt;a href=&#34;https://wmfs.github.io/reference/services/flobot-caches&#34;&gt;caches&lt;/a&gt;) and are probably only of interest if you&amp;rsquo;re writing your own plugins. However, some services (like &lt;a href=&#34;https://wmfs.github.io/reference/services/express-server&#34;&gt;server&lt;/a&gt;) offer key Flobot functionality.&lt;/p&gt;
+&lt;p&gt;After the boot-up process, Tymly will return many ready-to-use &lt;em&gt;services&lt;/em&gt;. Most services are internal things (like &lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-caches&#34;&gt;caches&lt;/a&gt;) and are probably only of interest if you&amp;rsquo;re writing your own plugins. However, some services (like &lt;a href=&#34;https://wmfs.github.io/reference/services/express-server&#34;&gt;server&lt;/a&gt;) offer key Tymly functionality.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;table&gt;
@@ -215,123 +231,129 @@
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/express-auth&#34;&gt;auth&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-express-plugin-auth&#34;&gt;auth&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-express-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-blueprint-docs&#34;&gt;blueprintDocs&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Allows tracking of documents created via blueprints, so they don&amp;#39;t get reverted when Flobot restarts&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-blueprint-docs&#34;&gt;blueprintDocs&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Allows tracking of documents created via blueprints, so they don&amp;#39;t get reverted when Tymly restarts&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-caches&#34;&gt;caches&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds &lt;a href=&#34;https://www.npmjs.com/package/lru-cache&#34;&gt;lru-cache&lt;/a&gt;-based caching to Flobot. Note defaults will be used if no &lt;code&gt;caches&lt;/code&gt; configuration is provided.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-caches&#34;&gt;caches&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds &lt;a href=&#34;https://www.npmjs.com/package/lru-cache&#34;&gt;lru-cache&lt;/a&gt;-based caching to Tymly. Note defaults will be used if no &lt;code&gt;caches&lt;/code&gt; configuration is provided.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-commands&#34;&gt;commands&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-commands&#34;&gt;commands&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Service to support blueprint commands&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/alerts-email&#34;&gt;email&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Integrates Flobot with &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt; to offer email-sending capabilities&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; alerts&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-alerts-plugin-email&#34;&gt;email&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Integrates Tymly with &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt; to offer email-sending capabilities&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-alerts-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-expression&#34;&gt;expression&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-expression&#34;&gt;expression&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides safe, &lt;a href=&#34;https://www.npmjs.com/package/esprima&#34;&gt;Esprima&lt;/a&gt;-based expression evaluation&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/express-flobot-rest&#34;&gt;flobotRest&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Exposes the core Flobot abilities (start, get, update and cancel) over a JWT-secured REST API&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-flobots&#34;&gt;flobots&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Creates Finite State Machines based on flow definitions and an API to interact with Flobots&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/forms-forms&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-forms-plugin-forms&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Exposes UI configuration (as supplied via blueprints in &lt;a href=&#34;http://schemaform.io/&#34;&gt;Schema Form&lt;/a&gt; format)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; forms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-forms-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-functions&#34;&gt;functions&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-functions&#34;&gt;functions&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds ability to run custom logic as defined in a blueprint&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-inventory&#34;&gt;inventory&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-inventory&#34;&gt;inventory&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-rbac&#34;&gt;rbac&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-rankings-plugin-rankings&#34;&gt;rankings&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds a ranking engine&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-rankings-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-rbac&#34;&gt;rbac&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-registry&#34;&gt;registry&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-registry&#34;&gt;registry&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides a mechanism for states to refer to site-specific values&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/express-server&#34;&gt;server&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-express-plugin-server&#34;&gt;server&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; express&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-express-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-states&#34;&gt;states&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Stores and prepares State Classes, ahead of generating flows&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-solr-plugin-solr&#34;&gt;solr&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds Solr support&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-solr-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;This is the default in-memory storage service that ships with Flobot. Useful for testing and not much else.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-statebox&#34;&gt;statebox&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Runs state machines defined in Amazon States Language&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/pg-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-express-plugin-statebox-api&#34;&gt;stateboxApi&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Exposes the core Tymly abilities (start, get, update and cancel) over a JWT-secured REST API&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-express-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;This is the default in-memory storage service that ships with Tymly. Useful for testing and not much else.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-pg-plugin-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Replaces the default in-memory storage solution with a MongoDB-backed alternative&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; pg&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly-pg-plugin&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-tags&#34;&gt;tags&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-tags&#34;&gt;tags&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Provides a generic mechanism to help tag/classify search results, tasks, forms etc.&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-temp&#34;&gt;temp&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Helps configure and manage a temporary folder for Flobot to use&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-temp&#34;&gt;temp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Helps configure and manage a temporary folder for Tymly to use&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;services/flobot-users&#34;&gt;users&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds user-management capabilities to Flobot (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; flobot&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;services/tymly-users&#34;&gt;users&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds user-management capabilities to Tymly (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt; tymly&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -339,647 +361,15 @@
     </item>
     
     <item>
-      <title>exportingCsvDeltaFile state</title>
-      <link>https://wmfs.github.io/reference/states/pg-exporting-csv-delta-file/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
+      <title>exportingCsvDeltaFile stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-exporting-csv-delta-file/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/reference/states/pg-exporting-csv-delta-file/</guid>
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-exporting-csv-delta-file/</guid>
       <description>
 
-&lt;p&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;exportingCsvDeltaFile&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;since&amp;quot;: &amp;quot;2000-07-16T20:37:26.847Z&amp;quot;,
-      &amp;quot;createdColumnName&amp;quot;: &amp;quot;_created&amp;quot;,
-      &amp;quot;modifiedColumnName&amp;quot;: &amp;quot;_modified&amp;quot;,
-      &amp;quot;actionAliases&amp;quot;: {
-        &amp;quot;insert&amp;quot;: &amp;quot;u&amp;quot;,
-        &amp;quot;update&amp;quot;: &amp;quot;u&amp;quot;,
-        &amp;quot;delete&amp;quot;: &amp;quot;d&amp;quot;
-      },
-      &amp;quot;tables&amp;quot;: [
-        {
-          &amp;quot;tableName&amp;quot;: &amp;quot;people&amp;quot;,
-          &amp;quot;csvColumns&amp;quot;: [
-            &amp;quot;PERSON&amp;quot;,
-            &amp;quot;$ACTION&amp;quot;,
-            &amp;quot;$ROW_NUM&amp;quot;,
-            &amp;quot;@social_security_id&amp;quot;,
-            &amp;quot;@first_name&amp;quot;,
-            &amp;quot;@last_name&amp;quot;,
-            &amp;quot;@age&amp;quot;
-          ]
-        }
-      ]
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;since&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The moment-in-time (e.g. an &lt;em&gt;epoch&lt;/em&gt;) that the exported CSV file should contain changes since&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;actionAliases&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Maps the necessary action (&lt;code&gt;insert&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt; or &lt;code&gt;delete&lt;/code&gt;) to a value to include in the outgoing CSV line (see the dynamic &lt;code&gt;$ACTION&lt;/code&gt; column).&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;tables&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;An array of objects that contain a &lt;code&gt;table&lt;/code&gt; object&amp;hellip; which in turn define how to assemble each CSV line. Please see &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt; for more information.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>findingById state</title>
-      <link>https://wmfs.github.io/reference/states/flobot-finding-by-id/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/flobot-finding-by-id/</guid>
-      <description>
-
-&lt;p&gt;Fetches a single document by its primary key values from storage and adds to a Flobot context. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;findingById&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;modelId&amp;quot;: &amp;quot;employees&amp;quot;,
-      &amp;quot;target&amp;quot;: &amp;quot;employeeDetails&amp;quot;,
-      &amp;quot;key&amp;quot;: {
-        &amp;quot;$value&amp;quot;: {
-          &amp;quot;path&amp;quot;: &amp;quot;key&amp;quot;
-        }
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;modelId&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is the id of a model within the current namespace from which a single document will be fetched.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;target&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is a &amp;#39;.&amp;#39; delimited path of where the fetched document should be set on the Flobot context.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;key&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object,array,string,number,integer&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Primary key values, either an object of simple key/value pairs, an array of values matching in order with the model&amp;#39;s primaryKey property or a string/number representing the id itself&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>findingOne state</title>
-      <link>https://wmfs.github.io/reference/states/flobot-finding-one/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/flobot-finding-one/</guid>
-      <description>
-
-&lt;p&gt;Fetches a single document from storage and adds to a Flobot context. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;findingOne&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;modelId&amp;quot;: &amp;quot;employees&amp;quot;,
-      &amp;quot;target&amp;quot;: &amp;quot;employeeDetails&amp;quot;,
-      &amp;quot;filter&amp;quot;: {
-        &amp;quot;where&amp;quot;: {
-          &amp;quot;email&amp;quot;: {
-            &amp;quot;equals&amp;quot;: {
-              &amp;quot;$value&amp;quot;: {
-                &amp;quot;path&amp;quot;: &amp;quot;key.email&amp;quot;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;modelId&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is the id of a model within the current namespace from which a single document will be fetched.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;target&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is a &amp;#39;.&amp;#39; delimited path of where the fetched document should be set on the Flobot context.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;filter&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Use to find the correct doc to return.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>formFilling state</title>
-      <link>https://wmfs.github.io/reference/states/forms-form-filling/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/forms-form-filling/</guid>
-      <description>
-
-&lt;p&gt;Indicates which form a human needs to interact with - and waits until a response is received. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;forms&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;formFilling&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;formId&amp;quot;: &amp;quot;catEditingForm&amp;quot;,
-      &amp;quot;target&amp;quot;: &amp;quot;catData&amp;quot;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;formId&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The id of a form in the current namespace that a human needs to interact with&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;target&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A &amp;#39;.&amp;#39; delimited path to where data that&amp;#39;s submitted via the form should be set on the Flobot context&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;false&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This state will require an external update before flow will advance&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>importingCsvFiles state</title>
-      <link>https://wmfs.github.io/reference/states/pg-importing-csv-files/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/pg-importing-csv-files/</guid>
-      <description>
-
-&lt;p&gt;Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt;. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;importingCsvFiles&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;headerColumnNamePkPrefix&amp;quot;: &amp;quot;.&amp;quot;,
-      &amp;quot;topDownTableOrder&amp;quot;: [
-        &amp;quot;addressbase_holding&amp;quot;
-      ]
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;headerColumnNamePkPrefix&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to denote primary key columns when dealing with update/upsert files. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy#options&#34;&gt;options&lt;/a&gt; section in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt; for more details.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;topDownTableOrder&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to resolve foreign-key constraint issues - will be deprecated in favour of something more automatic. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy#options&#34;&gt;options&lt;/a&gt; section in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt; for more details.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>logging state</title>
-      <link>https://wmfs.github.io/reference/states/flobot-logging/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/flobot-logging/</guid>
-      <description>
-
-&lt;p&gt;Just logs any data sent to it to the console. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;text&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;A value to send to the console&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>processingCsvFiles state</title>
-      <link>https://wmfs.github.io/reference/states/etl-processing-csv-files/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/etl-processing-csv-files/</guid>
-      <description>
-
-&lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;etl&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;processingCsvFiles&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;parser&amp;quot;: {
-        &amp;quot;quote&amp;quot;: &amp;quot;\&amp;quot;&amp;quot;,
-        &amp;quot;delimiter&amp;quot;: &amp;quot;,&amp;quot;,
-        &amp;quot;newline&amp;quot;: &amp;quot;\r\n&amp;quot;,
-        &amp;quot;skipFirstLine&amp;quot;: false,
-        &amp;quot;trimWhitespace&amp;quot;: true
-      },
-      &amp;quot;dirSplits&amp;quot;: [
-        {
-          &amp;quot;columnIndex&amp;quot;: 3,
-          &amp;quot;valueToDirMap&amp;quot;: {
-            &amp;quot;c&amp;quot;: &amp;quot;children&amp;quot;,
-            &amp;quot;a&amp;quot;: &amp;quot;adults&amp;quot;
-          }
-        }
-      ],
-      &amp;quot;fileSplits&amp;quot;: {
-        &amp;quot;columnIndex&amp;quot;: 4,
-        &amp;quot;valueToFileMap&amp;quot;: {
-          &amp;quot;u&amp;quot;: {
-            &amp;quot;filename&amp;quot;: &amp;quot;changes&amp;quot;,
-            &amp;quot;outputColumns&amp;quot;: [
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 0
-              },
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;first_name&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 1
-              },
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;last_name&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 2
-              }
-            ]
-          },
-          &amp;quot;d&amp;quot;: {
-            &amp;quot;filename&amp;quot;: &amp;quot;deletes&amp;quot;,
-            &amp;quot;outputColumns&amp;quot;: [
-              {
-                &amp;quot;name&amp;quot;: &amp;quot;person_no&amp;quot;,
-                &amp;quot;columnIndex&amp;quot;: 0
-              }
-            ]
-          }
-        }
-      }
-    },
-    &amp;quot;events&amp;quot;: {
-      &amp;quot;csvFilesProcessed&amp;quot;: {
-        &amp;quot;to&amp;quot;: &amp;quot;importingCsvFiles&amp;quot;
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;parser&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Object controlling how CSV lines should be parsed. Uses &lt;a href=&#34;https://www.npmjs.com/package/csv-streamify&#34;&gt;csv-streamify&lt;/a&gt; under the bonnet&amp;hellip; with the addition of a &lt;code&gt;skipFirstLine&lt;/code&gt; property (&lt;code&gt;boolean&lt;/code&gt;) for conditionally ignoring header lines.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;dirSplits&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to split CSV files across different directories, depending on column values. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens#dirsplit-object&#34;&gt;dirSplit&lt;/a&gt; object in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens&#34;&gt;Smithereens&lt;/a&gt;for more information.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;fileSplits&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;In a similar way, CSV lines can be split across different file too. Please see the &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens#filesplit-object&#34;&gt;fileSplit&lt;/a&gt; object in &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/smithereens&#34;&gt;Smithereens&lt;/a&gt;for more information.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>sendingEmail state</title>
-      <link>https://wmfs.github.io/reference/states/alerts-sending-email/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/alerts-sending-email/</guid>
-      <description>
-
-&lt;p&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;alerts&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;sendingEmail&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;to&amp;quot;: {
-        &amp;quot;$env&amp;quot;: {
-          &amp;quot;variableName&amp;quot;: &amp;quot;FLOBOT_WELCOME_RECIPIENTS&amp;quot;,
-          &amp;quot;failIfNotSet&amp;quot;: true
-        }
-      },
-      &amp;quot;subject&amp;quot;: &amp;quot;Welcome to Flobot!&amp;quot;,
-      &amp;quot;text&amp;quot;: &amp;quot;Congratulations... you are now part of the wonderful world of Flobot! &amp;lt;3&amp;quot;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;to&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Comma separated list or an array of recipients e-mail addresses that will appear on the To: field&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;cc&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Comma separated list or an array of recipients e-mail addresses that will appear on the Cc: field&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;bcc&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Comma separated list or an array of recipients e-mail addresses that will appear on the Bcc: field&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;subject&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The subject of the e-mail&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;text&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The plaintext version of the message as an Unicode string, Buffer, Stream or an attachment-like object ({path: &amp;#39;/var/data/&amp;hellip;&amp;#39;})&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;html&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The HTML version of the message as an Unicode string, Buffer, Stream or an attachment-like object ({path: &amp;#39;http://&amp;hellip;&amp;#39;})&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>starting state</title>
-      <link>https://wmfs.github.io/reference/states/flobot-starting/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/flobot-starting/</guid>
-      <description>
-
-&lt;p&gt;An internal (automatically added) state that performs some Flobot-startup tasks. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+&lt;p&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-pg-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
@@ -987,11 +377,28 @@
 &lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>findingById stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</guid>
+      <description>
+
+&lt;p&gt;Fetches a single document by its primary key values from storage and adds to a Tymly context. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr&gt;
 
@@ -1000,320 +407,274 @@
     </item>
     
     <item>
-      <title>synchronizingTable state</title>
-      <link>https://wmfs.github.io/reference/states/pg-synchronizing-table/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
+      <title>findingOne stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
       
-      <guid>https://wmfs.github.io/reference/states/pg-synchronizing-table/</guid>
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</guid>
       <description>
 
-&lt;p&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;. This state is provided via the
+&lt;p&gt;Finds one document from storage. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>formFilling stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-forms-plugin-form-filling/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-forms-plugin-form-filling/</guid>
+      <description>
+
+&lt;p&gt;Indicates which form a human needs to interact with - and waits until a response is received. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-forms-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>importingCsvFiles stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-importing-csv-files/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-importing-csv-files/</guid>
+      <description>
+
+&lt;p&gt;Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-pg-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>logging stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-logging/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-logging/</guid>
+      <description>
+
+&lt;p&gt;Logs to the console via a template. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>processingCsvFiles stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-csv-files/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-csv-files/</guid>
+      <description>
+
+&lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-etl-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>processingXmlFiles stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-xml-files/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-xml-files/</guid>
+      <description>
+
+&lt;p&gt;Takes an XML file and converts it to CSV. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-etl-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>refreshRanking stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-rankings-plugin-refresh-ranking/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-rankings-plugin-refresh-ranking/</guid>
+      <description>
+
+&lt;p&gt;Regenerates a database view of ranked data. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-rankings-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>sendingEmail stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-alerts-plugin-sending-email/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-alerts-plugin-sending-email/</guid>
+      <description>
+
+&lt;p&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-alerts-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>synchronizingTable stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-synchronizing-table/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-synchronizing-table/</guid>
+      <description>
+
+&lt;p&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-pg-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>upserting stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-upserting/</link>
+      <pubDate>Fri, 06 Oct 2017 23:47:52 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-upserting/</guid>
+      <description>
+
+&lt;p&gt;Perists a document to storage. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>refreshRankings stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-rankings-plugin-refresh-rankings/</link>
+      <pubDate>Thu, 05 Oct 2017 20:40:13 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-rankings-plugin-refresh-rankings/</guid>
+      <description>
+
+&lt;p&gt;Regenerates a database view of ranked data. This stateResource is provided via the
+&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-rankings-plugin&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>exportingCsvDeltaFile stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</link>
+      <pubDate>Mon, 02 Oct 2017 12:11:34 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</guid>
+      <description>
+
+&lt;p&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;. This stateResource is provided via the
 &lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;synchronizingTable&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;transformerFunctionName&amp;quot;: &amp;quot;someBlueprintFunction&amp;quot;,
-      &amp;quot;source&amp;quot;: {
-        &amp;quot;tableName&amp;quot;: &amp;quot;someNamespace.some_table_name&amp;quot;,
-        &amp;quot;hashSumColumnName&amp;quot;: &amp;quot;hash_sum&amp;quot;
-      },
-      &amp;quot;target&amp;quot;: {
-        &amp;quot;tableName&amp;quot;: &amp;quot;someNamespace.another_table_name&amp;quot;,
-        &amp;quot;hashSumColumnName&amp;quot;: &amp;quot;origin_hash_sum&amp;quot;
-      },
-      &amp;quot;join&amp;quot;: {
-        &amp;quot;source_pk_column&amp;quot;: &amp;quot;target_pk_column&amp;quot;
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;transformerFunctionName&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Identifies which blueprint function should be used to undertake transformation duties. See &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt; for more information.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;source&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Used to define a source table along with any other attributes (such as a hash sum column) for where data is to be sourced from. See &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt; for more information.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;target&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Likewise, defines a target table with similar attributes explaining where data is to sent to. See &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt; for more information.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;join&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A simple object denoting how primary keys on both tables are related - where &lt;code&gt;key&lt;/code&gt; values are the name of a column on the source table and its &lt;code&gt;value&lt;/code&gt; is a column on the target table&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>upserting state</title>
-      <link>https://wmfs.github.io/reference/states/flobot-upserting/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/states/flobot-upserting/</guid>
-      <description>
-
-&lt;p&gt;Saves a document to storage. This state is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;upserting&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;modelId&amp;quot;: &amp;quot;cat&amp;quot;,
-      &amp;quot;doc&amp;quot;: {
-        &amp;quot;$value&amp;quot;: {
-          &amp;quot;path&amp;quot;: &amp;quot;catDocFromParams&amp;quot;
-        }
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;modelId&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is the id of a model within the current namespace which will be used to upsert the document.&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;doc&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;object&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The document that needs storing. Use &lt;strong&gt;commands&lt;/strong&gt; such as &lt;code&gt;$value&lt;/code&gt; and similar to dynamically access Flobot context&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;code&gt;autoNudge&lt;/code&gt;: &lt;code&gt;true&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This state will automatically advance the flow and doesn&amp;rsquo;t require any external updates&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>env command</title>
-      <link>https://wmfs.github.io/reference/commands/flobot-env/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/commands/flobot-env/</guid>
-      <description>
-
-&lt;p&gt;Allows a state to refer to an environment variable. This command is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;sendingEmail&amp;quot;: {
-    &amp;quot;options&amp;quot;: {
-      &amp;quot;to&amp;quot;: {
-        &amp;quot;$env&amp;quot;: {
-          &amp;quot;variableName&amp;quot;: &amp;quot;FLOBOT_WELCOME_RECIPIENTS&amp;quot;,
-          &amp;quot;failIfNotSet&amp;quot;: true
-        }
-      },
-      &amp;quot;subject&amp;quot;: &amp;quot;Welcome to Flobot!&amp;quot;,
-      &amp;quot;text&amp;quot;: &amp;quot;Congratulations... you are now part of the wonderful world of Flobot! &amp;lt;3&amp;quot;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;variableName&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Name of an environment variable to read a value from&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;failIfNotSet&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Should things fail if the environment variable hasn&amp;#39;t been set? Defaults to &lt;code&gt;false&lt;/code&gt;.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>sprintf command</title>
-      <link>https://wmfs.github.io/reference/commands/flobot-sprintf/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/commands/flobot-sprintf/</guid>
-      <description>
-
-&lt;p&gt;Derive a runtime value using a &lt;a href=&#34;https://github.com/alexei/sprintf.js&#34;&gt;sprintf&lt;/a&gt; string template. This command is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;title&amp;quot;: {
-    &amp;quot;$sprintf&amp;quot;: {
-      &amp;quot;template&amp;quot;: &amp;quot;%s %s (aged %d years)&amp;quot;,
-      &amp;quot;inputPaths&amp;quot;: [
-        &amp;quot;employeeData.firstName&amp;quot;,
-        &amp;quot;employeeData.lastName&amp;quot;,
-        &amp;quot;employeeData.age&amp;quot;
-      ]
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;template&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A string template that can contain &lt;code&gt;%s&lt;/code&gt;, &lt;code&gt;%d&lt;/code&gt; and similar placeholders&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;inputPaths&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;array&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;An array of strings - the values of which should be &amp;#39;.&amp;#39; delimited paths pointing to values on the Flobot context. These context values will be combined as per the &lt;code&gt;template&lt;/code&gt; to return the output string. See &lt;a href=&#34;https://github.com/alexei/sprintf.js#javascript-vsprintf&#34;&gt;vsprintf&lt;/a&gt; for more info.&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>value command</title>
-      <link>https://wmfs.github.io/reference/commands/flobot-value/</link>
-      <pubDate>Sun, 30 Jul 2017 12:37:32 +0000</pubDate>
-      
-      <guid>https://wmfs.github.io/reference/commands/flobot-value/</guid>
-      <description>
-
-&lt;p&gt;Get a value from the Flobot&amp;#39;s context. This command is provided via the
-&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;flobot&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
-
-&lt;h2 id=&#34;command-config&#34;&gt;Command config&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;catName&amp;quot;: {
-    &amp;quot;$value&amp;quot;: {
-      &amp;quot;path&amp;quot;: &amp;quot;myCatData.name&amp;quot;
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Required&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;em&gt;path&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A &amp;#39;.&amp;#39; delimited path pointing to a value on the Flobot context&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr&gt;
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Key-concepts on FlobotJS Documentation</title>
+    <title>Key-concepts on Tymly Documentation</title>
     <link>https://wmfs.github.io/key-concepts/index.xml</link>
-    <description>Recent content in Key-concepts on FlobotJS Documentation</description>
+    <description>Recent content in Key-concepts on Tymly Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
@@ -18,183 +18,47 @@
       <guid>https://wmfs.github.io/key-concepts/</guid>
       <description>
 
-&lt;h2 id=&#34;flows&#34;&gt;Flows&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Everything in FlobotJS is built around a flow.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;An organisation is likely to contain hundreds of business processes. In FlobotJS, each of these processes can be modelled as a &amp;ldquo;&lt;strong&gt;flow&lt;/strong&gt;&amp;rdquo;. Flows can underpin something as simple as a user searching for a document through to  a complex multi-team endeavour.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Flows may involve lots of people or may require no human input at all. It&amp;rsquo;s likely an employee&amp;rsquo;s role will require interaction with several flows - but probably not all of them.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Flows play nicely with industry representations such as &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;State Diagrams&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Activity_diagram&#34;&gt;Activity Diagrams&lt;/a&gt; and &lt;a href=&#34;http://www.bpmn.org/&#34;&gt;Business Process Diagrams&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;the-booking-someone-sick-flow&#34;&gt;The booking-someone-sick flow&lt;/h3&gt;
-
-&lt;p&gt;The flow represented in the diagram below allows an Operator (or more accurately a &lt;em&gt;user&lt;/em&gt; who has been assigned the Operator &lt;em&gt;role&lt;/em&gt;) to process the necessary housekeeping when someone phones-in sick.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/simple-flow.png&#34; alt=&#34;Simple state diagram for booking-someone-sick&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;As described in the next section, each  circle in this diagram is known as a &lt;a href=&#34;#states&#34;&gt;State&lt;/a&gt;. The &lt;em&gt;initial&lt;/em&gt; state requires the operator to capture details of the sickness by filling-in a quick form.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Once the form has been completed, the flow advances to a state where an email is sent to the employee&amp;rsquo;s manager.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What state the flow moves to next is dependent on whether the absence will reduce staffing below some critical level. Either things are fine and the flow can move to the final state or the Operations Room will be alerted to a staffing shortfall.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;And to finish, the employee will have a new entry added to their sickness record.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;states&#34;&gt;States&lt;/h2&gt;
-
-&lt;p&gt;Each of the circles in the previous diagram are known as &lt;strong&gt;States&lt;/strong&gt;.  Each Flobot flow contains all the necessary information to assemble a &lt;a href=&#34;https://en.wikipedia.org/wiki/State_diagram&#34;&gt;Finite State Machine&lt;/a&gt; (&lt;strong&gt;FSM&lt;/strong&gt;), that being:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;A list of possible states (an FSM can be in exactly one of a finite number of states at any given time)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;How states are connected together (along with any conditions that are required)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Which state the FSM should find itself in as it starts (i.e. the flow&amp;rsquo;s &lt;em&gt;initial&lt;/em&gt; state)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;FlobotJS provides a pool of different &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-classes&#34;&gt;State Classes&lt;/a&gt;, each state in a flow will be associated with a particular &lt;em&gt;State Class&lt;/em&gt;. It&amp;rsquo;s possible to deliver a good chunk of back-office functionality with surprisingly few State Classes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;For a full list of states that are currently available out-of-the-box, please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-classes&#34;&gt;list of core states&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h2 id=&#34;flobots&#34;&gt;Flobots&lt;/h2&gt;
-
-&lt;p&gt;At this point it &lt;em&gt;might&lt;/em&gt;  be useful to think of things in terms of a railway network&amp;hellip;&lt;/p&gt;
-
-&lt;div class=&#34;admonition note&#34;&gt;
-&lt;p class=&#34;admonition-title&#34;&gt;Analogy alert!&lt;/p&gt;
-&lt;p&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Flows&lt;/strong&gt; can be seen as the railway track - connecting states together in a very controlled way&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;States&lt;/strong&gt; can be seen as the railway stations - they&amp;rsquo;re reached by travelling around flows. Journeys start at the &lt;em&gt;initial&lt;/em&gt; state.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Flobots&lt;/strong&gt; therefore can be seen as trains as they move from state-to-state. A single flow can have any number of Flobots making their way around it.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Flobots are always persisted as a simple document so that they can survive server restarts.
-This is an example of what might be persisted for a Flobot travelling around the &lt;strong&gt;booking-someone-sick&lt;/strong&gt; flow from earlier:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-JSON&#34;&gt;{ 
-    &amp;quot;_id&amp;quot; : &amp;quot;586e42ade923c119c4a4a85b&amp;quot;, 
-    &amp;quot;createdAt&amp;quot; : &amp;quot;2017-01-05T12:57:17.701+0000&amp;quot;,
-    &amp;quot;userId&amp;quot; : &amp;quot;john.doe@flobotjs.io&amp;quot;, 
-    &amp;quot;status&amp;quot; : &amp;quot;running&amp;quot;, 
-    &amp;quot;flowId&amp;quot; : &amp;quot;booking-someone-sick&amp;quot;, 
-    &amp;quot;stateId&amp;quot; : &amp;quot;notifyingOperationsRoom&amp;quot;, 
-    &amp;quot;stateEnterTime&amp;quot; : &amp;quot;2017-01-05T12:57:17.686+0000&amp;quot;, 
-    &amp;quot;ctx&amp;quot; : {
-        &amp;quot;formData&amp;quot; : {
-            &amp;quot;employeeNumber&amp;quot;: 372711,
-            &amp;quot;likelyReturnDate&amp;quot;: &amp;quot;2017-01-07T09:00:00.000+0000&amp;quot;,
-            &amp;quot;sicknessCode&amp;quot;: &amp;quot;hangover&amp;quot;
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The various properties in this example document are described in the table below:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;_id&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Uniquely identifies a Flobot&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;createdAt&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;When the Flobot was first instigated&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;userId&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;If the Flobot was instigated by a human, then this is the userId of that person&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;status&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Always one of &lt;code&gt;starting&lt;/code&gt;, &lt;code&gt;running&lt;/code&gt;, &lt;code&gt;waitingForHumanInput&lt;/code&gt; or &lt;code&gt;finished&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;flowId&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Identifies which flow this Flobot is travelling around&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;stateId&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Indicates the state that this Flobot is currently in&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;stateEnterTime&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;The timestamp of when the Flobot entered its current state&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;ctx&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;This is a simple key/value store that&amp;rsquo;s unique to each Flobot. In analogy terms, this is a good place to store the speed of a train. This &lt;strong&gt;context&lt;/strong&gt; is available to all states to read-from/write-to as they require. In this way, inter-state communication is possible - but within context of each &lt;del&gt;train&lt;/del&gt; Flobot.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr&gt;
-
 &lt;h2 id=&#34;blueprints&#34;&gt;Blueprints&lt;/h2&gt;
 
-&lt;p&gt;On their own, flow definitions aren&amp;rsquo;t enough&amp;hellip; for everything to spark, states need to be fed things like data models, form layouts, images, custom logic, templates etc.
-This is where FlobotJS &lt;strong&gt;Blueprints&lt;/strong&gt; come in. The actual content of a Blueprint is beyond the scope of this article, but just to say Blueprints themselves are nothing special, just a simple folder structure:&lt;/p&gt;
+&lt;p&gt;In Tymly, a &amp;ldquo;&lt;strong&gt;blueprint&lt;/strong&gt;&amp;rdquo; describes related functionality that adds value to an organization.
+Typically a blueprint will describe all the workflows, rules and forms affecting a business function or team - but they&amp;rsquo;re equally suited to describing open data and ETL pipelines.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/inside-a-blueprint.png#center&#34; alt=&#34;Cartoon illustration of people looking inside a Blueprint&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Blueprints equate to a directory containing a simple &lt;code&gt;blueprint.json&lt;/code&gt; file and one-or-more sub-directories:&lt;/p&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Directory&lt;/th&gt;
+&lt;th&gt;Sub-directory&lt;/th&gt;
 &lt;th&gt;Description&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/flows&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Flow definitions defined in JSON files&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
 &lt;td&gt;&lt;code&gt;/functions&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;One file per Node.js module (which should export a single function).&lt;/td&gt;
+&lt;td&gt;Blueprints are predominantly declarative - preferring JSON definitions over hand-coded functions. But for those times when only code will do, blueprints can supply supplemental Javascript functions too.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/registryKeys&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;A collection of JSON files which are used to create entries in the Flobot registry.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/registry-keys&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Consider a blueprint that defines a simple workflow that sends a Tweet - what Twitter username/password should be used? This is where &lt;em&gt;Registry Keys&lt;/em&gt; come in useful&amp;hellip; a simple key/value store inside Tymly, where keys are declared inside this sub-directory. To help conjure administrative screens and help validation, the required value content is described using JSON Schema.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/state-machines&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Each JSON file inside this sub-directory will be used to conjure a State Machine for orchestrating a workflow. Tymly uses the open &lt;a href=&#34;https://states-language.net/spec.html&#34;&gt;Amazon State Language&lt;/a&gt; to describe State Machines.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;/models&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;One JSON file per model (contents to be a JSON schema for defining the model&amp;#39;s data structure)&lt;/td&gt;
+&lt;td&gt;This sub-directory deals with the &lt;code&gt;M&lt;/code&gt; portion of &lt;code&gt;MVC&lt;/code&gt; - each JSON file in here defines a data model that can be subsequently used by a State Machine. Nested documents are supported along with a couple of extensions to help describe database indexes and primary keys. Tymly uses the JSON Schema standard for describing data models.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;/tags&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;JSON files providing &amp;#39;tags&amp;#39; which are used throughout Flobot to help categorise things and aid discovery&lt;/td&gt;
+&lt;td&gt;JSON files providing &amp;#39;tags&amp;#39; which are used throughout Tymly to help categorise things and aid discovery&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
@@ -206,25 +70,245 @@ This is where FlobotJS &lt;strong&gt;Blueprints&lt;/strong&gt; come in. The actu
 &lt;td&gt;&lt;code&gt;/forms&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;One JSON file per Form (currently need to be in &lt;a href=&#34;http://schemaform.io/&#34;&gt;Schemaform&lt;/a&gt; format)&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/rankings&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Each JSON file here will help configure everything required to rank a set of documents by a score derived from a variety of sources&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/search-docs&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Each JSON file is used to translates a model document into standard properties for searching.&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Given an organisation could potentially attract hundreds of flows, blueprints can logically group together related flows (perhaps into teams or functional areas) to help make things more manageable.
-Blueprints also help with versioning, collaboration (on Github or similar) and interoperability.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/yeoman.png#floatleft&#34; alt=&#34;Yeoman logo&#34; /&gt; &lt;strong&gt;We use &lt;a href=&#34;http://yeoman.io/&#34;&gt;Yeoman&lt;/a&gt; to help quickly scaffold new components in Tymly.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The FlobotJS framework can load any number of blueprints at startup, potentially serving all back-office functionality from a single server.&lt;/p&gt;
+&lt;p&gt;Running the &lt;code&gt;yo tymly:blueprint&lt;/code&gt; command will get you building basic blueprints in no time. Please see the &lt;a href=&#34;https://wmfs.github.io/getting-started/&#34;&gt;Getting started&lt;/a&gt; section for help with setting-up Yeoman.&lt;/p&gt;
 
-&lt;hr&gt;
+&lt;div style=&#34;clear: both;&#34;&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;state-machines&#34;&gt;State Machines&lt;/h2&gt;
+
+&lt;p&gt;All the events that occur inside Tymly are orchestrated by an army of &lt;del&gt;Finite&lt;/del&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Finite-state_machine&#34;&gt;State Machines&lt;/a&gt;.
+Conceptually, a State Machine is nothing more than a collection of &lt;a href=&#34;https://states-language.net/spec.html#states-fields&#34;&gt;States&lt;/a&gt; that are wired together to describe an executable process.
+Each state needs to be assigned a &lt;strong&gt;Type&lt;/strong&gt;, some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://states-language.net/spec.html#task-state&#34;&gt;Task&lt;/a&gt;&lt;/strong&gt; states are where all the heavy-lifting is done. Tasks cover all manner of processing: importing data, sending e-mails, form-filling etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://states-language.net/spec.html#choice-state&#34;&gt;Choice&lt;/a&gt;&lt;/strong&gt; states are used to implement conditional branching inside a state machine (i.e. configuring states so that they execute only if a certain expression is satisfied).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://states-language.net/spec.html#parallel-state&#34;&gt;Parallel&lt;/a&gt;&lt;/strong&gt; states allow for the concurrent running of two or more states.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If Tymly were to be considered in terms of Model, View, Controller&amp;hellip; then State Machines are all about the &lt;em&gt;Controller&lt;/em&gt;.
+Tymly uses the open &lt;a href=&#34;https://states-language.net/spec.html&#34;&gt;Amazon States Specification&lt;/a&gt; to define State Machines inside blueprints, as such, the following State Machine constructs are supported:&lt;/p&gt;
+
+&lt;table &gt;
+    &lt;tr&gt;
+        &lt;th&gt;Sequential&lt;/th&gt;
+        &lt;th&gt;Choice&lt;/th&gt;
+        &lt;th&gt;Parallel&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;img src=&#34;https://wmfs.github.io/images/sequential-states.png&#34;/&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src=&#34;https://wmfs.github.io/images/choice-states.png&#34;/&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src=&#34;https://wmfs.github.io/images/parallel-states.png&#34;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;pre style=&#34;margin:0; padding:1em;&#34;&gt;
+{
+ &#34;States&#34;: {
+  &#34;Load&#34;: {
+   &#34;Type&#34;: &#34;Task&#34;,
+   &#34;Resource&#34;: &#34;module:findingById&#34;,
+   &#34;InputPath&#34;: &#34;$.key&#34;,
+   &#34;Next&#34;: &#34;Form&#34;
+  },
+  &#34;Form&#34;: {
+   &#34;Type&#34;: &#34;Task&#34;,
+   &#34;Resource&#34;: &#34;module:formFilling&#34;,
+   &#34;ResultPath&#34;: &#34;$.formData&#34;,
+   &#34;Next&#34;: &#34;Save&#34;
+  },
+  &#34;Save&#34;: {
+   &#34;Type&#34;: &#34;Task&#34;,
+   &#34;Resource&#34;: &#34;module:upserting&#34;,
+   &#34;InputPath&#34;: &#34;$.formData&#34;,
+   &#34;End&#34;: &#34;True&#34;
+  }
+ }
+}
+&lt;/pre&gt;
+&lt;/td&gt;
+
+&lt;td&gt;
+&lt;pre style=&#34;margin:0;padding:1em;&#34;&gt;
+{
+ &#34;States&#34;: {
+  &#34;ConsiderLanguage&#34;: {
+   &#34;Type&#34;: &#34;Choice&#34;,
+   &#34;Choices&#34;: [
+    {
+     &#34;Variable&#34;: &#34;$.language&#34;,
+     &#34;StringEquals&#34;: &#34;Spanish&#34;
+     &#34;Next&#34;: &#34;SpanishGreeting&#34;
+    }
+   ],
+   &#34;Default&#34;: &#34;EnglishGreeting&#34;
+  },
+  &#34;SpanishGreeting&#34;: {
+   &#34;Type&#34;: &#34;Task&#34;,
+   &#34;Resource&#34;: &#34;module:logging&#34;,
+   &#34;ResourceConfig&#34;: {
+    &#34;template&#34;: &#34;Hola&#34;
+   },
+   &#34;End&#34;: &#34;True&#34;
+  },
+  &#34;EnglishGreeting&#34;: {
+   &#34;Type&#34;: &#34;Task&#34;,
+   &#34;Resource&#34;: &#34;module:logging&#34;,
+   &#34;ResourceConfig&#34;: {
+    &#34;template&#34;: &#34;Hello&#34;
+   },
+   &#34;End&#34;: &#34;True&#34;
+  }
+ }
+}
+&lt;/pre&gt;
+&lt;/td&gt;
+
+&lt;td&gt;
+&lt;pre style=&#34;margin:0;padding:1em;&#34;&gt;
+{
+ &#34;States&#34;: {
+  &#34;ParallelThings&#34;: {
+   &#34;Type&#34;: &#34;Parallel&#34;,
+   &#34;Branches&#34;: [
+    {
+     &#34;StartAt&#34;: &#34;ProcessAvatar&#34;,
+     &#34;States&#34;: {
+      &#34;ProcessAvatar&#34; : {
+       &#34;Type&#34;: &#34;Task&#34;,
+       &#34;Resource&#34;: &#34;module:crop&#34;
+       &#34;End&#34;: true
+      }
+     }
+    },
+    {
+     &#34;StartAt&#34;: &#34;CreateAccount&#34;,
+     &#34;States&#34;: {
+      &#34;CreateAccount&#34; : {
+       &#34;Type&#34;: &#34;Task&#34;,
+       &#34;Resource&#34;: &#34;module:onboard&#34;
+       &#34;End&#34;: true
+      }
+     }
+    }
+   ],
+   &#34;Next&#34;: &#34;SendWelcomeEmail&#34;
+  },
+  &#34;SendWelcomeEmail&#34;: {
+   &#34;Type&#34;: &#34;Task&#34;,
+   &#34;Resource&#34;: &#34;module:sendEmail&#34;
+   &#34;End&#34;: true
+  }
+ }
+}
+&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;If the purpose of a State Machine is to execute Task states in a controlled manner, then it could be argued Tymly isn&amp;rsquo;t too dissimilar to a microservice architecture.
+That said, instead of coordinating remote services over HTTP, Tymly State Machines orchestrate plain-old Javascript object instances.
+In Tymly, these objects are conjured from simple classes termed &amp;ldquo;&lt;strong&gt;Resources&lt;/strong&gt;&amp;rdquo;. Each Task State therefore needs to be associated with a single &lt;em&gt;resource&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/double-form-state-machine.png#center&#34; alt=&#34;A state machine containing two form-filling state tasks&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the State Machine illustrated above we have a couple of Task states (one for showing an order-form to a user and a second for showing a survey-form).
+Though these states will be configured differently inside the State Machine JSON, they&amp;rsquo;ll both be associated with a common &lt;code&gt;formFilling&lt;/code&gt; &lt;strong&gt;resource&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/yeoman.png#floatleft&#34; alt=&#34;Yeoman logo&#34; /&gt;
+As described below, Tymly is extended through a plugin mechanism which can supply new-and-exciting resources. Again, Yeoman is used to help get things started, the &lt;code&gt;yo tymly:resource&lt;/code&gt; will scaffold a basic resource for you to hack around with.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-resources&#34;&gt;list of core resources&lt;/a&gt; for more detailed information about the type of thing possible out-of-the-box with Tymly.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div style=&#34;clear: both;&#34;&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
 
-&lt;p&gt;FlobotJS takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;#states&#34;&gt;State Classes&lt;/a&gt; to cover-off most of the the duller business processes out there. To help try and keep things minimal and manageable Flobot employs a &lt;strong&gt;plugin&lt;/strong&gt; architecture.
-A FlobotJS plugin extends the core framework with related State Classes (along with other internal components required to run them).&lt;/p&gt;
+&lt;p&gt;Tymly takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-resources&#34;&gt;Resources&lt;/a&gt; to cover-off most of the the duller business processes out there
+To help try and keep things minimal and manageable, Resources (and other components) are bundled inside Tymly &amp;ldquo;&lt;strong&gt;Plugins&lt;/strong&gt;&amp;rdquo;. The following are available out-of-the-box:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-plugins&#34;&gt;list of core plugins&lt;/a&gt; to get a feel for what plugins are all about&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Plugin&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;p&gt;FlobotJS&amp;rsquo;s current library of state classes is certainly far from exhaustive and organisations will undoubtedly have specialist requirements of their own.
-It&amp;rsquo;s straightforward to write a new plugin for FlobotJS and add missing capabilities.&lt;/p&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/packages/tymly&#34;&gt;Tymly&lt;/a&gt; package itself has a &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/packages/tymly/lib/plugin&#34;&gt;built-in plugin&lt;/a&gt; which provides low-level components to help get the party started&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-alerts-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds some alerting options to the Tymly framework&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-etl-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;A collection of states for helping with Extract, Transform and Load tasks.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-express-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Exposes the Tymly framework via an Express.js web app.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-forms-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Adds some form capabilities to Tymly&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-pg-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Replace Tymly&amp;#39;s out-the-box memory storage with PostgreSQL&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-rankings-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Plugin which handles ranking of data&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-solr-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Plugin which handles interaction with Apache Solr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/yeoman.png#floatleft&#34; alt=&#34;Yeoman logo&#34; /&gt;
+Organizations will undoubtedly have specialist requirements of their own - this is where plugins shine, allowing Tymly to be easily extended and adapted as required.&lt;/p&gt;
+
+&lt;p&gt;And again, Yeoman can help things along. Running &lt;code&gt;yo tymly:plugin&lt;/code&gt; will generate a skeleton plugin into which new resources and related components can be added.&lt;/p&gt;
+
+&lt;div style=&#34;clear: both;&#34;&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
 </description>
     </item>
     

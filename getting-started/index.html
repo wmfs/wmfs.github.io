@@ -9,11 +9,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Getting started - FlobotJS Documentation</title>
+    <title>Getting started - Tymly Documentation</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
-    <meta name="description" content="A low-code platform for Node.js">
+    <meta name="description" content="An open source low-code platform - that&#39;s built for collaboration">
     
     <link rel="canonical" href="https://wmfs.github.io/getting-started/">
     
@@ -21,14 +21,14 @@
     
 
     <meta property="og:url" content="https://wmfs.github.io/getting-started/">
-    <meta property="og:title" content="FlobotJS Documentation">
+    <meta property="og:title" content="Tymly Documentation">
     <meta property="og:image" content="https://wmfs.github.io/images/logo.png">
-    <meta name="apple-mobile-web-app-title" content="FlobotJS Documentation">
+    <meta name="apple-mobile-web-app-title" content="Tymly Documentation">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="shortcut icon" type="image/x-icon" href="https://wmfs.github.io/images/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="https://wmfs.github.io/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://wmfs.github.io/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://wmfs.github.io/images/favicon.png">
 
     <style>
       @font-face {
@@ -66,12 +66,14 @@
     </style>
 
     
+    <link rel="stylesheet" href="https://wmfs.github.io/tymly.css">
+    
     <script src="https://wmfs.github.io/javascripts/modernizr.js"></script>
 
     
 
   </head>
-  <body class="palette-primary-red palette-accent-teal">
+  <body class="palette-primary-teal palette-accent-blue-grey">
 
 
 
@@ -103,7 +105,7 @@
 
     
     <div class="button button-twitter" role="button" aria-label="Twitter">
-       <a href="https://twitter.com/flobotJS" title="@flobotJS on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+       <a href="https://twitter.com/tymlyJS" title="@tymlyJS on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
     </div>
     
 
@@ -142,7 +144,7 @@
         </div>
       
       <div class="name">
-        <strong>FlobotJS Documentation <span class="version">0.0.11</span></strong>
+        <strong>Tymly Documentation <span class="version">0.0.15</span></strong>
         
           <br>
           wmfs/tymly
@@ -184,9 +186,9 @@
 
 
 
-<a  title="Welcome!" href="https://wmfs.github.io/">
+<a  title="Introduction" href="https://wmfs.github.io/">
 	
-	Welcome!
+	Introduction
 </a>
 
 
@@ -202,9 +204,9 @@
 
 
 
-<a  title="Key Concepts" href="https://wmfs.github.io/key-concepts/">
+<a  title="Key concepts" href="https://wmfs.github.io/key-concepts/">
 	
-	Key Concepts
+	Key concepts
 </a>
 
 
@@ -275,13 +277,13 @@
 
         
         <hr>
-        <span class="section">The author</span>
+        <span class="section">Follow us</span>
         
         <ul>
           
           <li>
-            <a href="https://twitter.com/flobotJS" target="_blank" title="@flobotJS on Twitter">
-              @flobotJS on Twitter
+            <a href="https://twitter.com/tymlyJS" target="_blank" title="@tymlyJS on Twitter">
+              @tymlyJS on Twitter
             </a>
           </li>
           
@@ -310,16 +312,17 @@
 
 			
 
-<p><strong>In this section we&rsquo;ll be writing a simple blueprint and running a Flobot&hellip;</strong></p>
+<blockquote>
+<p>In this section we&rsquo;ll be installing a few things, writing a simple <a href="https://wmfs.github.io/key-concepts/#blueprints">blueprint</a> and executing ourselves a <a href="https://wmfs.github.io/key-concepts/#state-machines">state machine</a>.</p>
+</blockquote>
 
 <h2 id="install-node-js">Install Node.js</h2>
 
-<p>First ensure you have <a href="https://nodejs.org/en/">Node.js</a> installed&hellip; FlobotJS requires at least <code>v6.9 LTS</code>.</p>
-
-<p>To check everything&rsquo;s OK, run <code>node</code> from the command line:</p>
+<p>First ensure you have <a href="https://nodejs.org/en/">Node.js</a> installed&hellip; Tymly requires at least <code>v8.5.0</code>.
+To check everything&rsquo;s OK, try the following from the command line:</p>
 
 <pre><code class="language-sh">$ node --version
-v6.9.1
+v8.5.0
 </code></pre>
 
 <h2 id="configure-npm">Configure npm</h2>
@@ -327,13 +330,13 @@ v6.9.1
 <p>The <code>npm</code> command (Node Package Manager) comes bundled with Node.js. But again, might be worth a quick check:</p>
 
 <pre><code class="language-sh">$ npm --version
-3.5.2
+3.10.10
 </code></pre>
 
-<h3 id="running-npm-behind-a-proxy">Running npm`behind a proxy</h3>
+<h3 id="running-npm-behind-a-proxy">Running npm behind a proxy</h3>
 
-<p>To download packages from the <strong><a href="https://www.npmjs.com/">mothership</a></strong>, <strong>npm</strong> will need access to all your internets.
-If you&rsquo;re going to be using FlobotJS from behind a proxy server, then there&rsquo;s some one-off hurt to get through at his point:</p>
+<p>To download packages from <strong><a href="https://www.npmjs.com/">npmjs.com</a></strong>, <code>npm</code> will need access to all your internets.
+If you&rsquo;re going to be using Tymly from behind a proxy server, then there&rsquo;s some one-off hurt to get through at his point:</p>
 
 <pre><code class="language-sh">$ npm config set proxy       &quot;http://domain%5Cusername:password@servername:port/&quot;
 $ npm config set https-proxy &quot;http://domain%5Cusername:password@servername:port/&quot;
@@ -343,22 +346,22 @@ $ npm config set https-proxy &quot;http://domain%5Cusername:password@servername:
 <p><strong>Note:</strong> Use URL encoding to include <code>\</code> characters (i.e. replace them with <code>%5C</code> as above). More <a href="http://stackoverflow.com/questions/25660936/using-npm-behind-corporate-proxy-pac">here</a>.</p>
 </blockquote>
 
-<p>To check NPM is using your proxy correctly, try the following (which should contact the <strong><a href="https://www.npmjs.com/">mothership</a></strong> to find out the latest published version of the <a href="https://www.npmjs.com/package/flobot">Flobot package</a>):</p>
+<p>To check <code>npm</code> is using your proxy correctly, try the following (which should contact <strong><a href="https://www.npmjs.com/">npmjs.com</a></strong> to find out the latest published version of the <a href="https://www.npmjs.com/package/tymly">tymly package</a>):</p>
 
-<pre><code class="language-sh">$ npm show flobot version
-0.0.4
+<pre><code class="language-sh">$ npm show tymly version
+0.0.15
 </code></pre>
 
 <hr>
 
 <h2 id="hello-world">Hello World!</h2>
 
-<p><strong>To help show what FlobotJS is about we&rsquo;ll go through the steps to get <code>Hello World!</code> printed to the console.</strong></p>
+<p><strong>To help show what Tymly is about we&rsquo;ll go through the steps to get <code>Hello World!</code> printed to the console.</strong></p>
 
-<p>All functionality in FlobotJS is delivered via a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> and flows are defined in <a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>.
+<p>All functionality in Tymly is delivered via a <a href="https://wmfs.github.io/key-concepts/#state-machines">state machine</a> and state machines are defined inside <a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>.
 So to get <code>Hello World!</code> onto the screen, we&rsquo;re going to need ourselves a blueprint&hellip;</p>
 
-<p>Nothing to it: make a directory, with a <code>/flows</code> sub-directory and a <code>/blueprint.json</code> file:</p>
+<p>Nothing to it: make a directory, with a <code>/state-machines</code> sub-directory and a <code>/blueprint.json</code> file:</p>
 
 <p><img src="https://wmfs.github.io/images/hello-world-directory-structure.png" alt="Directory structure for the Hello World! tutorial" /></p>
 
@@ -372,9 +375,9 @@ So to get <code>Hello World!</code> onto the screen, we&rsquo;re going to need o
   &quot;label&quot;: &quot;Hello World! tutorial&quot;,
   &quot;author&quot;: &quot;John Doe&quot;,
 
-  &quot;organisation&quot;: &quot;Flobots&quot;,
+  &quot;organisation&quot;: &quot;Tymly&quot;,
   &quot;description&quot;: &quot;Provides a simple flow to print 'Hello World!' to the console&quot;,
-  &quot;tags&quot;: [&quot;tutorial&quot;, &quot;test&quot;] 
+  &quot;tags&quot;: [&quot;tutorial&quot;, &quot;test&quot;]
 }
 </code></pre>
 
@@ -382,92 +385,74 @@ So to get <code>Hello World!</code> onto the screen, we&rsquo;re going to need o
 <li>The important takeaway here is that our blueprint is named <code>helloWorld</code> and it will live within the <code>tutorial</code> namespace. Blueprints which share the same namespace can refer to each others components. The rest of the <code>blueprint.json</code> is meta tinsel.</li>
 </ul>
 
-<p><strong>Now we need to define a <a href="https://wmfs.github.io/key-concepts/#flows">flow</a> for FlobotJS to run</strong></p>
+<p><strong>Now we need to define a <a href="https://wmfs.github.io/key-concepts/#state-machines">state machine</a> for Tymly to execute</strong></p>
 
-<p>Create a <code>/flows/hello-world.json</code> file:</p>
+<p>Create a <code>/state-machines/hello-world.json</code> file:</p>
 
 <p><img src="https://wmfs.github.io/images/hello-world-json.png" alt="Revised structure showing hello-world.json file" /></p>
 
 <p><strong>&hellip;and edit its content to:</strong></p>
 
 <pre><code class="language-json">{
-  &quot;description&quot;: &quot;Prints 'Hello World!' to the console and nothing else&quot;,
   &quot;version&quot;: &quot;1.0&quot;,
-  &quot;initialStateId&quot;: &quot;logging&quot;,
-  &quot;fsm&quot;: {
-    &quot;logging&quot;: {
-      &quot;options&quot;: {
-        &quot;text&quot;: &quot;Hello World!&quot;
-      }     
-    }    
-  }  
+  &quot;Comment&quot;: &quot;Logs 'Hello World!' to the console&quot;,
+  &quot;StartAt&quot;: &quot;HelloWorld&quot;,
+  &quot;States&quot;: {
+    &quot;HelloWorld&quot;: {
+    &quot;Type&quot;: &quot;Task&quot;,
+    &quot;Resource&quot;: &quot;module:logging&quot;,
+    &quot;ResourceConfig&quot;: {
+      &quot;template&quot;: &quot;Hello World!&quot;
+    },
+    &quot;End&quot;: true
+    }
+  }
 }
 </code></pre>
 
 <p><strong>That&rsquo;s the blueprint finished!</strong></p>
 
 <ul>
-<li>The <code>fsm</code> property is the meat of each flow and defines one or more <a href="https://wmfs.github.io/key-concepts/#states">states</a></li>
-<li>The keys of the <code>fsm</code> object are the ids for each state in the flow. So in this example we&rsquo;re working with one state with an id of <code>logging</code></li>
-<li>The <code>initialStateId</code> property is important: it indicates which state things should start from</li>
+<li>The keys of the <code>States</code> object are the unique names for each state in the State Machine. So in this example we&rsquo;re working with one state with the name <code>HelloWorld</code></li>
+<li>The <code>StartsAt</code> property is mandatory: it indicates the first state which to run when the State Machine is executed</li>
+<li>Please see the <a href="https://states-language.net/spec.html">Amazon States Language specification</a> for further information about how to conjure a State Machine</li>
 </ul>
-
-<p>As a quick aside, to keep things simple, some shorthand is in-play in this flow.
-Each state needs associating with a <a href="https://wmfs.github.io/core-components/#list-of-state-classes">State Class</a>. This can be done explicitily using the <code>className</code> property:</p>
-
-<pre><code class="language-json">&quot;fsm&quot;: {
-  &quot;logging&quot;: {
-    &quot;className&quot;: &quot;logging&quot;
-    &quot;options&quot;: {
-      &quot;text&quot;: &quot;Hello World!&quot;     
-    }    
-  }  
-}
-</code></pre>
-
-<p>&hellip;but if you omit <code>className</code> (like we did in our example flow) it will be inferred from the state&rsquo;s id.</p>
 
 <p><strong>Now we need to create a project to run our new blueprint&hellip;</strong></p>
 
 <p>Make a totally fresh directory somewhere (<strong>not</strong> inside the blueprint) and create an <code>/index.js</code> file inside it:</p>
 
-<p><img src="https://wmfs.github.io/images/hello-world-flobot.png" alt="Startings of a FlobotJS project structure" /></p>
+<p><img src="https://wmfs.github.io/images/execute-hello-world.png" alt="Startings of a Tymly project structure" /></p>
 
-<p><strong>Then, from <em>within that directory</em>, use the <code>npm</code> command to install the <a href="https://www.npmjs.com/package/flobot">flobot package</a>:</strong></p>
+<p><strong>Then, from <em>within that directory</em>, use the <code>npm</code> command to install the <a href="https://www.npmjs.com/package/tymly">tymly package</a>:</strong></p>
 
-<pre><code class="language-sh">$ npm install flobot
+<pre><code class="language-sh">$ npm install tymly
 </code></pre>
 
 <p>After some huffing-and-puffing a new <code>/node_modules</code> directory should appear full of wondrous things:</p>
 
 <p><img src="https://wmfs.github.io/images/node_modules.png" alt="Shows a new node_modules dir has appeared" /></p>
 
-<p><strong>Now we&rsquo;ll make sure FlobotJS can boot without any problems&hellip; edit the <code>/index.js</code> to be:</strong></p>
+<p><strong>Now we&rsquo;ll make sure Tymly can boot without any problems&hellip; edit the <code>/index.js</code> to be:</strong></p>
 
-<pre><code class="language-javascript"> 'use strict'
- var flobot = require('flobot')
- 
- flobot.boot(
-   {
-     blueprintPaths: [
-     
-       // Change the path below to point to wherever you created
-       // that blueprint directory earlier...
-      '/myProjects/blueprints/hello-world-blueprint'
-      
-     ]
-   },
-   
-   // Callback function
-   function (err, services) { 
-     if (err) {
-       console.error('There were errors.')
-     } else {
-       console.log('Done booting.')
-     }         
-   }
-   
- )
+<pre><code class="language-javascript">'use strict'
+var tymly = require('tymly')
+
+tymly.boot(
+  {
+    blueprintPaths: [
+      'd:/development/temp/hello-world-blueprint' // Change me!
+    ]
+  },
+  // Callback function
+  function (err, services) {
+    if (err) {
+      console.error('There were errors.')
+    } else {
+      console.log('Done booting.')
+    }
+  }
+)
 </code></pre>
 
 <p>Make sure you change the blueprint path to point to your <code>hello-world-blueprint</code> directory, then from the same directory that the <strong><code>index.js</code></strong> file is located, run:</p>
@@ -478,39 +463,42 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 <p>&hellip;a chunk of output should then appear - for everything to have worked it should end with <code>Done booting</code>.</p>
 
 <ul>
-<li>This is a relatively exciting moment! FlobotJS has booted, consumed our demo blueprint and offered us lots of ready-to-use <a href="https://wmfs.github.io/core-components/#list-of-services">services</a> - the reason we&rsquo;re not seeing <code>Hello World!</code> yet is that we haven&rsquo;t used any of those services.</li>
+<li>This is a relatively exciting moment! Tymly has booted, consumed the demo blueprint and offered lots of ready-to-use <a href="https://wmfs.github.io/reference/#list-of-services">services</a> - the reason we&rsquo;re not seeing <code>Hello World!</code> yet is that we haven&rsquo;t used any of those services.</li>
 </ul>
 
-<p><strong>Let&rsquo;s run a Flobot!</strong></p>
+<p><strong>Let&rsquo;s execute a State Machine!</strong></p>
 
-<p>Edit the <code>./index.js</code> file again, keep the changes you made previously but replace the callback function with:</p>
+<p>Edit the <code>./index.js</code> file again, keep the changes you made previously but <strong>replace</strong> the callback function with:</p>
 
-<pre><code class="language-javascript">
-  // Callback function
+<pre><code class="language-javascript">  // Callback function
   function (err, services) {
     if (err) {
-      console.error('There were errors booting.')
+      console.error(err)
     } else {
-      // No problems booting, so start a new Flobot...
-      services.flobots.startNewFlobot(
-        'tutorial_helloWorld_1_0', // flowId
-        {}, // Flobot options
-        function (err, flobot) {
+      // No problems booting, so execute the State Machine...
+      services.statebox.startExecution(
+        {},  // input
+        'tutorial_helloWorld_1_0', // state machine name
+        {
+          sendResponse: 'COMPLETE'
+        }, // options
+        function (err, executionDescription) {
           if (err) {
-            console.error('There were errors running the Flobot')
+            console.error(err)
+          } else {
+            console.log('Done.')
           }
         }
       )
     }
   }
-  
 </code></pre>
 
 <ul>
-<li>As before, if everything goes as expected during the boot process, FlobotJS will now offer some <code>services</code></li>
-<li>Several services are returned to the callback function, including <a href="http://localhost:1313/core-components/services/flobot-flobots/">flobots</a> that we&rsquo;re using here</li>
-<li>The <code>flobots</code> service offers an API with a few methods including <code>startNewFlobot</code>. The minimum required to call <code>startNewFlobot</code> (as seen in this example) is a <strong>flowId</strong> - here we&rsquo;re using the flowId <code>tutorial_helloWorld_1_0</code>.</li>
-<li>These flowIds are conjured by combining the name of the blueprint&rsquo;s namespace (<code>tutorial</code>), the flow&rsquo;s name (<code>helloWorld</code> - which has been inferred from the <code>/flows/hello-world.json</code> filename) and the version number of the flow (as defined in the <code>/flows/hello-world.json</code> file).</li>
+<li>As before, if everything goes as expected during the boot process, Tymly will offer some <code>services</code></li>
+<li>Several services are returned to the callback function, including <a href="https://wmfs.github.io/reference/services/tymly-statebox/">statebox</a> that we&rsquo;re using here</li>
+<li>The <code>statebox</code> service offers an API with a few methods including <code>startExecution</code>. The minimum required to call <code>startExecution</code> (as seen in this example) is a <strong>state machine name</strong> - here we&rsquo;re using <code>tutorial_helloWorld_1_0</code>.</li>
+<li>These unique names are conjured by combining the blueprint&rsquo;s namespace (<code>tutorial</code>), the state machines&rsquo;s name (<code>helloWorld</code> - which has been inferred from the <code>/state-machines/hello-world.json</code> filename) and the version number of the state machine (as defined in the <code>/state-machines/hello-world.json</code> file).</li>
 </ul>
 
 <p><strong>&hellip;once the replacement callback function is in-place, re-run:</strong></p>
@@ -521,7 +509,7 @@ Each state needs associating with a <a href="https://wmfs.github.io/core-compone
 <p><strong>Boom!</strong> You should now see <code>Hello World!</code> printed on the console.</p>
 
 <blockquote>
-<p>In this first tutorial we&rsquo;ve used some of the major components of the framework (<a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>, <a href="https://wmfs.github.io/key-concepts/#flows">flows</a>, <a href="https://wmfs.github.io/key-concepts/#states">states</a> and <a href="https://wmfs.github.io/key-concepts/#flobots">flobots</a>). The good news is that the distance from this point to running more complex flows only requires the introduction of a few more components.</p>
+<p>In this first tutorial we&rsquo;ve used some of the major components of the Tymly framework (<a href="https://wmfs.github.io/key-concepts/#blueprints">blueprints</a>, <a href="https://wmfs.github.io/key-concepts/#state-machines">state machines</a> and <a href="https://wmfs.github.io/reference/#list-of-services">services</a>). The good news is that the distance from this point to running more complex state machines only requires the introduction of a few more components.</p>
 </blockquote>
 
 
