@@ -314,8 +314,8 @@
 
 <h2 id="blueprints">Blueprints</h2>
 
-<p>In Tymly, a &ldquo;<strong>blueprint</strong>&rdquo; describes related functionality that adds value to an organization.
-Typically a blueprint will describe all the workflows, rules and forms affecting a business function or team - but they&rsquo;re equally suited to describing open data and ETL pipelines.</p>
+<p>In Tymly, &ldquo;<strong>blueprints</strong>&rdquo; provide a way to describe some related components that can coalesce to produce useful software.
+Typically a blueprint will describe all the workflows, rules and UI affecting a business function or team - but they&rsquo;re equally suited to describing open-data products and ETL pipelines as well.</p>
 
 <p><img src="https://wmfs.github.io/images/inside-a-blueprint.png#center" alt="Cartoon illustration of people looking inside a Blueprint" /></p>
 
@@ -385,10 +385,10 @@ Typically a blueprint will describe all the workflows, rules and forms affecting
 
 <hr />
 
-<h2 id="state-machines">State Machines</h2>
+<h2 id="state-machines">State machines</h2>
 
 <p>All the events that occur inside Tymly are orchestrated by an army of <del>Finite</del> <a href="https://en.wikipedia.org/wiki/Finite-state_machine">State Machines</a>.
-Conceptually, a State Machine is nothing more than a collection of <a href="https://states-language.net/spec.html#states-fields">States</a> that are wired together to describe an executable process.
+Conceptually, a state machine is nothing more than a collection of <a href="https://states-language.net/spec.html#states-fields">states</a> that are wired together to describe an executable process.
 Each state needs to be assigned a <strong>Type</strong>, some examples:</p>
 
 <ul>
@@ -398,124 +398,11 @@ Each state needs to be assigned a <strong>Type</strong>, some examples:</p>
 </ul>
 
 <p>If Tymly were to be considered in terms of Model, View, Controller&hellip; then State Machines are all about the <em>Controller</em>.
-Tymly uses the open <a href="https://states-language.net/spec.html">Amazon States Specification</a> to define State Machines inside blueprints, as such, the following State Machine constructs are supported:</p>
+Tymly uses the open <a href="https://states-language.net/spec.html">Amazon States Specification</a> to define state machines inside blueprints, as such, the following constructs are supported:</p>
 
-<table >
-    <tr>
-        <th>Sequential</th>
-        <th>Choice</th>
-        <th>Parallel</th>
-    </tr>
-    <tr>
-        <td><img src="https://wmfs.github.io/images/sequential-states.png"/></td>
-        <td><img src="https://wmfs.github.io/images/choice-states.png"/></td>
-        <td><img src="https://wmfs.github.io/images/parallel-states.png"></td>
-    </tr>
-<tr>
-<td>
-<pre style="margin:0; padding:1em;">
-{
- "States": {
-  "Load": {
-   "Type": "Task",
-   "Resource": "module:findingById",
-   "InputPath": "$.key",
-   "Next": "Form"
-  },
-  "Form": {
-   "Type": "Task",
-   "Resource": "module:formFilling",
-   "ResultPath": "$.formData",
-   "Next": "Save"
-  },
-  "Save": {
-   "Type": "Task",
-   "Resource": "module:upserting",
-   "InputPath": "$.formData",
-   "End": "True"
-  }
- }
-}
-</pre>
-</td>
-
-<td>
-<pre style="margin:0;padding:1em;">
-{
- "States": {
-  "ConsiderLanguage": {
-   "Type": "Choice",
-   "Choices": [
-    {
-     "Variable": "$.language",
-     "StringEquals": "Spanish"
-     "Next": "SpanishGreeting"
-    }
-   ],
-   "Default": "EnglishGreeting"
-  },
-  "SpanishGreeting": {
-   "Type": "Task",
-   "Resource": "module:logging",
-   "ResourceConfig": {
-    "template": "Hola"
-   },
-   "End": "True"
-  },
-  "EnglishGreeting": {
-   "Type": "Task",
-   "Resource": "module:logging",
-   "ResourceConfig": {
-    "template": "Hello"
-   },
-   "End": "True"
-  }
- }
-}
-</pre>
-</td>
-
-<td>
-<pre style="margin:0;padding:1em;">
-{
- "States": {
-  "ParallelThings": {
-   "Type": "Parallel",
-   "Branches": [
-    {
-     "StartAt": "ProcessAvatar",
-     "States": {
-      "ProcessAvatar" : {
-       "Type": "Task",
-       "Resource": "module:crop"
-       "End": true
-      }
-     }
-    },
-    {
-     "StartAt": "CreateAccount",
-     "States": {
-      "CreateAccount" : {
-       "Type": "Task",
-       "Resource": "module:onboard"
-       "End": true
-      }
-     }
-    }
-   ],
-   "Next": "SendWelcomeEmail"
-  },
-  "SendWelcomeEmail": {
-   "Type": "Task",
-   "Resource": "module:sendEmail"
-   "End": true
-  }
- }
-}
-</pre>
-</td>
-</tr>
-</table>
+<p><img src="https://wmfs.github.io/images/sequential-states.png" alt="A diagram showing three states, stringed together sequentially"/>
+<img src="https://wmfs.github.io/images/choice-states.png" alt="A diagram showing three states, but the final two illustrate two branches"/>
+<img src="https://wmfs.github.io/images/parallel-states.png" alt="A diagram again with three states, but the first two execute simultaneously"></p>
 
 <hr />
 
@@ -527,11 +414,11 @@ In Tymly, these objects are conjured from simple classes termed &ldquo;<strong>R
 
 <p><img src="https://wmfs.github.io/images/double-form-state-machine.png#center" alt="A state machine containing two form-filling state tasks" /></p>
 
-<p>In the State Machine illustrated above we have a couple of Task states (one for showing an order-form to a user and a second for showing a survey-form).
+<p>In the illustration above we have a couple of Task states (one for showing an order-form to a user and a second for showing a survey-form).
 Though these states will be configured differently inside the State Machine JSON, they&rsquo;ll both be associated with a common <code>formFilling</code> <strong>resource</strong>.</p>
 
 <p><img src="https://wmfs.github.io/images/yeoman.png#floatleft" alt="Yeoman logo" />
-As described below, Tymly is extended through a plugin mechanism which can supply new-and-exciting resources. Again, Yeoman is used to help get things started, the <code>yo tymly:resource</code> will scaffold a basic resource for you to hack around with.</p>
+As described below, Tymly is extended through a plugin mechanism which can supply new capabilities. Again, Yeoman is used to help get things started, the <code>yo tymly:resource</code> will scaffold a basic resource for you to hack around with.</p>
 
 <p><strong>Please see the <a href="https://wmfs.github.io/reference/#list-of-state-resources">list of core resources</a> for more detailed information about the type of thing possible out-of-the-box with Tymly.</strong></p>
 
@@ -541,7 +428,9 @@ As described below, Tymly is extended through a plugin mechanism which can suppl
 
 <h2 id="plugins">Plugins</h2>
 
-<p>Tymly takes a batteries-included approach and hopefully ships with enough <a href="https://wmfs.github.io/reference/#list-of-state-resources">Resources</a> to cover-off most of the the duller business processes out there
+<p><img src="https://wmfs.github.io/images/components.png" alt="Diagram showing how plugins/blueprints/config/services relate to each other" /></p>
+
+<p>Tymly takes a batteries-included approach and hopefully ships with enough <a href="https://wmfs.github.io/reference/#list-of-state-resources">Resources</a> to conjure most business processes out there.
 To help try and keep things minimal and manageable, Resources (and other components) are bundled inside Tymly &ldquo;<strong>Plugins</strong>&rdquo;. The following are available out-of-the-box:</p>
 
 <table>
@@ -554,42 +443,42 @@ To help try and keep things minimal and manageable, Resources (and other compone
 
 <tbody>
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly">tymly</a></td>
 <td>The <a href="https://github.com/wmfs/tymly/tree/master/packages/tymly">Tymly</a> package itself has a <a href="https://github.com/wmfs/tymly/tree/master/packages/tymly/lib/plugin">built-in plugin</a> which provides low-level components to help get the party started</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-alerts-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-alerts-plugin">alerts</a></td>
 <td>Adds some alerting options to the Tymly framework</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-etl-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-etl-plugin">etl</a></td>
 <td>A collection of states for helping with Extract, Transform and Load tasks.</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-express-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-express-plugin">express</a></td>
 <td>Exposes the Tymly framework via an Express.js web app.</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-forms-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-forms-plugin">forms</a></td>
 <td>Adds some form capabilities to Tymly</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-pg-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-pg-plugin">pg</a></td>
 <td>Replace Tymly&#39;s out-the-box memory storage with PostgreSQL</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-rankings-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-rankings-plugin">rankings</a></td>
 <td>Plugin which handles ranking of data</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-solr-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-solr-plugin">solr</a></td>
 <td>Plugin which handles interaction with Apache Solr</td>
 </tr>
 </tbody>
@@ -625,14 +514,14 @@ Organizations will undoubtedly have specialist requirements of their own - this 
 
   <div class="next">
   
-      <a href="https://wmfs.github.io/getting-started/" title="Getting started">
+      <a href="https://wmfs.github.io/plugins/tymly-alerts-plugin/" title="The &#39;alerts&#39; plugin">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Getting started
+              The &#39;alerts&#39; plugin
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

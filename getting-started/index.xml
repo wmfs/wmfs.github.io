@@ -166,7 +166,7 @@ tymly.boot(
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ node index.js
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&amp;hellip;a chunk of output should then appear - for everything to have worked it should end with &lt;code&gt;Done booting&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&amp;hellip;a chunk of output should then appear - for everything to have worked it should end with &lt;code&gt;Done booting.&lt;/code&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;This is a relatively exciting moment! Tymly has booted, consumed the demo blueprint and offered lots of ready-to-use &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-services&#34;&gt;services&lt;/a&gt; - the reason we&amp;rsquo;re not seeing &lt;code&gt;Hello World!&lt;/code&gt; yet is that we haven&amp;rsquo;t used any of those services.&lt;/li&gt;

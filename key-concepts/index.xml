@@ -20,8 +20,8 @@
 
 &lt;h2 id=&#34;blueprints&#34;&gt;Blueprints&lt;/h2&gt;
 
-&lt;p&gt;In Tymly, a &amp;ldquo;&lt;strong&gt;blueprint&lt;/strong&gt;&amp;rdquo; describes related functionality that adds value to an organization.
-Typically a blueprint will describe all the workflows, rules and forms affecting a business function or team - but they&amp;rsquo;re equally suited to describing open data and ETL pipelines.&lt;/p&gt;
+&lt;p&gt;In Tymly, &amp;ldquo;&lt;strong&gt;blueprints&lt;/strong&gt;&amp;rdquo; provide a way to describe some related components that can coalesce to produce useful software.
+Typically a blueprint will describe all the workflows, rules and UI affecting a business function or team - but they&amp;rsquo;re equally suited to describing open-data products and ETL pipelines as well.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/inside-a-blueprint.png#center&#34; alt=&#34;Cartoon illustration of people looking inside a Blueprint&#34; /&gt;&lt;/p&gt;
 
@@ -91,10 +91,10 @@ Typically a blueprint will describe all the workflows, rules and forms affecting
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;state-machines&#34;&gt;State Machines&lt;/h2&gt;
+&lt;h2 id=&#34;state-machines&#34;&gt;State machines&lt;/h2&gt;
 
 &lt;p&gt;All the events that occur inside Tymly are orchestrated by an army of &lt;del&gt;Finite&lt;/del&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Finite-state_machine&#34;&gt;State Machines&lt;/a&gt;.
-Conceptually, a State Machine is nothing more than a collection of &lt;a href=&#34;https://states-language.net/spec.html#states-fields&#34;&gt;States&lt;/a&gt; that are wired together to describe an executable process.
+Conceptually, a state machine is nothing more than a collection of &lt;a href=&#34;https://states-language.net/spec.html#states-fields&#34;&gt;states&lt;/a&gt; that are wired together to describe an executable process.
 Each state needs to be assigned a &lt;strong&gt;Type&lt;/strong&gt;, some examples:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -104,124 +104,11 @@ Each state needs to be assigned a &lt;strong&gt;Type&lt;/strong&gt;, some exampl
 &lt;/ul&gt;
 
 &lt;p&gt;If Tymly were to be considered in terms of Model, View, Controller&amp;hellip; then State Machines are all about the &lt;em&gt;Controller&lt;/em&gt;.
-Tymly uses the open &lt;a href=&#34;https://states-language.net/spec.html&#34;&gt;Amazon States Specification&lt;/a&gt; to define State Machines inside blueprints, as such, the following State Machine constructs are supported:&lt;/p&gt;
+Tymly uses the open &lt;a href=&#34;https://states-language.net/spec.html&#34;&gt;Amazon States Specification&lt;/a&gt; to define state machines inside blueprints, as such, the following constructs are supported:&lt;/p&gt;
 
-&lt;table &gt;
-    &lt;tr&gt;
-        &lt;th&gt;Sequential&lt;/th&gt;
-        &lt;th&gt;Choice&lt;/th&gt;
-        &lt;th&gt;Parallel&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;&lt;img src=&#34;https://wmfs.github.io/images/sequential-states.png&#34;/&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src=&#34;https://wmfs.github.io/images/choice-states.png&#34;/&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src=&#34;https://wmfs.github.io/images/parallel-states.png&#34;&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;
-&lt;pre style=&#34;margin:0; padding:1em;&#34;&gt;
-{
- &#34;States&#34;: {
-  &#34;Load&#34;: {
-   &#34;Type&#34;: &#34;Task&#34;,
-   &#34;Resource&#34;: &#34;module:findingById&#34;,
-   &#34;InputPath&#34;: &#34;$.key&#34;,
-   &#34;Next&#34;: &#34;Form&#34;
-  },
-  &#34;Form&#34;: {
-   &#34;Type&#34;: &#34;Task&#34;,
-   &#34;Resource&#34;: &#34;module:formFilling&#34;,
-   &#34;ResultPath&#34;: &#34;$.formData&#34;,
-   &#34;Next&#34;: &#34;Save&#34;
-  },
-  &#34;Save&#34;: {
-   &#34;Type&#34;: &#34;Task&#34;,
-   &#34;Resource&#34;: &#34;module:upserting&#34;,
-   &#34;InputPath&#34;: &#34;$.formData&#34;,
-   &#34;End&#34;: &#34;True&#34;
-  }
- }
-}
-&lt;/pre&gt;
-&lt;/td&gt;
-
-&lt;td&gt;
-&lt;pre style=&#34;margin:0;padding:1em;&#34;&gt;
-{
- &#34;States&#34;: {
-  &#34;ConsiderLanguage&#34;: {
-   &#34;Type&#34;: &#34;Choice&#34;,
-   &#34;Choices&#34;: [
-    {
-     &#34;Variable&#34;: &#34;$.language&#34;,
-     &#34;StringEquals&#34;: &#34;Spanish&#34;
-     &#34;Next&#34;: &#34;SpanishGreeting&#34;
-    }
-   ],
-   &#34;Default&#34;: &#34;EnglishGreeting&#34;
-  },
-  &#34;SpanishGreeting&#34;: {
-   &#34;Type&#34;: &#34;Task&#34;,
-   &#34;Resource&#34;: &#34;module:logging&#34;,
-   &#34;ResourceConfig&#34;: {
-    &#34;template&#34;: &#34;Hola&#34;
-   },
-   &#34;End&#34;: &#34;True&#34;
-  },
-  &#34;EnglishGreeting&#34;: {
-   &#34;Type&#34;: &#34;Task&#34;,
-   &#34;Resource&#34;: &#34;module:logging&#34;,
-   &#34;ResourceConfig&#34;: {
-    &#34;template&#34;: &#34;Hello&#34;
-   },
-   &#34;End&#34;: &#34;True&#34;
-  }
- }
-}
-&lt;/pre&gt;
-&lt;/td&gt;
-
-&lt;td&gt;
-&lt;pre style=&#34;margin:0;padding:1em;&#34;&gt;
-{
- &#34;States&#34;: {
-  &#34;ParallelThings&#34;: {
-   &#34;Type&#34;: &#34;Parallel&#34;,
-   &#34;Branches&#34;: [
-    {
-     &#34;StartAt&#34;: &#34;ProcessAvatar&#34;,
-     &#34;States&#34;: {
-      &#34;ProcessAvatar&#34; : {
-       &#34;Type&#34;: &#34;Task&#34;,
-       &#34;Resource&#34;: &#34;module:crop&#34;
-       &#34;End&#34;: true
-      }
-     }
-    },
-    {
-     &#34;StartAt&#34;: &#34;CreateAccount&#34;,
-     &#34;States&#34;: {
-      &#34;CreateAccount&#34; : {
-       &#34;Type&#34;: &#34;Task&#34;,
-       &#34;Resource&#34;: &#34;module:onboard&#34;
-       &#34;End&#34;: true
-      }
-     }
-    }
-   ],
-   &#34;Next&#34;: &#34;SendWelcomeEmail&#34;
-  },
-  &#34;SendWelcomeEmail&#34;: {
-   &#34;Type&#34;: &#34;Task&#34;,
-   &#34;Resource&#34;: &#34;module:sendEmail&#34;
-   &#34;End&#34;: true
-  }
- }
-}
-&lt;/pre&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/sequential-states.png&#34; alt=&#34;A diagram showing three states, stringed together sequentially&#34;/&gt;
+&lt;img src=&#34;https://wmfs.github.io/images/choice-states.png&#34; alt=&#34;A diagram showing three states, but the final two illustrate two branches&#34;/&gt;
+&lt;img src=&#34;https://wmfs.github.io/images/parallel-states.png&#34; alt=&#34;A diagram again with three states, but the first two execute simultaneously&#34;&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -233,11 +120,11 @@ In Tymly, these objects are conjured from simple classes termed &amp;ldquo;&lt;s
 
 &lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/double-form-state-machine.png#center&#34; alt=&#34;A state machine containing two form-filling state tasks&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In the State Machine illustrated above we have a couple of Task states (one for showing an order-form to a user and a second for showing a survey-form).
+&lt;p&gt;In the illustration above we have a couple of Task states (one for showing an order-form to a user and a second for showing a survey-form).
 Though these states will be configured differently inside the State Machine JSON, they&amp;rsquo;ll both be associated with a common &lt;code&gt;formFilling&lt;/code&gt; &lt;strong&gt;resource&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/yeoman.png#floatleft&#34; alt=&#34;Yeoman logo&#34; /&gt;
-As described below, Tymly is extended through a plugin mechanism which can supply new-and-exciting resources. Again, Yeoman is used to help get things started, the &lt;code&gt;yo tymly:resource&lt;/code&gt; will scaffold a basic resource for you to hack around with.&lt;/p&gt;
+As described below, Tymly is extended through a plugin mechanism which can supply new capabilities. Again, Yeoman is used to help get things started, the &lt;code&gt;yo tymly:resource&lt;/code&gt; will scaffold a basic resource for you to hack around with.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Please see the &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-resources&#34;&gt;list of core resources&lt;/a&gt; for more detailed information about the type of thing possible out-of-the-box with Tymly.&lt;/strong&gt;&lt;/p&gt;
 
@@ -247,7 +134,9 @@ As described below, Tymly is extended through a plugin mechanism which can suppl
 
 &lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
 
-&lt;p&gt;Tymly takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-resources&#34;&gt;Resources&lt;/a&gt; to cover-off most of the the duller business processes out there
+&lt;p&gt;&lt;img src=&#34;https://wmfs.github.io/images/components.png&#34; alt=&#34;Diagram showing how plugins/blueprints/config/services relate to each other&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tymly takes a batteries-included approach and hopefully ships with enough &lt;a href=&#34;https://wmfs.github.io/reference/#list-of-state-resources&#34;&gt;Resources&lt;/a&gt; to conjure most business processes out there.
 To help try and keep things minimal and manageable, Resources (and other components) are bundled inside Tymly &amp;ldquo;&lt;strong&gt;Plugins&lt;/strong&gt;&amp;rdquo;. The following are available out-of-the-box:&lt;/p&gt;
 
 &lt;table&gt;
@@ -260,42 +149,42 @@ To help try and keep things minimal and manageable, Resources (and other compone
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly&#34;&gt;tymly&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;The &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/packages/tymly&#34;&gt;Tymly&lt;/a&gt; package itself has a &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/packages/tymly/lib/plugin&#34;&gt;built-in plugin&lt;/a&gt; which provides low-level components to help get the party started&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-alerts-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-alerts-plugin&#34;&gt;alerts&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds some alerting options to the Tymly framework&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-etl-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-etl-plugin&#34;&gt;etl&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;A collection of states for helping with Extract, Transform and Load tasks.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-express-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-express-plugin&#34;&gt;express&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Exposes the Tymly framework via an Express.js web app.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-forms-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-forms-plugin&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Adds some form capabilities to Tymly&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-pg-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-pg-plugin&#34;&gt;pg&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Replace Tymly&amp;#39;s out-the-box memory storage with PostgreSQL&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-rankings-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-rankings-plugin&#34;&gt;rankings&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Plugin which handles ranking of data&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/wmfs/tymly#readme&#34;&gt;tymly-solr-plugin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-solr-plugin&#34;&gt;solr&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Plugin which handles interaction with Apache Solr&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

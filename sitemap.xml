@@ -7,13 +7,53 @@
   </url>
   
   <url>
+    <loc>https://wmfs.github.io/plugins/tymly-alerts-plugin/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/plugins/tymly-etl-plugin/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/plugins/tymly-express-plugin/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/plugins/tymly-forms-plugin/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/plugins/tymly-pg-plugin/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/plugins/tymly-rankings-plugin/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/plugins/tymly-solr-plugin/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/plugins/tymly/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wmfs.github.io/getting-started/</loc>
     <lastmod>2016-03-09T00:11:02+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
@@ -22,73 +62,148 @@
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-exporting-csv-delta-file/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-forms-plugin-form-filling/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/forms-form-filling/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-importing-csv-files/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/state-resources/tymly-logging/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-csv-files/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-xml-files/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-rankings-plugin-refresh-ranking/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-alerts-plugin-sending-email/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-synchronizing-table/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/state-resources/tymly-upserting/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/g-exporting-csv-delta-file/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/orms-form-filling/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/g-importing-csv-files/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tl-processing-csv-files/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tl-processing-xml-files/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/ankings-refresh-ranking/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/lerts-sending-email/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/g-synchronizing-table/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-exporting-csv-delta-file/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-forms-plugin-form-filling/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-importing-csv-files/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-csv-files/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-etl-plugin-processing-xml-files/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-rankings-plugin-refresh-ranking/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-alerts-plugin-sending-email/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/state-resources/tymly-pg-plugin-synchronizing-table/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/state-resources/tymly-rankings-plugin-refresh-rankings/</loc>
     <lastmod>2017-10-05T20:40:13+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
   </url>
   
   <url>
@@ -102,37 +217,7 @@
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/state-resources/forms-form-filling/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wmfs.github.io/reference/state-resources/flobot-logging/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</loc>
     <lastmod>2017-10-02T12:11:34+00:00</lastmod>
   </url>
   
@@ -143,17 +228,17 @@
   
   <url>
     <loc>https://wmfs.github.io/reference/commands/tymly-env/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/commands/tymly-sprintf/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/commands/tymly-value/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
   </url>
   
   <url>
@@ -172,108 +257,188 @@
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-tags/</loc>
-    <lastmod>2017-10-06T23:47:55+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/express-server/</loc>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-temp/</loc>
-    <lastmod>2017-10-06T23:47:55+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-users/</loc>
-    <lastmod>2017-10-06T23:47:55+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-registry/</loc>
-    <lastmod>2017-10-06T23:47:54+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-express-plugin-server/</loc>
-    <lastmod>2017-10-06T23:47:54+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-solr-plugin-solr/</loc>
-    <lastmod>2017-10-06T23:47:54+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/solr-solr/</loc>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/tymly-statebox/</loc>
-    <lastmod>2017-10-06T23:47:54+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-express-plugin-statebox-api/</loc>
-    <lastmod>2017-10-06T23:47:54+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/express-statebox-api/</loc>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-pg-plugin-storage/</loc>
-    <lastmod>2017-10-06T23:47:54+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/pg-storage/</loc>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/tymly-storage/</loc>
-    <lastmod>2017-10-06T23:47:54+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-alerts-plugin-email/</loc>
-    <lastmod>2017-10-06T23:47:53+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/tymly-tags/</loc>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-expression/</loc>
-    <lastmod>2017-10-06T23:47:53+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/tymly-temp/</loc>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-forms-plugin-forms/</loc>
-    <lastmod>2017-10-06T23:47:53+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/tymly-users/</loc>
+    <lastmod>2017-10-08T21:06:30+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-functions/</loc>
-    <lastmod>2017-10-06T23:47:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-inventory/</loc>
-    <lastmod>2017-10-06T23:47:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-rankings-plugin-rankings/</loc>
-    <lastmod>2017-10-06T23:47:53+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/rankings-rankings/</loc>
+    <lastmod>2017-10-08T21:06:29+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/tymly-rbac/</loc>
-    <lastmod>2017-10-06T23:47:53+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/tymly-express-plugin-auth/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <loc>https://wmfs.github.io/reference/services/tymly-registry/</loc>
+    <lastmod>2017-10-08T21:06:29+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/tymly-blueprint-docs/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/tymly-caches/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://wmfs.github.io/reference/services/tymly-commands/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/alerts-email/</loc>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-expression/</loc>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/forms-forms/</loc>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-functions/</loc>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-inventory/</loc>
+    <lastmod>2017-10-08T21:06:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/express-auth/</loc>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/xpress-server/</loc>
+    <lastmod>2017-10-07T19:10:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/olr-solr/</loc>
+    <lastmod>2017-10-07T19:10:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/xpress-statebox-api/</loc>
+    <lastmod>2017-10-07T19:10:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/g-storage/</loc>
+    <lastmod>2017-10-07T19:10:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/ankings-rankings/</loc>
+    <lastmod>2017-10-07T19:10:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/lerts-email/</loc>
+    <lastmod>2017-10-07T19:10:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/orms-forms/</loc>
+    <lastmod>2017-10-07T19:10:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/xpress-auth/</loc>
+    <lastmod>2017-10-07T19:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-express-plugin-server/</loc>
+    <lastmod>2017-10-07T19:03:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-solr-plugin-solr/</loc>
+    <lastmod>2017-10-07T19:03:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-express-plugin-statebox-api/</loc>
+    <lastmod>2017-10-07T19:03:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-pg-plugin-storage/</loc>
+    <lastmod>2017-10-07T19:03:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-rankings-plugin-rankings/</loc>
+    <lastmod>2017-10-07T19:03:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-alerts-plugin-email/</loc>
+    <lastmod>2017-10-07T19:03:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-forms-plugin-forms/</loc>
+    <lastmod>2017-10-07T19:03:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wmfs.github.io/reference/services/tymly-express-plugin-auth/</loc>
+    <lastmod>2017-10-07T19:03:30+00:00</lastmod>
   </url>
   
   <url>
@@ -297,32 +462,12 @@
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/pg-storage/</loc>
-    <lastmod>2017-10-02T12:11:40+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wmfs.github.io/reference/services/flobot-tags/</loc>
     <lastmod>2017-10-02T12:11:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/express-server/</loc>
-    <lastmod>2017-10-02T12:11:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/solr-solr/</loc>
-    <lastmod>2017-10-02T12:11:39+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wmfs.github.io/reference/services/flobot-statebox/</loc>
-    <lastmod>2017-10-02T12:11:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/express-statebox-api/</loc>
     <lastmod>2017-10-02T12:11:39+00:00</lastmod>
   </url>
   
@@ -352,17 +497,7 @@
   </url>
   
   <url>
-    <loc>https://wmfs.github.io/reference/services/alerts-email/</loc>
-    <lastmod>2017-10-02T12:11:36+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wmfs.github.io/reference/services/flobot-expression/</loc>
-    <lastmod>2017-10-02T12:11:36+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/forms-forms/</loc>
     <lastmod>2017-10-02T12:11:36+00:00</lastmod>
   </url>
   
@@ -374,11 +509,6 @@
   <url>
     <loc>https://wmfs.github.io/reference/services/flobot-blueprint-docs/</loc>
     <lastmod>2017-10-02T12:11:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wmfs.github.io/reference/services/express-auth/</loc>
-    <lastmod>2017-10-02T12:11:34+00:00</lastmod>
   </url>
   
   <url>
@@ -405,8 +535,14 @@
   </url>
   
   <url>
+    <loc>https://wmfs.github.io/plugins/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wmfs.github.io/reference/</loc>
-    <lastmod>2017-10-06T23:47:52+00:00</lastmod>
+    <lastmod>2017-10-08T21:06:27+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -312,15 +312,11 @@
 
 			
 
-<p>This page contains an inventory of all the main types of component supplied via the Tymly module and core plugins:</p>
-
-<p><img src="https://wmfs.github.io/images/components.png" alt="Diagram showing how plugins/blueprints/config/services relate to each other" /></p>
-
 <h3 id="contents">Contents</h3>
 
 <ul>
 <li><a href="#list-of-plugins">List of plugins</a></li>
-<li><a href="#list-of-state-classes">List of States Classes</a></li>
+<li><a href="#list-of-state-resources">List of state resources</a></li>
 <li><a href="#list-of-commands">List of commands</a></li>
 <li><a href="#list-of-services">List of services</a></li>
 </ul>
@@ -341,42 +337,42 @@
 
 <tbody>
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly">tymly</a></td>
 <td>The <a href="https://github.com/wmfs/tymly/tree/master/packages/tymly">Tymly</a> package itself has a <a href="https://github.com/wmfs/tymly/tree/master/packages/tymly/lib/plugin">built-in plugin</a> which provides low-level components to help get the party started</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-alerts-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-alerts-plugin">alerts</a></td>
 <td>Adds some alerting options to the Tymly framework</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-etl-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-etl-plugin">etl</a></td>
 <td>A collection of states for helping with Extract, Transform and Load tasks.</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-express-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-express-plugin">express</a></td>
 <td>Exposes the Tymly framework via an Express.js web app.</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-forms-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-forms-plugin">forms</a></td>
 <td>Adds some form capabilities to Tymly</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-pg-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-pg-plugin">pg</a></td>
 <td>Replace Tymly&#39;s out-the-box memory storage with PostgreSQL</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-rankings-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-rankings-plugin">rankings</a></td>
 <td>Plugin which handles ranking of data</td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/wmfs/tymly#readme">tymly-solr-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-solr-plugin">solr</a></td>
 <td>Plugin which handles interaction with Apache Solr</td>
 </tr>
 </tbody>
@@ -399,75 +395,75 @@
 
 <tbody>
 <tr>
-<td><a href="state-resources/tymly-pg-plugin-exporting-csv-delta-file">exportingCsvDeltaFile</a></td>
+<td><a href="state-resources/pg-exporting-csv-delta-file">exportingCsvDeltaFile</a></td>
 <td>Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over <a href="https://www.npmjs.com/package/pg-delta-file">pg-delta-file</a></td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-pg-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-pg-plugin"> pg</a></td>
 </tr>
 
 <tr>
 <td><a href="state-resources/tymly-finding-by-id">findingById</a></td>
 <td>Fetches a single document by its primary key values from storage and adds to a Tymly context</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="state-resources/tymly-finding-one">findingOne</a></td>
 <td>Finds one document from storage</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="state-resources/tymly-forms-plugin-form-filling">formFilling</a></td>
+<td><a href="state-resources/forms-form-filling">formFilling</a></td>
 <td>Indicates which form a human needs to interact with - and waits until a response is received</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-forms-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-forms-plugin"> forms</a></td>
 </tr>
 
 <tr>
-<td><a href="state-resources/tymly-pg-plugin-importing-csv-files">importingCsvFiles</a></td>
+<td><a href="state-resources/pg-importing-csv-files">importingCsvFiles</a></td>
 <td>Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over <a href="https://github.com/wmfs/tymly/tree/master/supercopy">Supercopy</a></td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-pg-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-pg-plugin"> pg</a></td>
 </tr>
 
 <tr>
 <td><a href="state-resources/tymly-logging">logging</a></td>
 <td>Logs to the console via a template</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="state-resources/tymly-etl-plugin-processing-csv-files">processingCsvFiles</a></td>
+<td><a href="state-resources/etl-processing-csv-files">processingCsvFiles</a></td>
 <td>Smash CSV files into more manageable files based on column values - just a thin wrapper over <a href="https://www.npmjs.com/package/smithereens">Smithereens</a></td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-etl-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-etl-plugin"> etl</a></td>
 </tr>
 
 <tr>
-<td><a href="state-resources/tymly-etl-plugin-processing-xml-files">processingXmlFiles</a></td>
+<td><a href="state-resources/etl-processing-xml-files">processingXmlFiles</a></td>
 <td>Takes an XML file and converts it to CSV</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-etl-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-etl-plugin"> etl</a></td>
 </tr>
 
 <tr>
-<td><a href="state-resources/tymly-rankings-plugin-refresh-ranking">refreshRanking</a></td>
+<td><a href="state-resources/rankings-refresh-ranking">refreshRanking</a></td>
 <td>Regenerates a database view of ranked data</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-rankings-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-rankings-plugin"> rankings</a></td>
 </tr>
 
 <tr>
-<td><a href="state-resources/tymly-alerts-plugin-sending-email">sendingEmail</a></td>
+<td><a href="state-resources/alerts-sending-email">sendingEmail</a></td>
 <td>For sending an emails - just a thin wrapper over <a href="https://nodemailer.com/">Nodemailer</a></td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-alerts-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-alerts-plugin"> alerts</a></td>
 </tr>
 
 <tr>
-<td><a href="state-resources/tymly-pg-plugin-synchronizing-table">synchronizingTable</a></td>
+<td><a href="state-resources/pg-synchronizing-table">synchronizingTable</a></td>
 <td>Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over <a href="https://www.npmjs.com/package/pg-telepods">pg-telepods</a></td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-pg-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-pg-plugin"> pg</a></td>
 </tr>
 
 <tr>
 <td><a href="state-resources/tymly-upserting">upserting</a></td>
 <td>Perists a document to storage</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 </tbody>
 </table>
@@ -491,19 +487,19 @@
 <tr>
 <td><a href="commands/tymly-env">env</a></td>
 <td>Allows a state to refer to an environment variable</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="commands/tymly-sprintf">sprintf</a></td>
 <td>Derive a runtime value using a <a href="https://github.com/alexei/sprintf.js">sprintf</a> string template</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="commands/tymly-value">value</a></td>
 <td>Get a value from the Tymly&#39;s context</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 </tbody>
 </table>
@@ -525,129 +521,129 @@
 
 <tbody>
 <tr>
-<td><a href="services/tymly-express-plugin-auth">auth</a></td>
+<td><a href="services/express-auth">auth</a></td>
 <td>Provides JWT-based authentication capabilities</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-express-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-express-plugin"> express</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-blueprint-docs">blueprintDocs</a></td>
 <td>Allows tracking of documents created via blueprints, so they don&#39;t get reverted when Tymly restarts</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-caches">caches</a></td>
 <td>Adds <a href="https://www.npmjs.com/package/lru-cache">lru-cache</a>-based caching to Tymly. Note defaults will be used if no <code>caches</code> configuration is provided.</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-commands">commands</a></td>
 <td>Service to support blueprint commands</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="services/tymly-alerts-plugin-email">email</a></td>
+<td><a href="services/alerts-email">email</a></td>
 <td>Integrates Tymly with <a href="https://nodemailer.com/">Nodemailer</a> to offer email-sending capabilities</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-alerts-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-alerts-plugin"> alerts</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-expression">expression</a></td>
 <td>Provides safe, <a href="https://www.npmjs.com/package/esprima">Esprima</a>-based expression evaluation</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="services/tymly-forms-plugin-forms">forms</a></td>
+<td><a href="services/forms-forms">forms</a></td>
 <td>Exposes UI configuration (as supplied via blueprints in <a href="http://schemaform.io/">Schema Form</a> format)</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-forms-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-forms-plugin"> forms</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-functions">functions</a></td>
 <td>Adds ability to run custom logic as defined in a blueprint</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-inventory">inventory</a></td>
 <td>Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="services/tymly-rankings-plugin-rankings">rankings</a></td>
+<td><a href="services/rankings-rankings">rankings</a></td>
 <td>Adds a ranking engine</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-rankings-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-rankings-plugin"> rankings</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-rbac">rbac</a></td>
 <td>Provides JWT-based authentication capabilities</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-registry">registry</a></td>
 <td>Provides a mechanism for states to refer to site-specific values</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="services/tymly-express-plugin-server">server</a></td>
+<td><a href="services/express-server">server</a></td>
 <td>Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-express-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-express-plugin"> express</a></td>
 </tr>
 
 <tr>
-<td><a href="services/tymly-solr-plugin-solr">solr</a></td>
+<td><a href="services/solr-solr">solr</a></td>
 <td>Adds Solr support</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-solr-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-solr-plugin"> solr</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-statebox">statebox</a></td>
 <td>Runs state machines defined in Amazon States Language</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="services/tymly-express-plugin-statebox-api">stateboxApi</a></td>
+<td><a href="services/express-statebox-api">stateboxApi</a></td>
 <td>Exposes the core Tymly abilities (start, get, update and cancel) over a JWT-secured REST API</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-express-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-express-plugin"> express</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-storage">storage</a></td>
 <td>This is the default in-memory storage service that ships with Tymly. Useful for testing and not much else.</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
-<td><a href="services/tymly-pg-plugin-storage">storage</a></td>
+<td><a href="services/pg-storage">storage</a></td>
 <td>Replaces the default in-memory storage solution with a MongoDB-backed alternative</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly-pg-plugin</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly-pg-plugin"> pg</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-tags">tags</a></td>
 <td>Provides a generic mechanism to help tag/classify search results, tasks, forms etc.</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-temp">temp</a></td>
 <td>Helps configure and manage a temporary folder for Tymly to use</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 
 <tr>
 <td><a href="services/tymly-users">users</a></td>
 <td>Adds user-management capabilities to Tymly (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)</td>
-<td><a href="https://github.com/wmfs/tymly#readme"> tymly</a></td>
+<td><a href="https://wmfs.github.io/plugins/tymly"> tymly</a></td>
 </tr>
 </tbody>
 </table>
