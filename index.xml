@@ -202,572 +202,6 @@ Organizations will undoubtedly have specialist requirements of their own - this 
     </item>
     
     <item>
-      <title>The &#39;alerts&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly-alerts-plugin/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly-alerts-plugin/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;Adds some alerting options to the Tymly framework&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly-alerts-plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.8&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly-alerts-plugin/lib/components&#34;&gt;/tymly/plugins/tymly-alerts-plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;services&#34;&gt;services&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/alerts-email&#34;&gt;email&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Integrates Tymly with &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt; to offer email-sending capabilities&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;stateresources&#34;&gt;stateResources&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/alerts-sending-email&#34;&gt;sendingEmail&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The &#39;etl&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly-etl-plugin/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly-etl-plugin/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;A collection of states for helping with Extract, Transform and Load tasks.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly-etl-plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.6&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly-etl-plugin/lib/components&#34;&gt;/tymly/plugins/tymly-etl-plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;stateresources&#34;&gt;stateResources&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/etl-processing-csv-files&#34;&gt;processingCsvFiles&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/etl-processing-xml-files&#34;&gt;processingXmlFiles&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Takes an XML file and converts it to CSV&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The &#39;express&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly-express-plugin/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly-express-plugin/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;Exposes the Tymly framework via an Express.js web app.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly-express-plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.7&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly-express-plugin/lib/components&#34;&gt;/tymly/plugins/tymly-express-plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;services&#34;&gt;services&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/express-auth&#34;&gt;auth&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/express-server&#34;&gt;server&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides a CORS-enabled Express.js server. Includes serving of static assets as supplied via Bluepints&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/express-statebox-api&#34;&gt;stateboxApi&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Exposes the core Tymly abilities (start, get, update and cancel) over a JWT-secured REST API&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The &#39;forms&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly-forms-plugin/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly-forms-plugin/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;Adds some form capabilities to Tymly&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly-forms-plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.8&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly-forms-plugin/lib/components&#34;&gt;/tymly/plugins/tymly-forms-plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;services&#34;&gt;services&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/forms-forms&#34;&gt;forms&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Exposes UI configuration (as supplied via blueprints in &lt;a href=&#34;http://schemaform.io/&#34;&gt;Schema Form&lt;/a&gt; format)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;stateresources&#34;&gt;stateResources&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/forms-form-filling&#34;&gt;formFilling&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Indicates which form a human needs to interact with - and waits until a response is received&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The &#39;pg&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly-pg-plugin/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly-pg-plugin/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;Replace Tymly&amp;#39;s out-the-box memory storage with PostgreSQL&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly-pg-plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.6&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly-pg-plugin/lib/components&#34;&gt;/tymly/plugins/tymly-pg-plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;services&#34;&gt;services&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/pg-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Replaces the default in-memory storage solution with a MongoDB-backed alternative&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;stateresources&#34;&gt;stateResources&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file&#34;&gt;exportingCsvDeltaFile&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-delta-file&#34;&gt;pg-delta-file&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/pg-importing-csv-files&#34;&gt;importingCsvFiles&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/pg-synchronizing-table&#34;&gt;synchronizingTable&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The &#39;rankings&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly-rankings-plugin/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly-rankings-plugin/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;Plugin which handles ranking of data&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly-rankings-plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.2&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly-rankings-plugin/lib/components&#34;&gt;/tymly/plugins/tymly-rankings-plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;services&#34;&gt;services&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/rankings-rankings&#34;&gt;rankings&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds a ranking engine&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;stateresources&#34;&gt;stateResources&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking&#34;&gt;refreshRanking&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Regenerates a database view of ranked data&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The &#39;solr&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly-solr-plugin/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly-solr-plugin/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;Plugin which handles interaction with Apache Solr&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly-solr-plugin&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.4&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly-solr-plugin/lib/components&#34;&gt;/tymly/plugins/tymly-solr-plugin&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;services&#34;&gt;services&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/solr-solr&#34;&gt;solr&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds Solr support&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The &#39;tymly&#39; plugin</title>
-      <link>https://wmfs.github.io/plugins/tymly/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://wmfs.github.io/plugins/tymly/</guid>
-      <description>
-
-&lt;blockquote&gt;
-&lt;p&gt;A framework for building and sharing workflows in Node.js&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;package-details&#34;&gt;Package details&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt;  &lt;code&gt;tymly&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt;  &lt;code&gt;0.0.15&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/plugins/tymly/lib/components&#34;&gt;/tymly/plugins/tymly&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;commands&#34;&gt;commands&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/commands/tymly-env&#34;&gt;env&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Allows a state to refer to an environment variable&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/commands/tymly-sprintf&#34;&gt;sprintf&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Derive a runtime value using a &lt;a href=&#34;https://github.com/alexei/sprintf.js&#34;&gt;sprintf&lt;/a&gt; string template&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/commands/tymly-value&#34;&gt;value&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Get a value from the Tymly&amp;#39;s context&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;services&#34;&gt;services&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-blueprint-docs&#34;&gt;blueprintDocs&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Allows tracking of documents created via blueprints, so they don&amp;#39;t get reverted when Tymly restarts&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-caches&#34;&gt;caches&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds &lt;a href=&#34;https://www.npmjs.com/package/lru-cache&#34;&gt;lru-cache&lt;/a&gt;-based caching to Tymly. Note defaults will be used if no &lt;code&gt;caches&lt;/code&gt; configuration is provided.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-commands&#34;&gt;commands&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Service to support blueprint commands&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-expression&#34;&gt;expression&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides safe, &lt;a href=&#34;https://www.npmjs.com/package/esprima&#34;&gt;Esprima&lt;/a&gt;-based expression evaluation&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-functions&#34;&gt;functions&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds ability to run custom logic as defined in a blueprint&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-inventory&#34;&gt;inventory&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-rbac&#34;&gt;rbac&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides JWT-based authentication capabilities&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-registry&#34;&gt;registry&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides a mechanism for states to refer to site-specific values&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-statebox&#34;&gt;statebox&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Runs state machines defined in Amazon States Language&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-storage&#34;&gt;storage&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;This is the default in-memory storage service that ships with Tymly. Useful for testing and not much else.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-tags&#34;&gt;tags&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Provides a generic mechanism to help tag/classify search results, tasks, forms etc.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-temp&#34;&gt;temp&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Helps configure and manage a temporary folder for Tymly to use&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/services/tymly-users&#34;&gt;users&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Adds user-management capabilities to Tymly (e.g. authorization checks, what flows/forms a user is entitled to instigate etc.)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;stateresources&#34;&gt;stateResources&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/tymly-finding-by-id&#34;&gt;findingById&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Fetches a single document by its primary key values from storage and adds to a Tymly context&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/tymly-finding-one&#34;&gt;findingOne&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Finds one document from storage&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/tymly-logging&#34;&gt;logging&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Logs to the console via a template&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://wmfs.github.io/reference/state-resources/tymly-upserting&#34;&gt;upserting&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Perists a document to storage&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Getting started</title>
       <link>https://wmfs.github.io/getting-started/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
@@ -980,7 +414,7 @@ tymly.boot(
     <item>
       <title>Reference</title>
       <link>https://wmfs.github.io/reference/</link>
-      <pubDate>Sun, 08 Oct 2017 21:06:27 +0000</pubDate>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/</guid>
       <description>
@@ -1346,7 +780,7 @@ tymly.boot(
     <item>
       <title>exportingCsvDeltaFile stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</link>
-      <pubDate>Sun, 08 Oct 2017 21:06:27 +0000</pubDate>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</guid>
       <description>
@@ -1369,7 +803,7 @@ tymly.boot(
     <item>
       <title>findingById stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</link>
-      <pubDate>Sun, 08 Oct 2017 21:06:27 +0000</pubDate>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</guid>
       <description>
@@ -1392,13 +826,197 @@ tymly.boot(
     <item>
       <title>findingOne stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</link>
-      <pubDate>Sun, 08 Oct 2017 21:06:27 +0000</pubDate>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</guid>
       <description>
 
 &lt;p&gt;Finds one document from storage. This stateResource is provided via the
 &lt;a href=&#34;https://wmfs.github.io/plugins/tymly&#34;&gt;tymly&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>formFilling stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/forms-form-filling/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/forms-form-filling/</guid>
+      <description>
+
+&lt;p&gt;Indicates which form a human needs to interact with - and waits until a response is received. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-forms-plugin&#34;&gt;forms&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>importingCsvFiles stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</guid>
+      <description>
+
+&lt;p&gt;Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over &lt;a href=&#34;https://github.com/wmfs/tymly/tree/master/supercopy&#34;&gt;Supercopy&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-pg-plugin&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>logging stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/tymly-logging/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/tymly-logging/</guid>
+      <description>
+
+&lt;p&gt;Logs to the console via a template. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly&#34;&gt;tymly&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>processingCsvFiles stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</guid>
+      <description>
+
+&lt;p&gt;Smash CSV files into more manageable files based on column values - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/smithereens&#34;&gt;Smithereens&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-etl-plugin&#34;&gt;etl&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>processingXmlFiles stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</guid>
+      <description>
+
+&lt;p&gt;Takes an XML file and converts it to CSV. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-etl-plugin&#34;&gt;etl&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>refreshRanking stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking/</guid>
+      <description>
+
+&lt;p&gt;Regenerates a database view of ranked data. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-rankings-plugin&#34;&gt;rankings&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>sendingEmail stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</guid>
+      <description>
+
+&lt;p&gt;For sending an emails - just a thin wrapper over &lt;a href=&#34;https://nodemailer.com/&#34;&gt;Nodemailer&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-alerts-plugin&#34;&gt;alerts&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
+
+&lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This state doesn&amp;rsquo;t require any configuration.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;related&#34;&gt;Related&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>synchronizingTable stateResource</title>
+      <link>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</link>
+      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      
+      <guid>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</guid>
+      <description>
+
+&lt;p&gt;Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over &lt;a href=&#34;https://www.npmjs.com/package/pg-telepods&#34;&gt;pg-telepods&lt;/a&gt;. This stateResource is provided via the
+&lt;a href=&#34;https://wmfs.github.io/plugins/tymly-pg-plugin&#34;&gt;pg&lt;/a&gt; plugin  and isn&amp;#39;t offered by any of the other core plugins.&lt;/p&gt;
 
 &lt;h2 id=&#34;state-config&#34;&gt;State config&lt;/h2&gt;
 
