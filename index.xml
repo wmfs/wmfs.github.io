@@ -414,7 +414,7 @@ tymly.boot(
     <item>
       <title>Reference</title>
       <link>https://wmfs.github.io/reference/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/</guid>
       <description>
@@ -780,7 +780,7 @@ tymly.boot(
     <item>
       <title>exportingCsvDeltaFile stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</guid>
       <description>
@@ -803,7 +803,7 @@ tymly.boot(
     <item>
       <title>findingById stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</guid>
       <description>
@@ -826,7 +826,7 @@ tymly.boot(
     <item>
       <title>findingOne stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</guid>
       <description>
@@ -849,7 +849,7 @@ tymly.boot(
     <item>
       <title>formFilling stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/forms-form-filling/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/forms-form-filling/</guid>
       <description>
@@ -872,7 +872,7 @@ tymly.boot(
     <item>
       <title>importingCsvFiles stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</guid>
       <description>
@@ -895,7 +895,7 @@ tymly.boot(
     <item>
       <title>logging stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-logging/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-logging/</guid>
       <description>
@@ -918,7 +918,7 @@ tymly.boot(
     <item>
       <title>processingCsvFiles stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</guid>
       <description>
@@ -941,7 +941,7 @@ tymly.boot(
     <item>
       <title>processingXmlFiles stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</guid>
       <description>
@@ -964,7 +964,7 @@ tymly.boot(
     <item>
       <title>refreshRanking stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking/</guid>
       <description>
@@ -987,7 +987,7 @@ tymly.boot(
     <item>
       <title>sendingEmail stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</guid>
       <description>
@@ -1010,7 +1010,7 @@ tymly.boot(
     <item>
       <title>synchronizingTable stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</guid>
       <description>

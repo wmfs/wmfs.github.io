@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MIT</copyright>
-    <lastBuildDate>Sun, 08 Oct 2017 21:16:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 18:08:15 +0000</lastBuildDate>
     <atom:link href="https://wmfs.github.io/reference/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Reference</title>
       <link>https://wmfs.github.io/reference/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/</guid>
       <description>
@@ -359,7 +359,7 @@
     <item>
       <title>exportingCsvDeltaFile stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/pg-exporting-csv-delta-file/</guid>
       <description>
@@ -382,7 +382,7 @@
     <item>
       <title>findingById stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-by-id/</guid>
       <description>
@@ -405,7 +405,7 @@
     <item>
       <title>findingOne stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-finding-one/</guid>
       <description>
@@ -428,7 +428,7 @@
     <item>
       <title>formFilling stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/forms-form-filling/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/forms-form-filling/</guid>
       <description>
@@ -451,7 +451,7 @@
     <item>
       <title>importingCsvFiles stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/pg-importing-csv-files/</guid>
       <description>
@@ -474,7 +474,7 @@
     <item>
       <title>logging stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-logging/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-logging/</guid>
       <description>
@@ -497,7 +497,7 @@
     <item>
       <title>processingCsvFiles stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/etl-processing-csv-files/</guid>
       <description>
@@ -520,7 +520,7 @@
     <item>
       <title>processingXmlFiles stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/etl-processing-xml-files/</guid>
       <description>
@@ -543,7 +543,7 @@
     <item>
       <title>refreshRanking stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/rankings-refresh-ranking/</guid>
       <description>
@@ -566,7 +566,7 @@
     <item>
       <title>sendingEmail stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/alerts-sending-email/</guid>
       <description>
@@ -589,7 +589,7 @@
     <item>
       <title>synchronizingTable stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/pg-synchronizing-table/</guid>
       <description>
@@ -612,7 +612,7 @@
     <item>
       <title>upserting stateResource</title>
       <link>https://wmfs.github.io/reference/state-resources/tymly-upserting/</link>
-      <pubDate>Sun, 08 Oct 2017 21:16:05 +0000</pubDate>
+      <pubDate>Mon, 09 Oct 2017 18:08:15 +0000</pubDate>
       
       <guid>https://wmfs.github.io/reference/state-resources/tymly-upserting/</guid>
       <description>
